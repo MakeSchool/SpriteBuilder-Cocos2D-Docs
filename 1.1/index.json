@@ -194,6 +194,11 @@
 				"title" : "Audio",
 				"path"  : "audio",
 				"version"  : "1.0"
+			},
+			{
+				"title" : "Custom Rendering / Drawing",
+				"path" : "customrendering",
+				"version" : "1.1"
 			}
 		]
 }
