@@ -1,5 +1,5 @@
 # Custom Rendering and Drawing in Cocos2D 3.1
-*This entire chapter is written and provided by Scott Lembke. Thanks a lot!*
+*This entire chapter is written and provided by Scott Lembcke. Thanks a lot!*
 
   
 
@@ -199,3 +199,7 @@ In order to perform automatic batching, the Cocos2D renderer will queue up sever
 You can generally modify whatever GL state you want. If you change the texture state, blending mode or shader bindings, you'll need to call `[CCRenderer invalidateState]` to let the renderer know that its cache is no longer correct. Other than that, the renderer uses VAOs to manage it's vertex state. Some states such as clear values are set each time they are used. Other states such as the stencil or z-testing modes are purposefully ignored. For instance, you might want to override `[CCNode visit:parentTransform:]` to enable scissor testing before visiting its children and then disable it again afterwards.
 
 One mild change that might happen before 3.1 is officially released is to add a parameter signifying that your block or method is threadsafe.
+
+##See Also
+
+- [Shader Cookbook by Scott Lembcke](https://github.com/slembcke/Cocos2DShaderCookbook) 
