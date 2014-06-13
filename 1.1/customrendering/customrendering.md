@@ -1,4 +1,9 @@
-# Quick Guide to Custom Rendering in 3.1
+# Custom Rendering and Drawing in Cocos2D 3.1
+*This entire chapter is written and provided by Scott Lembke. Thanks a lot!*
+
+  
+
+
 
 There are 3 main ways to extend the rendering in Cocos2D.
 
@@ -172,8 +177,8 @@ Currently the following GLSL uniform types are supported:
 
 GLSL Type | Expected Obj-C Type
 --- | ---
-`float` | `NSNumber`
-`vec2` | `[NSValue valueWithCGPoint:]`, `[NSValue valueWithCGSize:]`, `[NSValue valueWithGLKVector2:`
+float | NSNumber
+vec2 | [NSValue valueWithCGPoint:]`, `[NSValue valueWithCGSize:]`, `[NSValue valueWithGLKVector2:`
 `vec3` | `[NSValue valueWithGLKVector3:]`
 `vec4` | `[NSValue valueWithGLKVector4:]`, `CCColor`
 `mat4` | `[NSValue valueWithGLKMat4:]`
