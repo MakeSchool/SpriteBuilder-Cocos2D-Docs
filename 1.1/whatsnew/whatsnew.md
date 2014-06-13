@@ -15,6 +15,6 @@ SpriteBuilder 1.1 and Cocos2D 3.1 come with many new features. This page provide
 
 ##Cocos2D 3.1
 
-- New rendering engine with automatic batching and 
+- New rendering engine with automatic batching and culling
 - Simplified way to create shaders and write custom rendering code
 - Improves interaction of animations and physics
