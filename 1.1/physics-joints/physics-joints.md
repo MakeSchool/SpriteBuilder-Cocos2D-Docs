@@ -1,3 +1,4 @@
+
 #Joints
 
 Joints are used to connect physics bodies with each other.  SpriteBuilder 1.1 introduces the ability to create joints visually.
@@ -14,14 +15,6 @@ To make a connection between two bodies simply drag the appropriate node from th
 ![image](connect.gif)
 
 Note: In order to make a connection between two bodies they must both be the child of a CCPhysicsNode and they must both have physics enabled.
-
-Joints can also be initialized in code:
-- `connectedPivotJointWithBodyA:bodyB:anchorA:`
-- `connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:`
-- `connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:minDistance:maxDistance:`
-- `connectedSpringJointWithBodyA:bodyB:anchorA:anchorB:restLength:stiffness:damping:`
-
-Joints can be deactivated by calling the `invalidate` method.
 
 ##Properties of All Joints:
 
@@ -69,3 +62,17 @@ The pivot joint has three properties that can be enabled: Spring, Limit and Moto
 - `Damping:`   Specifies the amount of energy lost as the spring undulates.
 
 - `Stiffness:`  Specifies the strength of the spring.  A high stiffness will result in a high resistance against motion and a lot of force when a spring is released.
+
+##Joints in Code
+
+`CCPhysicsJoint` provides four class initializer methods to create different joints in code:
+
+- `connectedPivotJointWithBodyA:bodyB:anchorA:`
+- `connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:`
+- `connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:minDistance:maxDistance:`
+- `connectedSpringJointWithBodyA:bodyB:anchorA:anchorB:restLength:stiffness:damping:`
+
+Joints start working the moment they are created. Joints can be deactivated by calling the `invalidate` method. Here's an example of how to set up a joint in code:
+
+	// create a joint to connect the catapult arm with the catapult
+	_catapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_catapultArm.physicsBody bodyB:_catapult.physicsBody anchorA:_catapultArm.anchorPointInPoints];

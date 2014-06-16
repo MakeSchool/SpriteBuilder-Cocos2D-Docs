@@ -1,6 +1,6 @@
 #Setup physics in SpriteBuilder
 
-Basic physics properties can be easily applied within SpriteBuilder. In a future release SpriteBuilder will also support creating physics joints.
+Basic physics properties can be easily applied within SpriteBuilder. A later chapter will also discuss how to create physics joints in SpriteBuilder.
 
 ##Adding a Physics Node
 
