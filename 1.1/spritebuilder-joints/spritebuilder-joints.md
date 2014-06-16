@@ -34,9 +34,7 @@ Although each joint type is used under different circumstances, there are certai
 - `Collide bodies:` If this box is checked the connected bodies will not be able to pass through each other
 
 ![image](noCollide.gif)
-Default:  Collide bodies disabled
 ![image](collide.gif)
-Collide bodies enabled
 
 - `Anchor A & Anchor B:` Specify the coordinates on the physics bodies at which the joint is connected.  Moving the joint on screen will update these fields automatically.  If one of the bodies is static and the other is dynamic, the static body should be attached as body A, and the dynamic body should be body B.
 
@@ -55,7 +53,7 @@ The pivot joint has three properties that can be enabled: Spring, Limit and Moto
 
 ![image](pivotIndicators.png)
 
-`Note: When you have both Spring and Limit enabled a selection bar appears on screen to switch display of circles indicating range etc`
+> Note: When you have both Spring and Limit enabled a selection bar appears on screen to switch display of circles indicating range etc
 
 - `Motor:`  When enabled the motor will propel body B around the joint  with a given rate.  The arrow on screen indicates the direction that the motor will propel the rotation.  A positive rate rotates the motor counter-clockwise, while a negative rate generates clockwise motion.
 
