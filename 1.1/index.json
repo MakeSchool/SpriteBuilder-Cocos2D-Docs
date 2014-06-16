@@ -186,7 +186,11 @@
 		                	"path"  : "physics-spritebuilder",
 		                	"version"  : "1.1"
 		                },
-						
+		                {
+		                	"title" : "Physics Joints in SpriteBuilder",
+		                	"path" : "spritebuilder-joints",
+		                	"version" : "1.1"
+		                },
 						{	"title" : "Physics in Code",
 		                	"path"  : "physics-code",
 		                	"version"  : "1.0"	
