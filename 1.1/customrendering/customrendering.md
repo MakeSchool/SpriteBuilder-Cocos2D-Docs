@@ -177,8 +177,8 @@ Currently the following GLSL uniform types are supported:
 
 GLSL Type | Expected Obj-C Type
 --- | ---
-float | NSNumber
-vec2 | [NSValue valueWithCGPoint:]`, `[NSValue valueWithCGSize:]`, `[NSValue valueWithGLKVector2:`
+`float` | `NSNumber`
+`vec2` | `[NSValue valueWithCGPoint:]`, `[NSValue valueWithCGSize:]`, `[NSValue valueWithGLKVector2:`
 `vec3` | `[NSValue valueWithGLKVector3:]`
 `vec4` | `[NSValue valueWithGLKVector4:]`, `CCColor`
 `mat4` | `[NSValue valueWithGLKMat4:]`
