@@ -1,216 +1,621 @@
-{   "content"  :
-		[  
-			{
-				"title" : "Overview",
-				"path"  : "overview",
-				"version"  : "1.0"
-			},
-			{
-				"title" : "What is new in SB 1.1 and Cocos2D 3.1?",
-				"path"  : "whatsnew",
-				"version"  : "1.1",
-				"children": 
-		    		[
-		                {
-		                	"title" : "Cocos2D release notes",
-		                	"path"  : "release_notes_cocos2d",
-		                	"version"  : "1.1"
-		                }
-		            ]
-			},
-			{
-		    	"title" : "Create a new project",
-		    	"path"  : "first-project",
-		    	"version" : "1.0",
-		    	"children": 
-		    		[
-		                {
-		                	"title" : "Create a new project with SpriteBuilder",
-		                	"path"  : "first-project-spritebuilder",
-		                	"version"  : "1.0"
-		                },
-						
-						{	"title" : "Create a new project with Xcode",
-		                	"path"  : "first-project-xcode",
-		                	"version"  : "1.0"	
-		                }
-		            ]
-		    },
-			
-			{
-				"title" : "Basics of Cocos2D",
-				"path"  : "cocos2d-started",
-		        "version"  : "1.0",		                	
-
-				"children": 
-		    		[
-		    		    {
-		                	"title" : "Scenes in Cocos2D",
-		                	"path"  : "scenes",
-		                	"version"  : "1.0"
-		                },
-
-		                {
-		                	"title" : "Nodes in Cocos2D",
-		                	"path"  : "nodes",
-		                	"version"  : "1.0"		                	
-		                },
-
-		               {
-			            	"title" : "Cocos2D update loop",
-			            	"path"  : "update-loop",
-			            	"version"  : "1.0"		               	
-		    			}
-		        	]
-			},
-		                        
-		    {
-		    	"title" : "Basics of SpriteBuilder",
-		    	"path"  : "spritebuilder-started",
-		    	"version" : "1.0",
-		    	"children": 
-		    		[
-		                {
-		                	"title" : "SpirteBuilder's User Interface",
-		                	"path"  : "spritebuilder-ui",
-		                	"version"  : "1.0"
-		                },
-
-		                {
-		                	"title" : "Working with ccb files",
-		                	"path"  : "ccb-files",
-		                	"version"  : "1.1"
-		                },
-
-		                {
-		               		"title" : "SpriteBuilder's Grid System",
-		                	"path"  : "spritebuilder-grid",
-		                	"version"  : "1.1"
-		                },
+{    "content":{
 	
-						{	"title" : "Custom Classes and Code Connections in SpriteBuilder",
-		                	"path"  : "spritebuilder-code",
-		                	"version"  : "1.0"	
-		                },
-
-		                {	"title" : "Custom Properties in SpriteBuilder",
-		                	"path"  : "spritebuilder-custom-properties",
-		                	"version"  : "1.0"	
-		                },
+		"overview": [
+			{
+				"title" : "Getting Started with SpriteBuilder and Cocos2D",
+				"path" : "overview",
+				"version": "1.1",
+				"children":
+					[
 						{
-							"title" : "Sub ccb files",
-							"path"  : "spritebuilder-sub-ccb",
-							"version"  : "1.0"
+							"title": "Asset Managment",
+							"path" : "overview_assets",
+							"version": "1.1"
 						},
 						{
-							"title" : "Load ccb files in code",
-							"path" : "load-ccb",
-							"version" : "1.0"
-						}, 
-						{
-							"title" : "SpriteBuilder's Timeline",
-							"path" : "spritebuilder-timeline",
-							"version" : "1.0"							
+							"title": "Working With Sprites",
+							"path" : "overview_sprites",
+							"version": "1.1"
 						},
 						{
-							"title" : "Localization in SpriteBuilder",
-							"path" : "spritebuilder-localization",
-							"version" : "1.0"							
+							"title": "The Cocos2D Update Cycle",
+							"path" : "overview_update",
+							"version": "1.1"
+						},						
+						{
+							"title": "Working with Actions",
+							"path" : "overview_actions",
+							"version": "1.1"
+						},
+						{
+							"title": "Working with Touch Interaction",
+							"path" : "overview_touch",
+							"version": "1.1"
+						},
+						{
+							"title": "Working With Physics Bodies, Joints and Particle Effects",
+							"path" : "overview_physics",
+							"version": "1.1"
 						}
-		            ]
-		    },
-
-		     {
-		    	"title" : "Working with assets",
-		    	"path"  : "assets",
-		    	"version" : "1.0",
-		    	"children": 
-		    		[
-		                {
-		                	"title" : "Assets in SpriteBuilder",
-		                	"path"  : "assets-spritebuilder",
-		                	"version"  : "1.0"
-		                },
-						
-						{	"title" : "Assets in Cocos2D",
-		                	"path"  : "assets-cocos2d",
-		                	"version"  : "1.0"	
-		                }
-		            ]
-		    },
-		    {
-				"title" : "Working with Sprites",
-				"path"  : "sprites",
-				"version"  : "1.0",
-		    	"children": 
-		    		[						
-						{	"title" : "Sprite Animations in SpriteBuilder",
-		                	"path"  : "sprite-animation-spritebuilder",
-		                	"version"  : "1.0"	
-		                }
-		            ]
-			},
-
-		    {
-				"title" : "Animations & Movements",
-				"path"  : "animations-movements",
-				"version"  : "1.0"	
-			},
-
+					]
+			}
+		],
+		"editor":[
 			{
-				"title" : "User Interaction",
-				"path"  : "user-interaction",
-				"version"  : "1.1"	
+				"title" : "Create a New Project with SpriteBuilder",
+				"path" : "editor_new",
+				"version": "1.1"
 			},
+			{				
+				"title" : "SpriteBuilder's User Interface",
+				"path" : "editor_UI",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Document Management",
+						"path" : "editor_UI_documents",
+						"version": "1.1"
 
-			{
-				"title" : "User Interfaces",
-				"path"  : "user-interfaces",
-				"version"  : "1.0"
+					},
+					{
+						"title" : "Editing Area",
+						"path" : "editor_UI_editing",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Property Panel",
+						"path" : "editor_UI_properties",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Timeline",
+						"path" : "editor_UI_timeline",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Publishing to Xcode",
+						"path" : "editor_UI_xcode",
+						"version": "1.1"
+					},
+				]
 			},
+			{				
+				"title" : "SpriteBuilder's Visual Editing Capabilities",
+				"path" : "editor_visual",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Option Click on the Timeline",
+						"path" : "editor_visual_option",
+						"version": "1.1"
 
+					},
+					{
+						"title" : "The Grid System",
+						"path" : "editor_visual_grid",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Guides and Sticky Notes",
+						"path" : "editor_visual_guides",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Snapping",
+						"path" : "editor_visual_snapping",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "Key Classes and Concepts",
+				"path" : "editor_keys",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "The Internal Structure of a Game",
+						"path" : "editor_keys_structure",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Nodes",
+						"path" : "editor_keys_nodes",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "Update Loop",
+						"path" : "editor_keys_loop",
+						"version": "1.1"
+
+					},					
+					{
+						"title" : "CCAction",
+						"path" : "editor_keys_action",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "CCPhysicsBody",
+						"path" : "editor_keys_physics",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "CCResponder/CCNode",
+						"path" : "editor_keys_responder",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "CCB Files: The Building Blocks of a Game",
+				"path" : "editor_ccb",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Creating CCB files",
+						"path" : "editor_ccb_create",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Sub ccb files",
+						"path" : "editor_ccb_sub",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Scene CCB",
+						"path" : "editor_ccb_scene",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Node CCB",
+						"path" : "editor_ccb_node",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Layer CCB",
+						"path" : "editor_ccb_layer",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Sprite CCB",
+						"path" : "editor_ccb_sprite",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Particels CCB",
+						"path" : "editor_ccb_particles",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "Working with the Node Library",
+				"path" : "editor_node",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Node",
+						"path" : "editor_node_node",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Sub File",
+						"path" : "editor_node_sub",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Physics Node",
+						"path" : "editor_node_physics",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Physics Pivot Joint",
+						"path" : "editor_node_pivot",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Physics Distance Joint",
+						"path" : "editor_node_distance",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Physics Spring Joint",
+						"path" : "editor_node_spring",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Color Node",
+						"path" : "editor_node_color",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Gradient Node",
+						"path" : "editor_node_gradient",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Sprite/Sprite 9 Slice",
+						"path" : "editor_node_sprite",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Particle System",
+						"path" : "editor_node_particle",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Label TTF/Label Bm",
+						"path" : "editor_node_label",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Button",
+						"path" : "editor_node_button",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Text Field",
+						"path" : "editor_node_text",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Slider",
+						"path" : "editor_node_slider",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Scroll View",
+						"path" : "editor_node_scroll",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Box Layout",
+						"path" : "editor_node_box",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "Animations and Movement",
+				"path" : "editor_animation",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Editing the Timeline",
+						"path" : "editor_animation_timeline",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Multiple Animation Timelines",
+						"path" : "editor_animation_multiple",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Chaining Animation Timelines",
+						"path" : "editor_animation_chaining",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "Audio on the Timeline",
+				"path" : "editor_audio",
+				"version": "1.1",
+			},
+			{				
+				"title" : "Callback Functions",
+				"path" : "editor_callback",
+				"version": "1.1",
+			},
+			{				
+				"title" : "Physics",
+				"path" : "editor_physics",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "What a Physics Engine Does",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Physics in SpriteBuilder",
+						"path" : "editor_physics_sb",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Collision Detection",
+						"path" : "editor_physics_collision",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Object Boundaries",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Initializing Joints",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Pivot Joints",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Distance Joints",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Spring Joints",
+						"path" : "editor_physics_does",
+						"version": "1.1"
+
+					}
+				]
+			}
+		],
+		"xcode":[
+			{				
+				"title" : "Connocting SpriteBuilder to Xcode",
+				"path" : "xcode_connect",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Custom Classes and Code Connections",
+						"path" : "xcode_connect_classes",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Custom Properties",
+						"path" : "xcode_connect_properties",
+						"version": "1.1"
+
+					}
+				]
+			},
+			{				
+				"title" : "Lifecycles, Update Cycles, Event Listeners and Callbacks",
+				"path" : "xcode_cycles",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Scene Lifecycle",
+						"path" : "xcode_cycles_scene",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Listening for Events/Callbacks",
+						"path" : "xcode_cycles_listening",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Receiving Touches",
+						"path" : "xcode_cycles_touches",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "User Interfaces",
+						"path" : "xcode_cycles_ui",
+						"version": "1.1"
+					}
+				]
+			},
+			{				
+				"title" : "The Nested Structure of Nodes",
+				"path" : "xcode_nested",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Adding/removing a child",
+						"path" : "xcode_nested_child",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "z-ordering",
+						"path" : "xcode_nested_z",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Relative Coordinate Systems",
+						"path" : "xcode_nested_coordinates",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Load CCB Files in Code",
+						"path" : "xcode_nested_ccb",
+						"version": "1.1"
+					}
+				]
+			},
+			{				
+				"title" : "Animation",
+				"path" : "xcode_animation",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Principles of Animation",
+						"path" : "xcode_animation_principles",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Animation Pairs and Sequences",
+						"path" : "xcode_animation_sequences",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Triggering Animation in Code",
+						"path" : "xcode_animation_trigger",
+						"version": "1.1"
+
+					},					
+				]
+			},
+			{				
+				"title" : "Physics in Code",
+				"path" : "xcode_physics",
+				"version": "1.1",
+				"children": [
+					{
+						"title" : "Joints in Code",
+						"path" : "xcode_physics_joints",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Collision Detection",
+						"path" : "xcode_physics_collision",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Rotation and Coordinate Systems",
+						"path" : "xcode_physics_coordinates",
+						"version": "1.1"
+
+					},
+					{
+						"title" : "Defining Physical Boundaries",
+						"path" : "xcode_physics_boundaries",
+						"version": "1.1"
+
+					},				
+				]
+			},
+			{				
+				"title" : "Cocos2D Audio",
+				"path" : "xcode_audio",
+				"version": "1.1"
+			},
+			{				
+				"title" : "Cocos2D Scene Managment",
+				"path" : "xcode_scene",
+				"version": "1.1"
+			}
+		],
+		"advanced":[
 			{
 				"title" : "Particle Effects",
-				"path"  : "particle-effects",
-				"version"  : "1.0"
-			},
-
-			{
-				"title" : "Physics",
-				"path"  : "physics",
-				"version"  : "1.0",
-				"children": 
-		    		[
-		                {
-		                	"title" : "Physics in SpriteBuilder",
-		                	"path"  : "physics-spritebuilder",
-		                	"version"  : "1.1"
-		                },
-						{	"title" : "Physics in Code",
-		                	"path"  : "physics-code",
-		                	"version"  : "1.0"	
-		                },
-
-		                {	"title" : "Collision Detection",
-		                	"path"  : "physics-collision-detection",
-		                	"version"  : "1.0"	
-		                },
-		                {	"title" : "Joints",
-		                	"path"  : "physics-joints",
-		                	"version"  : "1.1"	
-		                }
-		            ]	
-			},
-
-			{
-				"title" : "Audio",
-				"path"  : "audio",
-				"version"  : "1.0"
+				"path" : "advanced_particles",
+				"version": "1.1"
 			},
 			{
-				"title" : "Custom Rendering / Drawing",
-				"path" : "customrendering",
-				"version" : "1.1"
+				"title" : "Localization in SpriteBuilder",
+				"path" : "advanced_localization",
+				"version": "1.1"
+			},
+			{
+				"title" : "Custom Rendering and Drawing in Cocos2D 3.1",
+				"path" : "advanced_rendering",
+				"version": "1.1"
+			}
+		],
+		"developer":[
+			{
+				"title" : "Creating Node Plug-ins",
+				"path" : "advanced_nodeplugins",
+				"version": "1.1"
+			},
+			{
+				"title" : "Creating Export Plug-ins",
+				"path" : "advanced_exportplugins",
+				"version": "1.1"
+			},
+			{
+				"title" : "CCB File Format",
+				"path" : "advanced_ccbformat",
+				"version": "1.1"
+			},
+			{
+				"title" : "CCBi File Format",
+				"path" : "advanced_ccbi",
+				"version": "1.1"
+			}
+		],
+		"resources":[
+			{
+				"title" : "Tutorials",
+				"path" : "resources_tutorials",
+				"version": "1.1"
+			},
+			{
+				"title" : "Cocos2D API Documentation",
+				"path" : "resources_api",
+				"version": "1.1"
+			},
+			{
+				"title" : "The Chipmunk Physics Engine",
+				"path" : "resources_chipmunk",
+				"version": "1.1"
+			},
+			{
+				"title" : "OpenGL",
+				"path" : "resources_opengl",
+				"version": "1.1"
+			},
+			{
+				"title" : "SpriteBuilder Release Notes",
+				"path" : "resources_sb_release",
+				"version": "1.1"
+			},
+			{
+				"title" : "Cocos2D Release Notes",
+				"path" : "resources_cc_release",
+				"version": "1.1"
 			}
 		]
+	}
 }
