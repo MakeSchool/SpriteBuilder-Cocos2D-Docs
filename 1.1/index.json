@@ -374,25 +374,25 @@
 					},
 					{
 						"title" : "Initializing Joints",
-						"path" : "editor_physics_does",
+						"path" : "editor_physics_joint",
 						"version": "1.1"
 
 					},
 					{
 						"title" : "Pivot Joints",
-						"path" : "editor_physics_does",
+						"path" : "editor_physics_pivot",
 						"version": "1.1"
 
 					},
 					{
 						"title" : "Distance Joints",
-						"path" : "editor_physics_does",
+						"path" : "editor_physics_distance",
 						"version": "1.1"
 
 					},
 					{
 						"title" : "Spring Joints",
-						"path" : "editor_physics_does",
+						"path" : "editor_physics_spring",
 						"version": "1.1"
 
 					}
