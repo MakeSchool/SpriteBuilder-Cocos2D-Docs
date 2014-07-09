@@ -110,6 +110,11 @@
 						"path" : "editor_visual_snapping",
 						"version": "1.1"
 
+					},
+					{
+						"title": "Zoom",
+						"path": "editor_visual_zoom",
+						"version": "1.1"
 					}
 				]
 			},
@@ -229,6 +234,12 @@
 
 					},
 					{
+						"title" : "Physics Joints",
+						"path" : "editor_node_joints",
+						"version": "1.1"
+
+					},
+					{
 						"title" : "Physics Pivot Joint",
 						"path" : "editor_node_pivot",
 						"version": "1.1"
@@ -266,7 +277,7 @@
 					},
 					{
 						"title" : "Particle System",
-						"path" : "editor_node_particle",
+						"path" : "editor_node_particles",
 						"version": "1.1"
 
 					},
@@ -401,7 +412,7 @@
 		],
 		"xcode":[
 			{				
-				"title" : "Connocting SpriteBuilder to Xcode",
+				"title" : "Connecting SpriteBuilder to Xcode",
 				"path" : "xcode_connect",
 				"version": "1.1",
 				"children": [
@@ -547,11 +558,6 @@
 			}
 		],
 		"advanced":[
-			{
-				"title" : "Particle Effects",
-				"path" : "advanced_particles",
-				"version": "1.1"
-			},
 			{
 				"title" : "Localization in SpriteBuilder",
 				"path" : "advanced_localization",

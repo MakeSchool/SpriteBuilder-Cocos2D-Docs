@@ -11,7 +11,7 @@
 
     Affected by gravity/allow rotation - Determine how a physical body will respond under the influence of gravity or rotation.
 
-    Density/Friction/Elasticity - Allow you to set the internal properties of the object which the physics engine can then apply to its interaction with other physics bodies.
+    Density/Friction/Elasticity - Allow you to set the internal properties of the object which the physics engine can then apply to its interaction with other physics bodies.  Mass of an object is automatically calculated using the density of the body and the area outlined by the physics body.
 
     Collision Type/Categories/Masks - I have no idea what these do
 
