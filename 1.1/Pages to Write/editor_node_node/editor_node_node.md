@@ -1,1 +1,0 @@
-One of the primary uses of the basic node is to lump other nodes together - equivelent to a folder structure
