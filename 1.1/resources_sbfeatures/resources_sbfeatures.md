@@ -1,0 +1,71 @@
+#SpriteBuilder Resources
+The following is an alphabatized list of SpriteBuilder functionality with links to the appropriate portions of the documentation:
+
+-Adding a child node
+-Animation
+-Animation: Triggering from code
+-Audio
+-Blending
+-Box Layout
+-Button
+-Callback Functions
+-Chipmunk Physics Engine
+-Code Connections
+-CCB Files
+-CCB File Format
+-CCBi File Format
+-CCAction
+-CCPhysicsBody
+-CCResponder
+-Color Node 
+-Creating a new SB project
+-Custom Properties
+-Custom Rendering and Drawing
+-Document Managment
+-Editing Area
+-Export Plugins
+-Guides and Sticky Notes
+-Gradient Node
+-Grid System
+-Label TTF/Label BM
+-Layer CCB
+-Listening for Events/Callbacks
+-Localization
+-Nodes
+-Node CCB
+-Node Plug-ins
+-OpenGL
+-Option Click
+-Particels CCB
+-Particle System
+-Physics: Collision Detection
+-Physics: Engine
+-Physics: Joints
+-Physics: Object Boundaries
+-Physics: Distance Joint
+-Physics: Node
+-Physics: Pivot Joint
+-Physics: Spring Joint
+-Physics: SpriteBuilder
+-Property Panel
+-Publishing to Xcode
+-Receiving Touches
+-Relative Coordinates
+-Removing a Child node
+-Scene CCB
+-Scene Lifecycle
+-Scroll View
+-Slider
+-Sprite CCB
+-Sprite/Sprite 9 Slice Node
+-Snapping
+-Sub CCB Files
+-Text Field
+-Timeline
+-Timeline: Chaining
+-Timeline: Multiple
+-Tutorials
+-Update Loop
+-User Interface
+-Zoom
+-Z ordering

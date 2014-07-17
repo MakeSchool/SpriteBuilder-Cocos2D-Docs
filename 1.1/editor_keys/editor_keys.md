@@ -1,0 +1,3 @@
+#An Introduction to Key Classes and Concepts
+
+With an understanding of how interact with SpriteBuilder, it is now important to understand how the games you will build with it are designed and function.  These sections will cover how Cocos2D games are structured and the update loop that drives them, as well as provide a guided introduction to the fundamental Cocos2D classes that underpin every aspect of a Cocos2D game.
