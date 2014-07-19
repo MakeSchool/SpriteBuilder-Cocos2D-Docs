@@ -1,7 +1,5 @@
-{    "content":{
-	
-		"overview": [
-			{
+{    "content":[
+				{
 				"title" : "Getting Started with SpriteBuilder and Cocos2D",
 				"path" : "overview",
 				"version": "1.1",
@@ -21,7 +19,12 @@
 							"title": "The Cocos2D Update Cycle",
 							"path" : "overview_update",
 							"version": "1.1"
-						},						
+						},		
+						{
+							"title": "Working with Nodes",
+							"path" : "overview_nodes",
+							"version": "1.1"
+						},					
 						{
 							"title": "Working with Actions",
 							"path" : "overview_actions",
@@ -38,9 +41,7 @@
 							"version": "1.1"
 						}
 					]
-			}
-		],
-		"editor":[
+			},
 			{
 				"title" : "Create a New Project with SpriteBuilder",
 				"path" : "editor_new",
@@ -414,9 +415,7 @@
 
 					}
 				]
-			}
-		],
-		"xcode":[
+			},
 			{				
 				"title" : "Connecting SpriteBuilder to Xcode",
 				"path" : "xcode_connect",
@@ -478,14 +477,14 @@
 
 					},
 					{
-						"title" : "z-ordering",
-						"path" : "xcode_nested_z",
+						"title" : "Relative Coordinate Systems",
+						"path" : "xcode_nested_coordinates",
 						"version": "1.1"
 
 					},
 					{
-						"title" : "Relative Coordinate Systems",
-						"path" : "xcode_nested_coordinates",
+						"title" : "z-ordering",
+						"path" : "xcode_nested_z",
 						"version": "1.1"
 
 					},
@@ -561,9 +560,7 @@
 				"title" : "Cocos2D Scene Managment",
 				"path" : "xcode_scene",
 				"version": "1.1"
-			}
-		],
-		"advanced":[
+			},
 			{
 				"title" : "Localization in SpriteBuilder",
 				"path" : "advanced_localization",
@@ -573,9 +570,7 @@
 				"title" : "Custom Rendering and Drawing in Cocos2D 3.1",
 				"path" : "advanced_rendering",
 				"version": "1.1"
-			}
-		],
-		"developer":[
+			},
 			{
 				"title" : "Creating Node Plug-ins",
 				"path" : "advanced_nodeplugins",
@@ -595,9 +590,7 @@
 				"title" : "CCBi File Format",
 				"path" : "advanced_ccbi",
 				"version": "1.1"
-			}
-		],
-		"resources":[
+			},
 			{
 				"title" : "Tutorials",
 				"path" : "resources_tutorials",
