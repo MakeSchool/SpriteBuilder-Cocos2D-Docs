@@ -1,3 +1,8 @@
+
+#Joints
+
+Joints are used to connect physics bodies with each other.  SpriteBuilder 1.1 introduces the ability to create joints visually.
+
 ##Initializing Joints
 
 SpriteBuilder has three types of joints available in the Node Library:
@@ -10,7 +15,6 @@ To make a connection between two bodies simply drag the appropriate node from th
 ![image](connect.gif)
 
 Note: In order to make a connection between two bodies they must both be the child of a CCPhysicsNode and they must both have physics enabled.
-
 
 ##Properties of All Joints:
 

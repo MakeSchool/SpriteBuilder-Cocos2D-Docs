@@ -11,5 +11,5 @@ connectedSpringJointWithBodyA:bodyB:anchorA:anchorB:restLength:stiffness:damping
 
 Joints start working the moment they are created. Joints can be deactivated by calling the invalidate method. Here's an example of how to set up a joint in code:
 
-// create a joint to connect the catapult arm with the catapult
-_catapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_catapultArm.physicsBody bodyB:_catapult.physicsBody anchorA:_catapultArm.anchorPointInPoints];
+	// create a joint to connect the catapult arm with the catapult
+	_catapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_catapultArm.physicsBody bodyB:_catapult.physicsBody anchorA:_catapultArm.anchorPointInPoints];

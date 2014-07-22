@@ -28,7 +28,3 @@ There are two options to handle delta:
 - **Do not multiply with delta**: If the framerate drops the game will slow down
 
 This extensive [discussion](http://www.learn-cocos2d.com/2013/10/game-engine-multiply-delta-time-or-not/) provides some good background information on which option to choose for which game.
-
-
-##Where to go from here
-This concludes the very basic introduction to Cocos2D. The next chapters will describe SpriteBuilder features and how they can be used to create Cocos2D games. After the SpriteBuilder introduction all Cocos2D core features will be discussed in detail in individual chapters.

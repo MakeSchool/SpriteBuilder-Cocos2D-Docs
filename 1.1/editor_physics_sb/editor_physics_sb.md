@@ -1,13 +1,3 @@
-#Setup physics in SpriteBuilder
-
-Basic physics properties can be easily applied within SpriteBuilder. A later chapter will also discuss how to create physics joints in SpriteBuilder.
-
-##Adding a Physics Node
-
-A physics node needs to be added as a parent for any physics object. In SpriteBuilder a physics node can be added directly from the node library:
-
-![image](SpriteBuilder_physicsNode.png)
-
 ##Setting up Physics Bodies
 
 In SpriteBuilder any selected Node can be turned into a physics body:
