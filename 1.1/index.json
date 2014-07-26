@@ -92,13 +92,7 @@
 							"title" : "Nodes",
 							"path" : "editor_keys_nodes",
 							"version": "1.1"
-						},					
-
-						{
-							"title" : "CCResponder/CCNode",
-							"path" : "editor_keys_responder",
-							"version": "1.1"
-						},				
+						},							
 						{
 							"title" : "CCAction",
 							"path" : "editor_keys_action",
@@ -282,11 +276,6 @@
 				"version": "1.1"
 			},
 			{				
-				"title" : "Callback Functions",
-				"path" : "editor_callback",
-				"version": "1.1"
-			},
-			{				
 				"title" : "Physics",
 				"path" : "editor_physics",
 				"version": "1.1",
@@ -364,6 +353,16 @@
 							"version": "1.1"
 						},
 						{
+							"title" : "Connecting Member Variables",
+							"path" : "xcode_connect_member",
+							"version": "1.1"
+						},
+						{
+							"title" : "Callbacks for Interactive Elements",
+							"path" : "xcode_connect_callbacks",
+							"version": "1.1"
+						},
+						{
 							"title" : "Custom Properties",
 							"path" : "xcode_connect_properties",
 							"version": "1.1"
@@ -371,7 +370,7 @@
 					]
 			},
 			{				
-				"title" : "Lifecycles, Update Cycles, Event Listeners and Callbacks",
+				"title" : "Life Cycles and Update Cycles",
 				"path" : "xcode_cycles",
 				"version": "1.1",
 				"children": 
@@ -382,18 +381,13 @@
 							"version": "1.1"
 						},
 						{
-							"title" : "Listening for Events/Callbacks",
-							"path" : "xcode_cycles_listening",
+							"title" : "Cocos2d Scene Managment",
+							"path" : "xcode_cycles_managment",
 							"version": "1.1"
 						},
 						{
 							"title" : "Receiving Touches",
 							"path" : "xcode_cycles_touches",
-							"version": "1.1"
-						},
-						{
-							"title" : "User Interfaces",
-							"path" : "xcode_cycles_ui",
 							"version": "1.1"
 						}
 					]
@@ -482,11 +476,7 @@
 				"path" : "xcode_audio",
 				"version": "1.1"
 			},
-			{				
-				"title" : "Cocos2D Scene Managment",
-				"path" : "xcode_scene",
-				"version": "1.1"
-			},
+
 			{
 				"title" : "Localization in SpriteBuilder",
 				"path" : "advanced_localization",

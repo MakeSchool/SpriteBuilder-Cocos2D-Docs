@@ -15,15 +15,6 @@ Setting up a simple action:
     
 By calling `runAction:` on a `CCNode` and passing an *action* along you make the node the target of that action. In case of the example above, the hero will move to the target position within 1 second. 
 
-##Wrapping and Grouping Actions
-
-Many actions in Cocos2D wrap around other actions and manipulate them, group them or sequence them. Examples:
-
-- **CCActionReverse**: Reverses another action
-- **CCActionSequence**: Runs multiple actions after each other
-
-![image](CCActionSequence.png)
-
 ##Finite, Instant, and Infinite actions
 
 ![image](CCActionHierarchy.png)
@@ -45,11 +36,3 @@ Subclasses of `CCAction`:
 
 In certain cases it is important if finite or infinite actions are used. For example `CCActionReverse` can only take a finite action as a parameter since only actions that have a start and an endpoint can be reversed. `CCActionSequence` is another example for a wrapper action that can only take finite actions.
 
-##Running code from actions
-
-Cocos2D provides two actions that allow running code:
-
-- CCActionCallFunc (uses selectors)
-- CCActionCallBlock (uses blocks)
-
-Most developers use this kinds of actions within a sequence. A common pattern is having a `CCActionSequence` and adding a `CCActionCallFunc` or `CCActionCallBlock` as the last action. This pattern provides a callback for a `CCActionSequence`.

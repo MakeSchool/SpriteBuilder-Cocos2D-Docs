@@ -4,10 +4,10 @@ Although SpriteBuilder is able to setup joints that persist for the entire life 
 
 CCPhysicsJoint provides four class initializer methods to create different joints in code:
 
-connectedPivotJointWithBodyA:bodyB:anchorA:
-connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:
-connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:minDistance:maxDistance:
-connectedSpringJointWithBodyA:bodyB:anchorA:anchorB:restLength:stiffness:damping:
+-connectedPivotJointWithBodyA:bodyB:anchorA:
+-connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:
+-connectedDistanceJointWithBodyA:bodyB:anchorA:anchorB:minDistance:maxDistance:
+-connectedSpringJointWithBodyA:bodyB:anchorA:anchorB:restLength:stiffness:damping:
 
 Joints start working the moment they are created. Joints can be deactivated by calling the invalidate method. Here's an example of how to set up a joint in code:
 
