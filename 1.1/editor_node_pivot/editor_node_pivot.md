@@ -1,4 +1,4 @@
-##Pivot Joint Properties
+#Pivot Joints
 
 The pivot joint has three properties that can be enabled: Spring, Limit and Motor.  Angles are defined in terms of body A, so be sure that if you have a static body it is connected to the joint as point A or else the rest angle and degree limits will not be defined the way they are displayed on screen.
 

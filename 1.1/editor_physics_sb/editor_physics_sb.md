@@ -1,4 +1,4 @@
-##Setting up Physics Bodies
+#Setting up Physics Bodies
 
 In SpriteBuilder any selected Node can be turned into a physics body:
 

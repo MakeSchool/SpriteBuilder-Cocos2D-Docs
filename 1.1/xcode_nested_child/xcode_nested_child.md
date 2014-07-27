@@ -1,4 +1,4 @@
-##Working with children of nodes
+#Working with children of nodes
 Nodes can be added as children of other nodes. This way a node hierarchy is created. 
 
 ###Adding Children

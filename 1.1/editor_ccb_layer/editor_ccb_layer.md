@@ -1,3 +1,5 @@
+#Layer CCBs
+
 When creating a CCB Layer you will be prompted with the ability to enter a content size.  By default this is set to the size of an iPhone5, so the layer would fill an entire scene.  It's ok if you are unsure what the layer size should be when the layer is created - you will be able to alter it later.
 
 [image](layer_create.png)

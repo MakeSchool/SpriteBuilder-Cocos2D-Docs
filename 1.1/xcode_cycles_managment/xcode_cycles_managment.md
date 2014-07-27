@@ -1,4 +1,4 @@
-##Creating a Scene
+#Creating a Scene
 The default SpriteBuilder and Cocos2D projects come with one scene. For most games you will have to create additional scenes. You can either create scenes in SpriteBuilder or in code.
 	
 * Create a Scene CCB-File in SpriteBuilder and load the scene in code utilizing CCBReader:   

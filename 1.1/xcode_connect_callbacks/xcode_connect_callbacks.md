@@ -1,4 +1,4 @@
-##Connecting callbacks for interactive elements
+#Connecting callbacks for interactive elements
 SpriteBuilder and Cocos2D provide a couple of interactive UI elements out of the box, e.g. buttons or sliders. A developer can setup callback methods that shall be called when actions on these UI elements occur. 
 
 Just as the member variable connections the callbacks can be either linked to the *Document Root* or to the *Owner*. 

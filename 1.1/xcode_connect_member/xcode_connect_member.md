@@ -1,5 +1,4 @@
-
-##Connecting member variables
+#Connecting member variables
 
 A second way to connect SpriteBuilder and code is creating member variable connections. This allows a developer to access SpriteBuilder nodes from code. This, for example, can be useful to update the text displayed in a score label from code.
 

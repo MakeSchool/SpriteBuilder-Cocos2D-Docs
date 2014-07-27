@@ -1,3 +1,5 @@
+#Editor CCBs
+
 The Particle System CCB creates a new file with a CCParticleSystem included as the root node.  Since CCParticleSystems cannot take on children, this will be the only node in the file.  For more information about creating particle effects see the section on the Particle System node (link).
 
 ##Templates vs CCBs
