@@ -1,6 +1,4 @@
-
-
-##Changing between devices to see how displayed
+#Changing between devices to see how displayed
 
 Use document-> resolution to switch between iPhone and iPad screen sizes to see how your board looks on each.
 

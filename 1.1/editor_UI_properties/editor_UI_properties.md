@@ -1,5 +1,4 @@
-
-###Inspector
+#Inspector
 
 The first tab of the Detail View (labelled as section 4 in the above image) is the Inspector. Once a node on the stage is selected this panel can be used to to modify many of its properties, like position and color:
 

@@ -8,6 +8,11 @@
 				"children":
 					[
 						{
+							"title": "Basics of Cocos2D",
+							"path" : "cocos2d-started",
+							"version": "1.0"
+						},
+						{
 							"title": "The Cocos2D Update Cycle",
 							"path" : "overview_update",
 							"version": "1.1"
@@ -45,11 +50,16 @@
 				"version": "1.1"
 			},
 			{				
-				"title" : "SpriteBuilder's User Interface",
-				"path" : "editor_UI",
-				"version": "1.1",
+				"title" : "Basics of SpriteBuilder",
+				"path" : "spritebuilder-started",
+				"version": "1.0",
 				"children": 
 					[
+						{
+							"title" : "SpriteBuilder's User Interface",
+							"path" : "editor_UI",
+							"version": "1.1"
+						},
 						{
 							"title" : "Document Management",
 							"path" : "editor_UI_documents",
@@ -276,29 +286,6 @@
 				"version": "1.1"
 			},
 			{				
-				"title" : "Physics",
-				"path" : "editor_physics",
-				"version": "1.1",
-				"children": 
-					[
-						{
-							"title" : "What a Physics Engine Does",
-							"path" : "editor_physics_does",
-							"version": "1.1"
-						},
-						{
-							"title" : "Physics in SpriteBuilder",
-							"path" : "editor_physics_sb",
-							"version": "1.1"
-						},
-						{
-							"title" : "Collision Detection",
-							"path" : "editor_physics_collision",
-							"version": "1.1"
-						}
-					]
-			},
-			{				
 				"title" : "SpriteBuilder Tips and Tricks",
 				"path" : "editor_visual",
 				"version": "1.1",
@@ -444,11 +431,26 @@
 					]
 			},
 			{				
-				"title" : "Physics in Code",
+				"title" : "Physics",
 				"path" : "xcode_physics",
 				"version": "1.1",
 				"children": 
 					[
+						{
+							"title" : "What a Physics Engine Does",
+							"path" : "editor_physics_does",
+							"version": "1.1"
+						},
+						{
+							"title" : "Physics in SpriteBuilder",
+							"path" : "editor_physics",
+							"version": "1.1"
+						},
+						{
+							"title" : "Physics Bodies in SpriteBuilder",
+							"path" : "editor_physics_sb",
+							"version": "1.1"
+						},
 						{
 							"title" : "Joints in Code",
 							"path" : "xcode_physics_joints",
@@ -517,12 +519,6 @@
 				"path" : "resources_api",
 				"version": "1.1"
 			},
-			{
-				"title" : "SpriteBuilder Feature Reference",
-				"path" : "resources_sbfeatures",
-				"version": "1.1"
-			},
-
 			{
 				"title" : "The Chipmunk Physics Engine",
 				"path" : "resources_chipmunk",

@@ -1,4 +1,4 @@
-##Using the update loop to interact with game objects
+#Using the update loop to interact with game objects
 The update loop is often used as an alternative to a `CCAction` for continous game actions.
 If it is preferabale to use a `CCAction` or implement the `update:` method depends strongly on the individual game.
 
