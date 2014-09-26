@@ -20,21 +20,8 @@
 			},
 			{
 		    	"title" : "Create a new project",
-		    	"path"  : "first-project",
-		    	"version" : "1.0",
-		    	"children": 
-		    		[
-		                {
-		                	"title" : "Create a new project with SpriteBuilder",
-		                	"path"  : "first-project-spritebuilder",
-		                	"version"  : "1.0"
-		                },
-						
-						{	"title" : "Create a new project with Xcode",
-		                	"path"  : "first-project-xcode",
-		                	"version"  : "1.0"	
-		                }
-		            ]
+		    	"path"  : "first-project-spritebuilder",
+		    	"version" : "1.2"
 		    },
 			
 			{
