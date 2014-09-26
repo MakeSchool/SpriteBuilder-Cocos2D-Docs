@@ -1,0 +1,220 @@
+{   "content"  :
+		[  
+			{
+				"title" : "Overview",
+				"path"  : "overview",
+				"version"  : "1.0"
+			},
+			{
+				"title" : "What is new in SB 1.2 and Cocos2D 3.2",
+				"path"  : "whatsnew",
+				"version"  : "1.2",
+				"children": 
+		    		[
+		                {
+		                	"title" : "Cocos2D release notes",
+		                	"path"  : "release_notes_cocos2d",
+		                	"version"  : "1.1"
+		                }
+		            ]
+			},
+			{
+		    	"title" : "Create a new project",
+		    	"path"  : "first-project",
+		    	"version" : "1.0",
+		    	"children": 
+		    		[
+		                {
+		                	"title" : "Create a new project with SpriteBuilder",
+		                	"path"  : "first-project-spritebuilder",
+		                	"version"  : "1.0"
+		                },
+						
+						{	"title" : "Create a new project with Xcode",
+		                	"path"  : "first-project-xcode",
+		                	"version"  : "1.0"	
+		                }
+		            ]
+		    },
+			
+			{
+				"title" : "Basics of Cocos2D",
+				"path"  : "cocos2d-started",
+		        "version"  : "1.0",		                	
+
+				"children": 
+		    		[
+		    		    {
+		                	"title" : "Scenes in Cocos2D",
+		                	"path"  : "scenes",
+		                	"version"  : "1.0"
+		                },
+
+		                {
+		                	"title" : "Nodes in Cocos2D",
+		                	"path"  : "nodes",
+		                	"version"  : "1.0"		                	
+		                },
+
+		               {
+			            	"title" : "Cocos2D update loop",
+			            	"path"  : "update-loop",
+			            	"version"  : "1.0"		               	
+		    			}
+		        	]
+			},
+		                        
+		    {
+		    	"title" : "Basics of SpriteBuilder",
+		    	"path"  : "spritebuilder-started",
+		    	"version" : "1.0",
+		    	"children": 
+		    		[
+		                {
+		                	"title" : "SpirteBuilder's User Interface",
+		                	"path"  : "spritebuilder-ui",
+		                	"version"  : "1.0"
+		                },
+
+		                {
+		                	"title" : "Working with ccb files",
+		                	"path"  : "ccb-files",
+		                	"version"  : "1.1"
+		                },
+
+		                {
+		               		"title" : "SpriteBuilder's Grid System",
+		                	"path"  : "spritebuilder-grid",
+		                	"version"  : "1.1"
+		                },
+	
+						{	"title" : "Custom Classes and Code Connections in SpriteBuilder",
+		                	"path"  : "spritebuilder-code",
+		                	"version"  : "1.0"	
+		                },
+
+		                {	"title" : "Custom Properties in SpriteBuilder",
+		                	"path"  : "spritebuilder-custom-properties",
+		                	"version"  : "1.0"	
+		                },
+						{
+							"title" : "Sub ccb files",
+							"path"  : "spritebuilder-sub-ccb",
+							"version"  : "1.0"
+						},
+						{
+							"title" : "Load ccb files in code",
+							"path" : "load-ccb",
+							"version" : "1.0"
+						}, 
+						{
+							"title" : "SpriteBuilder's Timeline",
+							"path" : "spritebuilder-timeline",
+							"version" : "1.0"							
+						},
+						{
+							"title" : "Localization in SpriteBuilder",
+							"path" : "spritebuilder-localization",
+							"version" : "1.0"							
+						}
+		            ]
+		    },
+
+		     {
+		    	"title" : "Working with assets",
+		    	"path"  : "assets",
+		    	"version" : "1.0",
+		    	"children": 
+		    		[
+		                {
+		                	"title" : "Assets in SpriteBuilder",
+		                	"path"  : "assets-spritebuilder",
+		                	"version"  : "1.0"
+		                },
+						
+						{	"title" : "Assets in Cocos2D",
+		                	"path"  : "assets-cocos2d",
+		                	"version"  : "1.0"	
+		                }
+		            ]
+		    },
+		    {
+				"title" : "Working with Sprites",
+				"path"  : "sprites",
+				"version"  : "1.0",
+		    	"children": 
+		    		[						
+						{	"title" : "Sprite Animations in SpriteBuilder",
+		                	"path"  : "sprite-animation-spritebuilder",
+		                	"version"  : "1.0"	
+		                }
+		            ]
+			},
+
+		    {
+				"title" : "Animations & Movements",
+				"path"  : "animations-movements",
+				"version"  : "1.0"	
+			},
+
+			{
+				"title" : "User Interaction",
+				"path"  : "user-interaction",
+				"version"  : "1.1"	
+			},
+
+			{
+				"title" : "User Interfaces",
+				"path"  : "user-interfaces",
+				"version"  : "1.0"
+			},
+
+			{
+				"title" : "Particle Effects",
+				"path"  : "particle-effects",
+				"version"  : "1.0"
+			},
+
+			{
+				"title" : "Physics",
+				"path"  : "physics",
+				"version"  : "1.0",
+				"children": 
+		    		[
+		                {
+		                	"title" : "Physics in SpriteBuilder",
+		                	"path"  : "physics-spritebuilder",
+		                	"version"  : "1.1"
+		                },
+						{	"title" : "Physics in Code",
+		                	"path"  : "physics-code",
+		                	"version"  : "1.0"	
+		                },
+
+		                {	"title" : "Collision Detection",
+		                	"path"  : "physics-collision-detection",
+		                	"version"  : "1.0"	
+		                },
+		                {	"title" : "Joints",
+		                	"path"  : "physics-joints",
+		                	"version"  : "1.1"	
+		                }
+		            ]	
+			},
+			{
+				"title" : "CCEffects",
+				"path"  : "cceffects",
+				"version"  : "1.2"
+			},
+			{
+				"title" : "Audio",
+				"path"  : "audio",
+				"version"  : "1.0"
+			},
+			{
+				"title" : "Custom Rendering / Drawing",
+				"path" : "customrendering",
+				"version" : "1.1"
+			}
+		]
+}
