@@ -41,6 +41,8 @@ You can override the scaling settings for any image in your project: Just drag a
 
 ![image](SpriteBuilder_Override_Scaling.png)
 
+> Note: You can only drop images from Finder into the four image preview fields, you cannot use assets that are already part of your SpriteBuilder project
+
 ##Audio files
 Add sounds to your project by dragging them to the file view. By default, SpriteBuilder will select adequate export options for the sounds (CAF and MP4 for iOS and OGG for Android). You can specify the over all compression settings in the project settings or change them on a per-file basis.
 
