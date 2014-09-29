@@ -8,15 +8,7 @@
 			{
 				"title" : "What is new in SB 1.2 and Cocos2D 3.2",
 				"path"  : "whatsnew",
-				"version"  : "1.2",
-				"children": 
-		    		[
-		                {
-		                	"title" : "Cocos2D release notes",
-		                	"path"  : "release_notes_cocos2d",
-		                	"version"  : "1.1"
-		                }
-		            ]
+				"version"  : "1.2"
 			},
 			{
 		    	"title" : "Create a new project",
@@ -118,7 +110,6 @@
 		                	"path"  : "assets-spritebuilder",
 		                	"version"  : "1.0"
 		                },
-						
 						{	"title" : "Assets in Cocos2D",
 		                	"path"  : "assets-cocos2d",
 		                	"version"  : "1.0"	

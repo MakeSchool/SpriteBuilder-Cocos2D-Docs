@@ -38,7 +38,7 @@ Guides and sticky notes have no effect when loaded into your app but can make it
 
 To create a new guide, drag it out from the bottom or left side ruler. To move it, hold down the command key while dragging it. You can remove a guide by dragging it out of the visible area.
 
-Sticky notes are created by choosing *Add Sticky Note* from the *View* menu. Edit or remove the sticky note by double clicking it.
+Sticky notes are created by choosing *Add Sticky Note* from the *Document* menu. Edit or remove the sticky note by double clicking it.
 
 ## Moving Nodes
 

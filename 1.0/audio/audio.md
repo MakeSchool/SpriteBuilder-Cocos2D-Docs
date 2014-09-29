@@ -8,7 +8,7 @@ The `OALSimpleAudio` class provides multiple convinience methods to play sounds.
 	// access audio object
 	OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
 	// play background sound
-	[audio playBg:@"your_file_name" loop:TRUE];
+	[audio playBg:@"your_file_name" loop:YES];
 
 ##See Also
 

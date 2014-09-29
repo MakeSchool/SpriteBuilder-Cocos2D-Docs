@@ -32,7 +32,7 @@ Particle effects can be loaded just as any other CCB file, using the `CCBReader`
 	// load particle effect and cast CCNode to CCParticleSystem
 	CCParticleSystem *fire = (CCParticleSystem *)[CCBReader load:@"Fire"];
 	// make the particle effect clean itself up, once it is completed
-	fire.autoRemoveOnFinish = TRUE;
+	fire.autoRemoveOnFinish = YES;
 	// place the particle effect on the seals position
 	fire.position = ccp(100,100);
 	// add the particle effect to the scene

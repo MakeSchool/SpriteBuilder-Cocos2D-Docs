@@ -12,3 +12,8 @@ SpriteBuilder 1.2 and Cocos2D 3.2 come with many new features. This page provide
 ##Cocos2D 3.2
 
 - New `CCEffects` API allows developers to create stunning visual effects without writing custom shaders
+
+##Relase Notes:
+
+- [SpriteBuilder 1.2 Release Notes](https://github.com/spritebuilder/SpriteBuilder/wiki/SpriteBuilder-1.2.0)
+- [SpriteBuilder 1.2.1 Relase Notes](https://github.com/spritebuilder/SpriteBuilder/wiki/SpriteBuilder-1.2.1)

@@ -74,7 +74,7 @@ If you want to provide a transition effect for swapping the scene you can use th
 	CCTransition *transition = [CCTransition transitionCrossFadeWithDuration:1.f];
     [[CCDirector sharedDirector] replaceScene:gameplayScene withTransition:transition];
 
-To get an overview of the different available transitions and the transition options, take a look at the Cocos2D class reference for [CCTransition](http://www.cocos2d-iphone.org/api-ref/3.0-rc1/Classes/CCTransition).
+To get an overview of the different available transitions and the transition options, take a look at the Cocos2D class reference for [CCTransition](http://www.cocos2d-swift.org/docs/api/Classes/CCTransition.html).
 
 ###Using the Scene Navigation stack
 Another option instead of replacing scenes is pushing and popping scenes. When you push a new scene, the old scene gets deactivated but remains in a the stack of scenes. When you pop a scene that scene gets removed from the navigation stack and the top most controller of the navigation stack gets presented.

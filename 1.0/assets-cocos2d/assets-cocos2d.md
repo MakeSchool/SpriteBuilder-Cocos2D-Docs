@@ -1,6 +1,6 @@
 #Assets in Cocos2D
 
-When using Cocos2D without SpriteBuilder assets are not autosized. Instead developers need to povide assets in different resolutions. By default Cocos2D uses filename suffixes to identify the assets in the different resoutions. The relevant suffixes are:
+When using Cocos2D without SpriteBuilder assets are not autosized. Instead developers need to provide assets in different resolutions. By default Cocos2D uses filename suffixes to identify the assets in the different resoutions. The relevant suffixes are:
 
 - **no suffix** - default iPhone assets
 - `-hd` (iPhone retina assets)

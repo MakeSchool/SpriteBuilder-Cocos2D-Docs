@@ -8,7 +8,7 @@ This chapter will provide information on adding custom user interaction to a Coc
 
 Any `CCNode` subclass can call following line to activate touch handling:
 
-	self.userInteractionEnabled = TRUE;
+	self.userInteractionEnabled = YES;
 
 > In most cases the user interaction should be enabled in the `onEnter` method.
 
@@ -37,7 +37,7 @@ If you decide to not handle a touch and want to pass it on to the next touch res
 ##Enabling multi touch
 `CCNode` instances in Cocos2D also support multi touch. Multi touch can be activated with the following line:
 
-    self.multipleTouchEnabled = TRUE;
+    self.multipleTouchEnabled = YES;
 
 If multiple touches occur the corresponding touch handling methods will be called multiple times. Touching the screen of a device with three fingers will lead to `touchBegan:` beeing called three times.
 
