@@ -1,4 +1,5 @@
-{"content" : [
+{"_comment" : "This format relies on a tab width of 4 spaces per tab.",	"content" : [
+
 	{"title" : "Test Page",									"path" : "test", 								"version" : "1.3"},
 	{"title" : "Overview",									"path" : "overview", 							"version" : "1.0"},
 	{"title" : "What's New?",								"path" : "whatsnew",							"version" : "1.3"},
@@ -44,4 +45,5 @@
 	{"title" : "CCEffects",									"path" : "cceffects",							"version" : "1.2"},
 	{"title" : "Audio",										"path" : "audio",								"version" : "1.0"},
 	{"title" : "Custom Rendering / Drawing",				"path" : "customrendering",						"version" : "1.1"}
+
 ]}
