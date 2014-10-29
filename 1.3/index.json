@@ -1,10 +1,12 @@
 {"_comment" : "This format relies on a tab width of 4 spaces per tab.",	"content" : [
 
+	{"title" : "test",										"path" : "test", 								"version" : "1.3"},
+
 	{"title" : "Overview",									"path" : "overview", 							"version" : "1.0", "children":
 	[
-		{"title" : "What's New?",							"path" : "whatsnew",							"version" : "1.3"},
-		{"title" : "Getting Started",						"path" : "overview-getting-started",			"version" : "1.3"},
-		{"title" : "format test",							"path" : "test", 								"version" : "1.3"}
+		{"title" : "What's New",							"path" : "overview-whats-new",					"version" : "1.3"},
+		{"title" : "Requirements",							"path" : "",				"version" : "1.3"},
+		{"title" : "Getting Started",						"path" : "",				"version" : "1.3"}
 	]},
 
 	{"title" : "SpriteBuilder",								"path" : "spritebuilder-started",				"version" : "1.0",	"children": 
@@ -29,7 +31,7 @@
 
 	{"title" : "Cocos2D",									"path" : "cocos2d-started",						"version" : "1.0",	"children": 
 	[
-		{"title" : "Scenes",						"path" : "scenes",								"version" : "1.0"},
+		{"title" : "Scenes",								"path" : "scenes",								"version" : "1.0"},
 		{"title" : "Nodes in Cocos2D",						"path" : "nodes",								"version" : "1.0"},
 		{"title" : "Cocos2D update loop",					"path" : "update-loop",							"version" : "1.0"},
 		{"title" : "Assets in Cocos2D",						"path" : "assets-cocos2d",						"version" : "1.0"},
