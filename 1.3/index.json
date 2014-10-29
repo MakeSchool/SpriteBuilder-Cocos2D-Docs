@@ -13,7 +13,10 @@
 	{"title" : "Basics of SpriteBuilder",					"path" : "spritebuilder-started",				"version" : "1.0",	"children": 
 	[
 		{"title" : "SpirteBuilder's User Interface",		"path" : "spritebuilder-ui",					"version" : "1.0"},
-		{"title" : "Working with ccb files",				"path" : "ccb-files",							"version" : "1.1"},
+		{"title" : "Working with ccb files",				"path" : "ccb-files",							"version" : "1.1",	"children":
+		[
+			{"title" : "Sub ccb files",						"path" : "spritebuilder-sub-ccb",				"version" : "1.0"}
+		]},
 		{"title" : "SpriteBuilder's Grid System",			"path" : "spritebuilder-grid",					"version" : "1.1"},
 		{"title" : "Code Connections",						"path" : "spritebuilder-code",					"version" : "1.0"},
 		{"title" : "Custom Properties",						"path" : "spritebuilder-custom-properties",		"version" : "1.0"},
