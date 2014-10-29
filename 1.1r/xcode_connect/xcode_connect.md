@@ -1,5 +1,0 @@
-#Working with Cocos2D in Xcode
-
-With the firm understanding of how to create and structure the visible assets of a game in SpriteBuilder, it's time to take a peek under the hood at working with Cocos2D in Xcode.  Since SpriteBuilder exposes most of the properties for each Cocos2D class in the properties panel there will not be a large number of new properties, methods or concepts to learn.  However, by using callback functions and functions which are automatically called on events such as scene transitions or collisions it is possible to dynamically alter these properties in a way that is currently not possible in SpriteBuilder.
-
-In this second half of the documentation code connections, programming properties we set in SB by hand, adding additional functionality to structured events like physics collisions.

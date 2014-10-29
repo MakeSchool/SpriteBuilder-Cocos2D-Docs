@@ -1,3 +1,0 @@
-#Receiving User Inputs
-
-Just like every node on screen can be altered using actions, every node on screen comes pre-configured with the ability to recognize and respond to touch interactions from users.  As a result, any node can be configured to trigger code when the user interacts with it, or if these methods are not used the node will simply not respond to user interaction.  Additionally, special interactive elements like text boxes and silder bars can specify a callback function to return the information they take in to for processing.  Nowhere in a Cocos2D game will you have to resort to interpreting user interactions by hand.

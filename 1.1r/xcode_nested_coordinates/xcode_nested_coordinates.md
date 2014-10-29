@@ -1,5 +1,0 @@
-#Children and Relative Coordinates
-
-When making changes to a node in Cocos2D it's improtant to note that all children of the node will be effected.  As a result, if you rotate a node 45 degrees all children will also be rotated 45 degrees.  This is done so that when nodes are used to tie together components of an image (for example the torso, arm and leg of a character), when they are rotated, they rotate together.
-
-As a bi-product, all coordinate systems in Cocos2D are relative to their parent node so that the programmer does not have to track the positions of all relevant nodes manually.  Therefore, if you want to move a dot up and down a characters body, a single up/down motion can be applied whether the parent node is facing straight up right or is at an angle even though these appear to be distinct motions.  This makes properly structuring your parent/child heirarchy important since, if the node is or is not being altered relative to other nodes will make keeping consistent visuals extraordinarily difficult.

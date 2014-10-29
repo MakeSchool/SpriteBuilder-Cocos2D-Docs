@@ -1,2 +1,0 @@
-#Working with Box Layout
-The box layout node serves as a container for other nodes that need to be laid out in evenly spaced rows or columns.  Adding nodes as children of the box layout automtically places them in line with the other children either horizontally or vertically.  It is possible to toggle the box layout between Horizontal and Vertical in the properties panel.  Spacing between each of the nodes can also be set in the properties panel.  This class provides a visual interface for CCLayoutBox.

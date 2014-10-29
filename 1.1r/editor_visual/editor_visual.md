@@ -1,3 +1,0 @@
-#Interacting with SpriteBuilder
-
-SpriteBuilder provides an easy way to interact with the visual assets of your game using an intuitive drag and drop interface.  In order to make game development as easy as possible a number of tools have been built into SpriteBuilder to make laying out, commenting and viewing the visual assets of the project easier.    This section of the documentation will provide you with an introduction to these tools to help you get the most out of SpriteBuilder.

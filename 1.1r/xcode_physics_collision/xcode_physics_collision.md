@@ -1,3 +1,0 @@
-#Collision Delegate
-
-Cocos2D specifies delegate methods for handeling collisions between two bodies.  These methods allow you to programmatically modify the two bodies and the way they collide in ways that the physics engine will not process the collision by default.  The CollisionBegin and CollisionSeperate methods are called once each, when the two bodies first start colliding and after they seperate, and can be used to setup or resolve the collision in different ways.  The other two methods, CollisionPreSolve and CollisionPostSolve are called each timestep before and after the physics solver (respectively).  Using these methods it is possible to create an infinite variety of collision behaviour.

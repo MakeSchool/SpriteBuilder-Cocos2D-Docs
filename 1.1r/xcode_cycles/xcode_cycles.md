@@ -1,5 +1,0 @@
-#Tapping into the Power of Cycles
-
-Cocos2D games are built on loops.  After each frame is rendered to the screen, the engine analyzes the states of the objects on screen as well as any user inputs and then proceeds to make calculations to determine what the next frame will look like.  Fortunately, Cocos2D exposes methods which allow programmers to tap into this cycle at a number of different stages in order to monitor and influence the results.  This section will show you how to tap into these methods.
-
-There are also some events which don't happen on a scheduled basis, such as user interactions.  These types of events are hadled through code connections.  When an action occurs on screen a code connection specifies the class and method to call to process the new input.  Additionally, by giving the visual assets instance names  their properties can be accessed through variables of the same name specified in Xcode.This section will also explore how to setup code connections between nodes and Xcode so that their properties can be accessed.

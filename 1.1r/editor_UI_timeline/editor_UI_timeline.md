@@ -1,3 +1,0 @@
-#SpriteBuilder's Timeline
-
-The timeline runs along the bottom of the SpriteBuilder editor.  It gives you access to the node heirarchy and z-ordering, allows you to construct animations, and control visibility of objects on screen.    Selecting one of the arrows on a node reveals the individual properties of the node which can be altered for animation purposes including scale, position, rotation, visibility and skew. 

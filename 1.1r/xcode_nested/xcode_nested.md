@@ -1,5 +1,0 @@
-#Why the Node Tree Matters
-
-In Cocos2D the visual assets are structured in a tree format.  The root node for any scene contains "children" such as the background, foreground, characters.  Each of these children may in turn have their own children, creating an inverted tree.  However, this structure is not solely important from the perspective of organizing work.  Cocos2D uses the tree structure to determine factors such as the render order for nodes, and how to apply transitions and coordinate systems.
-
-In SpriteBuilder this structuring is handled automatically using the timeline heirarchy.  In Xcode, heirarchy is determined when nodes are initialized.  To add a node to the scene the addChild method must be called on an existing CCNode.  As a result, every CCNode has built in methods for adding/removing children and accessing information about their parents/children.
