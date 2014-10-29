@@ -1,0 +1,3 @@
+#Sprite CCBs
+
+A CCB Sprite file has a CCSprite as its base node.  As a result, there is no content size setting for a CCB Sprite file.  Since it is possible to directly drag images onto a scene, this type of file is ideal for linking multiple related sprites together (e.g. a character sprite may be broken into multiple limbs which can be layered within the CCB file) and creating animations on sprites that can be instantiated.

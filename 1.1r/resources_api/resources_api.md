@@ -1,0 +1,5 @@
+#Resources: Cocos2D API
+
+![image](cocos2d-logo.png)
+
+In addition to the Cocos2D implementation introductions provided throughout this userguide, there is also a full API for Cocos2D for users implementing games that require a great deal of code.  The full API for Cocos2D can be found [here.](https://www.cocos2d-swift.org/docs/api)

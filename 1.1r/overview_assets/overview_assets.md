@@ -1,0 +1,5 @@
+#Managing Assets
+
+An asset for a game is any non-code file that you load in to bring your game to life.  This includes graphics files, bitmaped texts, and audio files.  As games grow they can accumulate a large number of assets, and as a result storing assets in logical locations can save a lot of search time, trying to locate the image or sound you need.  Additionally, in order to get an asset into a game, at some point you need to load it in by referencing its location in your game's folder structure.  To save yourself the headache of having to re-write all of these asset references later, it's a good idea to put a logical asset structure in place early during the development process.
+
+If you are inexperienced with asset managment, SpriteBuilder can help.  SpriteBuilder has a built in document managment window where you can visually keep track of where your assets are being stored, and re-organize them easily if the need arrises.  It also has filtering by filetype and previews so that you can locate assets quickly.  Advanced features like automatic sprite sheet generation and automatic image sizing help to eliminate additional asset overhead.

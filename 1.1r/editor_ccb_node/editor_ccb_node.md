@@ -1,0 +1,3 @@
+#Node CCBs
+
+A Node CCB is a template CCB file in which pretty much anything that can be built in SpriteBuilder can be stored.  It has a CCNode as its base node, but does not have any of the restrictions of a scene.  It is possible to simulate any of the other CCB file types from a CCB node by altering content size and nodes underneath, however it is better to use the pre-configured templates since they lock out additional functionality and promote good habbits regarding data encapsulation.
