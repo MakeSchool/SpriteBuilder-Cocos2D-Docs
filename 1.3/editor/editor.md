@@ -22,4 +22,4 @@ In general the workflow with SpriteBuilder will look like this:
 
 When the game is run from Xcode, a component called `CCBReader` will read all the .ccb files from the SpriteBuilder project and create Cocos2D Scenes and Nodes out of them. This is a visualization of how SpriteBuilder and Xcode projects work together:
 
-![image](../_images/editor/publishing-workflow.png)
+![image](../_images/editor/publish-workflow-diagram.png)

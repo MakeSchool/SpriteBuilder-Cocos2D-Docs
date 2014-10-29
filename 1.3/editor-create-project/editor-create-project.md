@@ -9,11 +9,11 @@ SpriteBuilder is a tool available on the Mac AppStore. [Download the latest vers
 
 Create a new project by opening SpriteBuilder and selecting *File > New > Project...*
 
-![image](../_images/editor/new-project.png)
+![image](../_images/editor/file-new-project-menu.png)
 
 Choose a name for your new project. Choose a name for your new project. After you create the project the folder structure should look similar to this:
 
-![image](../_images/editor/filesystem.png)
+![image](../_images/editor/finder-spritebuilder-package-structure.png)
 
 SpriteBuilder created a new folder (*Projectname*.spritebuilder). Inside that folder SpriteBuilder created a new Xcode project (*Projectname*.xcodeproj).
 You can now edit your game in SpriteBuilder and in the corresponding Xcode project.

@@ -7,7 +7,7 @@ I most cases each scene in a game created with SpriteBuilder is represented by i
 ## Creating ccb files
 A new ccb file can be created by selecting *New > File...* from the *File* menu.
 
-![image](../_images/editor/create-new-ccb.png)
+![image](../_images/editor/file-new-ccb-dialog.png)
 
 SpriteBuilder supports five different types of ccb-files.
 
@@ -34,7 +34,7 @@ When loaded into your app, the zOrder of your nodes will be numbered from 0 to (
 ## Guides and Sticky Notes
 Guides and sticky notes have no effect when loaded into your app but can make it easier to align objects or save comments for other developers or designers working in the ccb-file.
 
-![image](../_images/editor/sticky-notes.png)
+![image](../_images/editor/sticky-notes-example.png)
 
 To create a new guide, drag it out from the bottom or left side ruler. To move it, hold down the command key while dragging it. You can remove a guide by dragging it out of the visible area.
 
