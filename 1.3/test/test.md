@@ -2,6 +2,16 @@
 
 This page is a test. Do not look at it. It will receive you Augenkrebs. Jaaa.
 
+Video Test
+360p
+<iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/k47Gi8KSJQs?rel=0" frameborder="0" allowfullscreen></iframe>
+
+480p
+<iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/k47Gi8KSJQs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+720p
+<iframe width="1280" height="720" src="//www.youtube-nocookie.com/embed/k47Gi8KSJQs?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+
 # <a name="anchor1"></a>First Heading
 Headings can be created either by one or more leading # characters or by underlining the heading with hyphens (h2) or equal signs for H1 (three or more: --- === ).
 Heading 1

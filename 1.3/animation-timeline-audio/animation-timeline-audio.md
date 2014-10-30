@@ -2,7 +2,7 @@
 Audio can be added to the timeline directly on top of animations, allowing you to syncronize soud effects or music with the motion of your sprites.  Audio can either be dragged directly onto the timeline from the library, or an audio event can be created by option-clicking on the timeline, and then selecting the audio source in the event's pop-up box.
 
 
-![image](select_audio.png)
+![image](../_images/editor/timeline-edit-audio-keyframe.png)
 
 Note:  Once a sound file is triggered it will play through to the end.  This means that if your sound file is longer than your animation timeline and you have your timeline set to loop the sound will trigger for a second time before the first sound finishes.
 

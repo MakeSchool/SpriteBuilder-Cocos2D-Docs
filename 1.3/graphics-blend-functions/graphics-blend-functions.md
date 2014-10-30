@@ -3,7 +3,7 @@
 When putting two layers on top of each other OpenGL provides the ability to control how the two sources of pixel information are merged together and rendered on the screen.  This gives you the ability to select whether the top image is completely opaque and the renderer should ignore all of the original pixel information, or if the two layers should be belded together, allowing the color of the image to be influenced by the background it is on or to create effects like a glow around an image.  SpriteBuilder provides a visual interface for setting these rendering options at the bottom of the properties panel for appropriate node types(color nodes, gradient nodes, particle effects).
 
 
-![img](color_panel.png)
+![img](../_images/editor/node-color-blendfunc-properties.png)
 
 When placing two pixels on top of each other, the final color that is rendered to the screen is determined using the following equation:
 

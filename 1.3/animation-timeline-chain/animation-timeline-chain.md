@@ -2,7 +2,7 @@
 
 Chaining timelines together causes one timeline to begin as soon as the previous timeline ends  SpriteBuilder makes chaining timelines simple using a dropdown menu at he bottom of the timeline.
 
-![image](chain_timeline.png)
+![image](../_images/editor/timeline-chain-context-menu.png)
 
 #####
 Is there equivelent of timeline animations in Cocos2D/is there a way to initiate timelines in code?
