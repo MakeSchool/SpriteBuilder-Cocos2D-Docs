@@ -1,84 +1,94 @@
 {"_comment" : "This format relies on a tab width of 4 spaces per tab.",	"content" : [
 
-	{"title" : "test",										"path" : "test",									"version" : "1.3"},
-	{"title" : "to do",										"path" : "todo",									"version" : "1.3"},
-
-	{"title" : "Overview",									"path" : "overview", 								"version" : "1.3", "children":
+	{"title" : "Welcome",									"path" : "getting-started/intro",							"version" : "1.3",	"children": 
 	[
-		{"title" : "What's New",							"path" : "overview-whats-new",						"version" : "1.3"},
+		{"title" : "Getting Started",						"path" : "getting-started/getting-started",					"version" : "1.3"},
+		{"title" : "First Steps: SpriteBuilder",			"path" : "getting-started/getting-started-spritebuilder",	"version" : "1.3"},
+		{"title" : "First Steps: Cocos2D",					"path" : "getting-started/getting-started-cocos2d",			"version" : "1.3"}
+	]},
+
+	{"title" : "to do",										"path" : "_private/todo",									"version" : "1.3"},
+	{"title" : "test",										"path" : "_private/test",									"version" : "1.3"},
+
+	{"title" : "Android",									"path" : "android/intro",									"version" : "1.3",	"children": 
+	[
+	]},
+
+	{"title" : "Developer Reference",						"path" : "develop/intro",									"version" : "1.3",	"children": 
+	[
+		{"title" : "Creating Node Plugins",					"path" : "develop/plugin-node",								"version" : "1.3"},
+		{"title" : "Creating Export Plugins",				"path" : "develop/plugin-export",							"version" : "1.3"},
+		{"title" : "CCB File Format",						"path" : "develop/file-format-ccb",							"version" : "1.3"},
+		{"title" : "CCBi File Format",						"path" : "develop/file-format-ccbi",						"version" : "1.3"}
+	]},
+
+
+
+
+	{"title" : "Overview (old)",							"path" : "_old/overview/intro",							"version" : "1.3", "children":
+	[
+		{"title" : "What's New",							"path" : "_old/overview/whats-new",						"version" : "1.3"},
 		{"title" : "Learn SpriteBuilder",					"path" : "",				"version" : "1.3"},
 		{"title" : "Getting Started",						"path" : " ",				"version" : "1.3"},
-		{"title" : "Scenes",								"path" : "overview-scene-graph",					"version" : "1.3"},
-		{"title" : "Nodes",									"path" : "overview-nodes",							"version" : "1.3"}
+		{"title" : "Scenes",								"path" : "_old/overview/scene-graph",					"version" : "1.3"},
+		{"title" : "Nodes",									"path" : "_old/overview/node",							"version" : "1.3"}
 	]},
 
-	{"title" : "SpriteBuilder",								"path" : "editor",									"version" : "1.3",	"children": 
+	{"title" : "SpriteBuilder (old)",						"path" : "_old/editor/intro",							"version" : "1.3",	"children": 
 	[
-		{"title" : "User Interface Overview",				"path" : "editor-user-interface-overview",			"version" : "1.3"},
-		{"title" : "Create a new project",					"path" : "editor-create-project",					"version" : "1.3"},
-		{"title" : "Basics",								"path" : "editor-basics",							"version" : "1.3"},
-		{"title" : "Grid Editing",							"path" : "editor-grid-editing",						"version" : "1.3"},
-		{"title" : "Code Connections",						"path" : "editor-code-connections",					"version" : "1.3"},
-		{"title" : "Custom Properties",						"path" : "editor-custom-properties",				"version" : "1.3"},
-		{"title" : "Prefabs / Templates",					"path" : "editor-prefabs",							"version" : "1.3"},
-		{"title" : "Managing Assets",						"path" : "editor-assets",							"version" : "1.3"},
-		{"title" : "Localization",							"path" : "editor-localization",						"version" : "1.3"}
+		{"title" : "User Interface Overview",				"path" : "_old/editor/user-interface-overview",			"version" : "1.3"},
+		{"title" : "Create a new project",					"path" : "_old/editor/create-project",					"version" : "1.3"},
+		{"title" : "Basics",								"path" : "_old/editor/basics",							"version" : "1.3"},
+		{"title" : "Grid Editing",							"path" : "_old/editor/grid-editing",					"version" : "1.3"},
+		{"title" : "Code Connections",						"path" : "_old/editor/code-connections",				"version" : "1.3"},
+		{"title" : "Custom Properties",						"path" : "_old/editor/custom-properties",				"version" : "1.3"},
+		{"title" : "Prefabs / Templates",					"path" : "_old/editor/prefabs",							"version" : "1.3"},
+		{"title" : "Managing Assets",						"path" : "_old/editor/assets",							"version" : "1.3"},
+		{"title" : "Localization",							"path" : "_old/editor/localization",					"version" : "1.3"}
 	]},
 
-	{"title" : "Cocos2D",									"path" : "cocos2d",									"version" : "1.3",	"children": 
+	{"title" : "Cocos2D (old)",								"path" : "_old/cocos2d/intro",							"version" : "1.3",	"children": 
 	[
-		{"title" : "Scheduling Updates",					"path" : "cocos2d-scheduling",						"version" : "1.3"},
-		{"title" : "Managing Assets",						"path" : "cocos2d-assets",							"version" : "1.3"},
-		{"title" : "Loading SpriteBuilder documents",		"path" : "cocos2d-load-ccb",						"version" : "1.3"}, 
-		{"title" : "Working with Sprites",					"path" : "cocos2d-sprites",							"version" : "1.3"},
-		{"title" : "Touch Events",							"path" : "cocos2d-touch-events",					"version" : "1.3"}
+		{"title" : "Scheduling Updates",					"path" : "_old/cocos2d/scheduling",						"version" : "1.3"},
+		{"title" : "Managing Assets",						"path" : "_old/cocos2d/assets",							"version" : "1.3"},
+		{"title" : "Loading SpriteBuilder documents",		"path" : "_old/cocos2d/load-ccb",						"version" : "1.3"}, 
+		{"title" : "Working with Sprites",					"path" : "_old/cocos2d/sprites",						"version" : "1.3"},
+		{"title" : "Touch Events",							"path" : "_old/cocos2d/touch-events",					"version" : "1.3"}
 	]},
 
-	{"title" : "Physics",									"path" : "physics",									"version" : "1.3",	"children": 
+	{"title" : "Physics (old)",								"path" : "_old/physics/intro",							"version" : "1.3",	"children": 
 	[
-		{"title" : "Physics Editing",						"path" : "physics-editing-overview",				"version" : "1.3"},
-		{"title" : "Editing Joints",						"path" : "physics-editing-joints",					"version" : "1.3"},
-		{"title" : "Physics Programming",					"path" : "physics-programming-overview",			"version" : "1.3"},
-		{"title" : "Collision Handling",					"path" : "physics-handling-collisions",				"version" : "1.3"}
+		{"title" : "Physics Editing",						"path" : "_old/physics/editing-overview",				"version" : "1.3"},
+		{"title" : "Editing Joints",						"path" : "_old/physics/editing-joints",					"version" : "1.3"},
+		{"title" : "Physics Programming",					"path" : "_old/physics/programming-overview",			"version" : "1.3"},
+		{"title" : "Collision Handling",					"path" : "_old/physics/handling-collisions",			"version" : "1.3"}
 	]},
 
-	{"title" : "Animation",									"path" : "animation",								"version" : "1.3",	"children": 
+	{"title" : "Animation (old)",							"path" : "_old/animation/intro",						"version" : "1.3",	"children": 
 	[
-		{"title" : "Timeline",								"path" : "animation-timeline",						"version" : "1.3"},
-		{"title" : "Timeline Create Animation",				"path" : "animation-timeline-create",				"version" : "1.3"},
-		{"title" : "Timeline Animation Chain",				"path" : "animation-timeline-chain",				"version" : "1.3"},
-		{"title" : "Timeline Multiple Animations",			"path" : "animation-timeline-multiple-timelines",	"version" : "1.3"},
-		{"title" : "Timeline Audio",						"path" : "animation-timeline-audio",				"version" : "1.3"},
-		{"title" : "Sprite Frame Animation",				"path" : "animation-spriteframes",					"version" : "1.3"},
-		{"title" : "Animation Actions",						"path" : "animation-actions",						"version" : "1.3"}
+		{"title" : "Timeline",								"path" : "_old/animation/timeline",						"version" : "1.3"},
+		{"title" : "Timeline Create Animation",				"path" : "_old/animation/timeline-create",				"version" : "1.3"},
+		{"title" : "Timeline Animation Chain",				"path" : "_old/animation/timeline-chain",				"version" : "1.3"},
+		{"title" : "Timeline Multiple Animations",			"path" : "_old/animation/timeline-multiple-timelines",	"version" : "1.3"},
+		{"title" : "Timeline Audio",						"path" : "_old/animation/timeline-audio",				"version" : "1.3"},
+		{"title" : "Sprite Frame Animation",				"path" : "_old/animation/spriteframes",					"version" : "1.3"},
+		{"title" : "Animation Actions",						"path" : "_old/animation/actions",						"version" : "1.3"}
 	]},
 
-	{"title" : "Graphics",									"path" : "graphics",								"version" : "1.3",	"children": 
+	{"title" : "Graphics (old)",							"path" : "_old/graphics/intro",							"version" : "1.3",	"children": 
 	[
-		{"title" : "Particle Effects",						"path" : "graphics-particle-effects",				"version" : "1.3"},
-		{"title" : "Built-in Shader Effects",				"path" : "graphics-builtin-shader-effects",			"version" : "1.3"},
-		{"title" : "Blend Modes",							"path" : "graphics-blend-functions",				"version" : "1.3"},
-		{"title" : "Custom Drawing Code",					"path" : "graphics-custom-rendering",				"version" : "1.3"}
+		{"title" : "Particle Effects",						"path" : "_old/graphics/particle-effects",				"version" : "1.3"},
+		{"title" : "Built-in Shader Effects",				"path" : "_old/graphics/builtin-shader-effects",		"version" : "1.3"},
+		{"title" : "Blend Modes",							"path" : "_old/graphics/blend-functions",				"version" : "1.3"},
+		{"title" : "Custom Drawing Code",					"path" : "_old/graphics/custom-rendering",				"version" : "1.3"}
 	]},
 
-	{"title" : "Audio",										"path" : "audio",									"version" : "1.3",	"children": 
-	[
-	]},
-
-	{"title" : "GUI",										"path" : "gui",										"version" : "1.3",	"children": 
-	[
-		{"title" : "GUI Programming",						"path" : "gui-programming-overview",				"version" : "1.3"}
-	]},
-
-	{"title" : "Android",									"path" : "android",									"version" : "1.3",	"children": 
+	{"title" : "Audio (old)",								"path" : "_old/audio/intro",							"version" : "1.3",	"children": 
 	[
 	]},
 
-	{"title" : "Developer Reference",						"path" : "develop",									"version" : "1.3",	"children": 
+	{"title" : "GUI (old)",									"path" : "_old/gui/intro",								"version" : "1.3",	"children": 
 	[
-		{"title" : "Creating Node Plugins",					"path" : "develop-plugin-node",						"version" : "1.3"},
-		{"title" : "Creating Export Plugins",				"path" : "develop-plugin-export",					"version" : "1.3"},
-		{"title" : "CCB File Format",						"path" : "develop-file-format-ccb",					"version" : "1.3"},
-		{"title" : "CCBi File Format",						"path" : "develop-file-format-ccbi",				"version" : "1.3"}
+		{"title" : "GUI Programming",						"path" : "_old/gui/programming-overview",				"version" : "1.3"}
 	]}
 ]}
