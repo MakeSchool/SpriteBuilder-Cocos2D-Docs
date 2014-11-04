@@ -2,6 +2,9 @@
 
 This page is a test. Do not look at it. It will receive you Augenkrebs. Jaaa.
 
+GIF Test
+![gif animation](../_images/test.gif "just trying an animated gif here")
+
 Video Test
 360p
 <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/k47Gi8KSJQs?rel=0" frameborder="0" allowfullscreen></iframe>
