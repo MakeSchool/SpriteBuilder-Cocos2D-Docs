@@ -5,13 +5,22 @@ This is the reference documentation for [SpriteBuilder](http://www.spritebuilder
 Game Engine | Game Editor | Official Guide | Tutorials
 :-: | :-: | :-: | :-:
 [![Cocos2D-Swift](intro-cocos2d-logo.png "Cocos2D-Swift")](http://www.cocos2d-swift.org) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeGamesWith.Us](intro-mgwu-logo.png "Make Games With Us: Online Academy")](https://www.makegameswith.us/home/)
-Cocos2D-Swift | SpriteBuilder | Learn SpriteBuilder | Make Games With Us
+Cocos2D-Swift | SpriteBuilder | Learn SpriteBuilder | MakeGamesWithUs
 
 ### SpriteBuilder Show-Reel
-<p/><iframe width="568" height="320" src="//www.youtube-nocookie.com/embed/7dyj6NkM8Ew?rel=0&amp;showinfo=0" 
+
+<iframe width="568" height="320" src="//www.youtube-nocookie.com/embed/7dyj6NkM8Ew?rel=0&amp;showinfo=0" 
 frameborder="0" allowfullscreen></iframe> 
 
 ### Cocos2D Demos
-<iframe width="480" height="360" src="//www.youtube-nocookie.com/embed/eGLy7hQLiOM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="480" height="360" src="//www.youtube-nocookie.com/embed/bvzviDoJE-Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="360" src="//www.youtube-nocookie.com/embed/eGLy7hQLiOM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> |
+- |
+Deep Water Dragon |
+
+<p/>
+
+<iframe width="480" height="360" src="//www.youtube-nocookie.com/embed/bvzviDoJE-Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> |
+- |
+Galactic Guardian |
+

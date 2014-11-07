@@ -1,8 +1,8 @@
 # First Steps with SpriteBuilder
 
-## Installing SpriteBuilder
+## Install SpriteBuilder
 
-You can download SpriteBuilder for free from the [Mac App Store](https://itunes.apple.com/app/spritebuilder/id784912885). The latest beta versions are available on the [SpriteBuilder Beta download page](http://www.spritebuilder.com/beta). Experienced developers may want to [build SpriteBuilder from sources]().
+You can download SpriteBuilder for free from the [Mac App Store](https://itunes.apple.com/app/spritebuilder/id784912885). The latest beta versions are available on the [SpriteBuilder Beta download page](http://www.spritebuilder.com/beta). Experienced developers may want to [build SpriteBuilder from sources](#!/docs/1.3/develop/spritebuilder-build-from-sources).
 
 There are no installation or setup steps necessary. Cocos2D-Swift is already included in the SpriteBuilder download.
 
@@ -48,4 +48,6 @@ To build and run the project from Xcode click the `Run` button in the upper left
 
 If all went well the app should build without errors and launch on the selected deployment location.
 
-![First Project in Simulator](getting-started-spritebuilder-first-project-simulator.png "Congratulations, you've successfully launched your first SpriteBuilder app!")
+![First Project in Simulator](getting-started-spritebuilder-first-project-simulator.png "Your first SpriteBuilder app")
+
+Congratulations, you've successfully created your first SpriteBuilder app!

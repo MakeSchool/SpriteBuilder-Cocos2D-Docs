@@ -1,9 +1,13 @@
 # To Do List & Planning
 
+# TODO
 - overview/intro
 	- update logos
 	- update showreel
+- SB User Interfce Overview: enhance file view context menu with links to articles describing the non-obvious items (ie make smart sprite sheet)
 
+
+# OUTLINE
 
 https://www.youtube.com/watch?v=7dyj6NkM8Ew
 

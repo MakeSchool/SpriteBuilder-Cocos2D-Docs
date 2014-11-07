@@ -18,7 +18,24 @@ NOTE yellowish table contents
 CAUTION reddish table contents
 </td></tr></table>
 
+<table border="0"><tr><td width="48px" bgcolor="#ffa0ff"><strong>TBD</strong></td><td bgcolor="#ffa0ff">
+note to self
+</td></tr></table>
 
+image frame
+
+![fsdf](../android/intro-android-example.png) |
+- |
+description |
+
+There's another paragraph here.
+This one uses HTML (ouch!):
+
+<table border="1"><tr><td >
+<img src="http://localhost/~gaminghorror/md/1.3/android/intro-android-example.png" title="This is a tooltip." />
+</td></tr><tr><td bgcolor="#f9f9f9"><span style="font-size:smaller">
+Image description goes here ...
+</span></td></td></tr></table>
 
 ## Older Tests
 
@@ -149,8 +166,14 @@ Left         | Center        | Right
 Let 2 spaces at the end of a line to do a  
 line break
 
-Text attributes *italic*, **bold**, `monospace`,~~monospace~~, `monospace` .
+Text attributes;
+ 
+*italic*, **bold**, 
+
+`monospace`, ~~monospace~~ , `monospace`
+
 *Kursiv*, **Fett** und ***Fett kursiv*** bzw.
+
 _Kursiv_, __Fett__ und ___Fett kursiv___	Kursiv, Fett und Fett kursiv bzw.
 
 This --- will add a line:
