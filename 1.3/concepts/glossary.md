@@ -26,10 +26,14 @@
 - Label
 - Tilemap
 - Timeline
+	- Timeline Cursor, Timestamp
 - Keyframe
 - Node Tree (Hierarchy, Scene/Node Graph)
 - Sprite Sheet (Texture Atlas)
 - Anchor Point
+- Sibling Node
+- Parent Node
+- Children
 
 
 #### Not specifically CC/SB
