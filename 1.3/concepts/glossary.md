@@ -3,7 +3,12 @@
 ## A-Z
 
 - **Action** - Refers to all classes that inherit from [CCAction](http://www.cocos2d-swift.org/docs/api/Classes/CCAction.html). Actions animate properties of a node over time. Actions can be in a sequence and repeated. Actions can be used to time events using [CCActionDelay](http://www.cocos2d-swift.org/docs/api/Classes/CCActionDelay.html) and [CCActionCallBlock](http://www.cocos2d-swift.org/docs/api/Classes/CCActionCallBlock.html) or [CCActionCallFunc](http://www.cocos2d-swift.org/docs/api/Classes/CCActionCallFunc.html) in a [CCActionSequence](http://www.cocos2d-swift.org/docs/api/Classes/CCActionSequence.html).
+- **CCB** - Refers to a SpriteBuilder document (text file, plist format) which carries the `.ccb` file extension. CCB stands for **C**o**C**os**B**uilder. The SpriteBuilder project used to be known as CocosBuilder.
+- **CCBi** - A SpriteBuilder document in compressed binary form optimized for in-app loading. The *i* stands for b*i*nary.
 - **Director** - The core class in Cocos2D. Acts as view controller, manages the render loop, presents scenes.
+- **Document** - SpriteBuilder document. See also **CCB**.
+- **Interpolation** - A technique that changes the value of a property between two keyframes over time. Interpolation can be linear, instance or one of the SpriteBuilder easing modes.
+- **Keyframe** - A point in the Timeline which marks the values a node should have at that point. The property value is interpolated between two keyframes depending on the interpolation mode.
 - **Layer** - A concept of grouping nodes together so that an entire branch of the node hierarchy can be animated separately from other layers. Most nodes can be used as the parent node for a layer but typically [CCNode](http://www.cocos2d-swift.org/docs/api/Classes/CCNode.html) is chosen for this task. Used to refer to the no longer existing class CCLayer.
 - **Loading Scene** - Refers to the concept of introducing an intermediary scene ("loading scene") whose only purpose is to load the next scene's assets after the incoming transition has ended. Once the next scene's assets are loaded, the loading scene presents (optionally with a transition) the next scene. The loading scene would typically display a loading icon or text, which may or may not be animated.
 - **Node** - Refers to the [CCNode](http://www.cocos2d-swift.org/docs/api/Classes/CCNode.html) class but is often used to refer to any class inheriting from CCNode: sprites, labels, etc all inherit from CCNode. Most nodes display content on the screen.
@@ -13,7 +18,7 @@
 - **View** - Refers to the Cocos2D view. It can refer to either the CCGLView or CCMetalView classes in iOS apps, or the CCGLView class in OS X apps.
 
 ## Todo
-- CCB (CCBi, SpriteBuilder Document File)
+
 - GUI
 - Particle
 - Physics (World)

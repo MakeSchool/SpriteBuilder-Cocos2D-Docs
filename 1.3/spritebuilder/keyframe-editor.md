@@ -1,6 +1,6 @@
 # Keyframe Editor
 
-The Keyframe Editor encompasses the right side of the Timeline view. This is where you edit Keyframes and easing modes. The Keyframe Editor is also tied into the Node Tree as each node can have several properties animated.
+The Keyframe Editor encompasses the right side of the Timeline view. This is where you edit Keyframes and Interpolation Mode. The Keyframe Editor is also tied into the Node Tree as each node can have several properties animated.
 
 ![Keyframe Editor Overview](keyframe-editor-overview.png "Keyframe Editor Overview")
 
@@ -8,7 +8,7 @@ If the expand/collapse triangle of a node is pointing up, that node shows a list
 
 The Keyframes are empty rectangles, slightly higher than wide. A smaller keyframe is drawn for each node above any time stamp that has a Keyframe on it. This smaller keyframe, located within the Visible bar, just indicates whether the node has any keyframes at all if the node is collapsed (triangle arrow pointing down).
 
-Between any two Keyframes of the same property a pink bar is drawn: the Keyframe Segment. Right-clicking a Keyframe Segment allows you to set the segment's easing mode. The easing mode is indicated by a small gradient at the end of either or both sides of the Keyframe Segment.
+Between any two Keyframes of the same property a pink bar is drawn: the Keyframe Segment. Right-clicking a Keyframe Segment allows you to set the segment's Interpolation Mode. The Interpolation Mode is indicated by a small gradient at the end of either or both sides of the Keyframe Segment.
 
 ## Non-Animatable Nodes / Properties
 
@@ -55,19 +55,18 @@ Each Sound Effect Keyframe also requires double-clicking it to assign one of the
 
 Loading or trying to play a Timeline animation in the app with a Callbacks Keyframe without a selector or a Sound Effects Keyframe without an assigned sound effect will cause a runtime error.
 
-## Easing Modes
+## Interpolation Mode
 
-Once you have two Keyframes of the same property, a Keyframe Segment (pink bar) is drawn between the two keyframes. Right-clicking the Keyframe Segment brings up the Easing Mode context menu:
+Once you have two Keyframes of the same property, a Keyframe Segment (pink bar) is drawn between the two keyframes. Right-clicking the Keyframe Segment brings up the Interpolation Mode context menu:
 
-![Easing Modes](keyframe-editor-easing-menu.png "Easing Mode context menu")
+![Interpolation Modes](keyframe-editor-easing-menu.png "Interpolation Mode context menu")
 
-Easing modes affect how the animated property is interpolated between two Keyframes. *In* hereby refers to the beginning of the segment whereas *Out* refers to the end of the segment. Logically *In/Out* applies the easing to both the beginning and the end of the segment equally.
+Interpolation affects how the animated property is changed over time between two Keyframes. *In* hereby refers to the beginning of the segment whereas *Out* refers to the end of the segment. Logically *In/Out* applies the easing to both the beginning and the end of the segment equally.
 
-The default easing mode is linear. Instant will disable interpolation, instead the property is changed instnatly once the time stamp reaches the given Keyframe.
+The default Interpolation Mode is linear. Instant will disable interpolation, instead the property is changed instantly once the time stamp reaches the given Keyframe.
 
-The Easing Setting is only available once either Ease or Elastic easing modes is selected. The Easing Settings allows you to change the Rate (Ease) and Period (Elastic) properties.
+The *Easing Setting* is only available once either *Ease* or *Elastic* Interpolation Mode is selected. The *Easing Settings* allows you to change the *Rate* (Ease) and *Period* (Elastic) properties.
 
-### Easing Modes by Example
+### Interpolation by Example
 
-![Easing Example](keyframe-editor-easing-example-animation.gif "Easing Mode Example Animation")
-
+![Interpolation Example](keyframe-editor-easing-example-animation.gif "Interpolation Mode Example Animation")

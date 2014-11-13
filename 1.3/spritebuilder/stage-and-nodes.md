@@ -2,7 +2,7 @@
 
 The Stage shows a visual representation of the currently active SpriteBuilder document. SpriteBuilder documents are often referred to as "CCB files" because they carry the `.ccb` extension.
 
-![The Stage](user-interface-overview-stage.png)
+![The Stage](stage-and-nodes-overview.png)
 
 ## Working with the Stage
 
@@ -30,7 +30,7 @@ Extras: what does it do?
 To pan the stage, keep the Command (Cmd) key pressed, then left-click and drag with your mouse to move the Stage contents.
 
 <table border="0"><tr><td width="48px" bgcolor="#d0f0ff"><strong>Info</strong></td><td bgcolor="#d0f0ff">
-Alternative panning controls are [currently in discussion](https://github.com/spritebuilder/SpriteBuilder/issues/1075).
+Alternative panning controls are [currently being discussed](https://github.com/spritebuilder/SpriteBuilder/issues/1075).
 </td></tr></table>
 
 

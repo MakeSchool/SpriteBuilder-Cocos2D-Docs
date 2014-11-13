@@ -1,3 +1,0 @@
-# Inspector and Templates
-
-

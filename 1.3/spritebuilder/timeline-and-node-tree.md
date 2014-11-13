@@ -7,7 +7,7 @@ The Timeline itself is divided into three areas. The "Timeline Toolbar" (top) wi
 1. **Playback Controls** allow you to rewind, step through, stop, play and toggle looping the current Timeline.
 2. **Zoom and Duration** will change the Keyframe Editor's zoom level and the duration of the current Timeline.
 3. **Node Tree** presents the document's nodes in a hierarchical view, plus additional entries for Callback and Sound Effect Keyframes (top) as well as listing the document's Physics Joints (bottom) and giving you access to more Timeline menu items at the very top (Timeline Selection) and bottom (chained Timeline).
-4. **Keyframe Editor** is used to add, move and remove Keyframes and to edit the easing modes of Keyframe Segments (pink bars).
+4. **Keyframe Editor** is used to add, move and remove Keyframes and to edit the Interpolation Mode of Keyframe Segments (pink bars).
 
 ## Node Tree
 

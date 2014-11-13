@@ -24,7 +24,9 @@
 		{"title" : "Stage and Nodes",						"path" : "spritebuilder/stage-and-nodes",					"version" : "1.3"},
 		{"title" : "Timeline and Node Tree",				"path" : "spritebuilder/timeline-and-node-tree",			"version" : "1.3"},
 		{"title" : "Keyframe Editor",						"path" : "spritebuilder/keyframe-editor",					"version" : "1.3"},
-		{"title" : "Inspector and Templates",				"path" : "spritebuilder/inspector-and-templates",			"version" : "1.3"}
+		{"title" : "Inspector Tabs",						"path" : "spritebuilder/inspector",							"version" : "1.3"},
+		{"title" : "Node Properties",						"path" : "spritebuilder/node-properties",					"version" : "1.3"},
+		{"title" : "Code Connections",						"path" : "spritebuilder/code-connections",					"version" : "1.3"}
 	]},
 
 	{"title" : "Android",									"path" : "android/intro",									"version" : "1.3",	"children": 
