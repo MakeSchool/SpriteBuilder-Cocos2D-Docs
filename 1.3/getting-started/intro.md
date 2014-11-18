@@ -7,6 +7,11 @@ Game Engine | Game Editor | Official Guide | Tutorials
 [![Cocos2D-Swift](intro-cocos2d-logo.png "Cocos2D-Swift")](http://www.cocos2d-swift.org) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeGamesWith.Us](intro-mgwu-logo.png "Make Games With Us: Online Academy")](https://www.makegameswith.us/home/)
 Cocos2D-Swift | SpriteBuilder | Learn SpriteBuilder | MakeGamesWithUs
 
+<p/>
+<table border="0"><tr><td width="48px" bgcolor="#ffa0ff"><strong>Write in Progress</strong></td><td bgcolor="#ffa0ff">
+This documentation is currently work in progress. It will be updated frequently over the coming weeks.
+</td></tr></table>
+
 ### SpriteBuilder Show-Reel
 
 <iframe width="568" height="320" src="//www.youtube-nocookie.com/embed/7dyj6NkM8Ew?rel=0&amp;showinfo=0" 
