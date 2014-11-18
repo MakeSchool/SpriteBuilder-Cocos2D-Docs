@@ -5,6 +5,24 @@
 	- update logos
 	- update showreel
 - SB User Interfce Overview: enhance file view context menu with links to articles describing the non-obvious items (ie make smart sprite sheet)
+- packages
+
+# Cocos2D API Ref TODO
+
+- block action: example, local var scope, link to blocks programming guide
+- call func: example
+- general overhaul:
+	- CCAnimationManager
+	- CCAppDelegate
+	- CCRender*
+- verify up-to-date & accurate:
+	- CCPhysics*
+	- CCResponder
+	- CCNode
+- consider removing:
+	- CCPointArray
+	- CCNodeMultiplexer
+- check enums are NS_ENUM and properly documented	
 
 
 # OUTLINE

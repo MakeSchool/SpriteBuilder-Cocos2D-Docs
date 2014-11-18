@@ -24,8 +24,120 @@ A common mistake is to incorrectly assume that the selector has to be implemente
 
 ## Edit Custom Properties
 
-...
+The **Edit Custom Properties** button appears on the Item Code Connections and Item Properties tabs once the *Custom Class* field contains a string. 
 
-<table border="0"><tr><td width="48px" bgcolor="#ffa0ff"><strong>TBD</strong></td><td bgcolor="#ffa0ff">
-write stuff here
+<table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
+SpriteBuilder does not verify whether the Custom Class actually exists in the project, nor does it verify whether the given properties exist as either @property or instance variable (ivar) in said class. A mistake in either will lead to a runtime error or will be logged as a warning when loading the document.
 </td></tr></table>
+
+Clicking the **Edit Custom Properties** button brings up the Custom Properties Editor.
+
+![Custom Properties Editor](code-connections-custom-properties-dialog.png "Custom Properties Editor")
+
+The **[+]** and **{-]** buttons allow you to add or remove a custom property. You can change the name of the property by double-clicking its name in the *Property name* column. The property value can also be edited by double-clicking an entry in the *Value* column.
+
+The property *Type* can be set to *Bool*, *Float*, *Int* or *String*. There is a way to also support CGPoint and other types, see the *Custom Property Conversion* heading below.
+
+After clicking *Done* the custom properties list in both the Item Code Connections and Item Properties tabs will be updated. See the screenshot at the top for an example (7). You can then edit the property values on the Inspector. You only need to use the Custom Properties Editor if you want to add, remove or rename properties.
+
+### Custom Property Conversion
+
+You may have noticed the absence of `CGPoint`, `CGSize` and `CGRect` properties and some other built-in types (ie `double`). You may want to be able to edit these and other property types in SpriteBuilder. This is all possible by encoding the values as strings and implementing a specific method in the node's custom class.
+
+In this example, the following custom properties were added to the *MainScene.ccb* document:
+
+![String for Structs](code-connections-custom-properties-dialog-strings-for-structs.png "Custom Properties Editor with struct types encoded as strings")
+
+The Core Graphics (CG) types use the string format with curly braces supported by built-in CG conversion methods, for instance: `CGPoint p = CGPointFromString(@"{100, 200}")`. For other types it is up to you to correctly decode the values from the supplied string.
+
+The custom class of MainScene.ccb is named `MainScene` and its header includes the following custom struct and properties:
+
+```
+#import "CCNode.h"
+
+typedef struct
+{
+	double doubleValue1;
+	double doubleValue2;
+	double doubleValue3;
+} MyStruct;
+
+@interface MainScene : CCNode
+
+@property CGPoint myCustomCGPoint;
+@property CGSize myCustomCGSize;
+@property CGRect myCustomCGRect;
+@property MyStruct myCustomStruct;
+
+@end
+```
+
+In the MainScene.m implementation you then need to implement the `setValue:forKey:` method because all property assignments run through that Key-Value-Coding (KVC) method. [Learn more about KVC](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueCoding/Articles/BasicPrinciples.html#//apple_ref/doc/uid/20002170-178791).
+
+Every time this method gets called, you check whether the `key` string equals one of the custom property names. If it does, you apply the proper conversion from NSString to the desired data type. The following example purposefully omits any sanity checks for brevity. In your own you should certainly add assertions that test whether the given value has the proper type and format.
+
+```
+#import "MainScene.h"
+
+@implementation MainScene
+
+-(void) setValue:(id)value forKey:(NSString *)key
+{
+	if ([key isEqualToString:@"myCustomCGPoint"])
+	{
+		_myCustomCGPoint = CGPointFromString(value);
+	}
+	else if ([key isEqualToString:@"myCustomCGSize"])
+	{
+		_myCustomCGSize = CGSizeFromString(value);
+	}
+	else if ([key isEqualToString:@"myCustomCGRect"])
+	{
+		_myCustomCGRect = CGRectFromString(value);
+	}
+	else if ([key isEqualToString:@"myCustomStruct"])
+	{
+		NSArray* components = [value componentsSeparatedByString:@","];
+		_myCustomStruct.doubleValue1 = [components[0] doubleValue];
+		_myCustomStruct.doubleValue2 = [components[1] doubleValue];
+		_myCustomStruct.doubleValue3 = [components[2] doubleValue];
+	}
+	else
+	{
+		// let the super implementation handle this property assignment
+		[super setValue:value forKey:key];
+	}
+}
+
+-(void) didLoadFromCCB
+{
+	NSLog(@"%@", NSStringFromCGPoint(_myCustomCGPoint));
+	NSLog(@"%@", NSStringFromCGSize(_myCustomCGSize));
+	NSLog(@"%@", NSStringFromCGRect(_myCustomCGRect));
+	NSLog(@"%f, %f, %f", _myCustomStruct.doubleValue1, _myCustomStruct.doubleValue2, 
+	      _myCustomStruct.doubleValue3);
+}
+
+@end
+```
+
+<table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
+Do not forget to call <code>[super setValue:value forKey:key]</code> for any key that you don't handle yourself! Otherwise none of the node's properties would get assigned, including the built-in properties like position, rotation, scale, sprite frame, etc. On the other hand be sure not to call the super implementation if you <strong>do</strong> handle a given key, doing so would result in an infinite recursion (app freezes).
+</td></tr></table>
+
+When running the project with this MainScene class, the Debug Console in Xcode will log something similar to these lines, confirming that KVC is truly awesome:
+
+```
+MyFirstProject[3909:70b] {100, 200}
+MyFirstProject[3909:70b] {123, 456}
+MyFirstProject[3909:70b] {{0, 0}, {960, 640}}
+MyFirstProject[3909:70b] 1.230000, 4.560000, 7.890000
+```
+
+Not surprisingly the output of `NSStringFromCGPoint` for instance is the same string that you fed into `CGPointFromNSString`.
+
+<table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
+If you need to frequently convert a string to one of the CG types it makes sense to create an NSString category. An NSString instance gets the <code>pointValue</code>, <code>sizeValue</code> and <code>rectValue</code> methods sent automatically when CCBReader loads a document. If you implement these methods in a NSString category you can make the conversion from NSString to CG types work automatically without having to implement a <code>setValue:forKey:</code> method in several node's custom classes.</p> You may even be able to support other types where the NSString instance receives the more generic method <code>-(NSValue*)getValue:(void*)buffer</code>. You can ignore the buffer because <code>self</code> represents the string that contains the to be converted string, and all you need to do is to return the appropriate NSValue representation of your data type.
+</td></tr></table>
+
+You can of course do more than just converting the values in the `setValue:forKey:`method. For instance you could assign certain properties to one of the custom class' child nodes. You may want to use a string like `leftLeg.maxAngle` that allows you to look up the node named *leftLeg* and then assign the *maxAngle* value to a NSMutableDictionary that you've previously assigned to each child node's *userObject* property. That way you don't have to create a custom class for every child node in composite nodes - for example a player consisting of separate nodes for its limbs and weapon/armor attachments.

@@ -1,23 +1,24 @@
 # Overview
 
-New users should read [Getting Started with SpriteBuilder](#!/docs/1.3/overview/getting-started-spritebuilder) first to learn how to use the SpriteBuilder editor as a companion for Cocos2D development. 
+New users should read [Getting Started with SpriteBuilder](./overview/getting-started-spritebuilder) first to learn how to use the SpriteBuilder editor as a companion for Cocos2D development. 
 
-If you do not want to use the SpriteBuilder editor at all, you should read the [Getting Started with Cocos2D](#!/docs/1.3/overview/getting-started-cocos2d) article. You will have to write code for everything and import/convert/manage assets manually. This is only advisable for experienced game developers.
+If you do not want to use the SpriteBuilder editor at all, you should read the [Getting Started with Cocos2D](./overview/getting-started-cocos2d) article. You will have to write code for everything and import/convert/manage assets manually. This is only advisable for experienced game developers.
 
 ## Table of Contents
 
 This documentation covers the following topics in alphabetical order. Clicking on a link brings you directly to the main article for each topic.
 
-- [Android](#!/docs/1.3/android/intro) (SpriteBuilder Android Plugin, Apportable)
-- [Animation](#!/docs/1.3/animation/intro) (Timeline, Sprite Frame, Actions)
-- [Audio](#!/docs/1.3/audio/intro) (ObjectAL, Music and Effects playback)
-- [Cocos2D](#!/docs/1.3/cocos2d/intro) (Cocos2d Programming Guide)
-- [Developer Reference](#!/docs/1.3/develop/intro) (Technical Information, Advanced Uses)
+- [Android](./android/intro) (SpriteBuilder Android Plugin, Apportable)
+- [Animation](./_old/animation/intro) (Timeline, Sprite Frame, Actions)
+- [Audio](./_old/audio/intro) (ObjectAL, Music and Effects playback)
+- [Cocos2D](./_old/cocos2d/intro) (Cocos2d Programming Guide)
+- [Concepts](./concepts/intro) (High-Level Concepts, Recommended for Beginners)
+- [Developer Reference](./develop/intro) (Technical Information, Advanced Uses)
 - **Getting Started** [this section] (Concepts and Getting Started guides)
-- [Graphics](#!/docs/1.3/graphics/intro) (Shader and Particle Effects, Custom Rendering)
-- [GUI](#!/docs/1.3/gui/intro) (User Interface Controls)
-- [Physics](#!/docs/1.3/physics/intro) (Physics Simulation, Chipmunk)
-- [SpriteBuilder](#!/docs/1.3/editor/intro) (SpriteBuilder User Guide)
+- [Graphics](./_old/graphics/intro) (Shader and Particle Effects, Custom Rendering)
+- [GUI](./_old/gui/intro) (User Interface Controls)
+- [Physics](./_old/physics/intro) (Physics Simulation, Chipmunk)
+- [SpriteBuilder](./spritebuilder/intro) (SpriteBuilder User Guide)
 
 ## Other Resources
 

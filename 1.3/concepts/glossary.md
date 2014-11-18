@@ -3,6 +3,7 @@
 ## A-Z
 
 - **Action** - Refers to all classes that inherit from [CCAction](http://www.cocos2d-swift.org/docs/api/Classes/CCAction.html). Actions animate properties of a node over time. Actions can be in a sequence and repeated. Actions can be used to time events using [CCActionDelay](http://www.cocos2d-swift.org/docs/api/Classes/CCActionDelay.html) and [CCActionCallBlock](http://www.cocos2d-swift.org/docs/api/Classes/CCActionCallBlock.html) or [CCActionCallFunc](http://www.cocos2d-swift.org/docs/api/Classes/CCActionCallFunc.html) in a [CCActionSequence](http://www.cocos2d-swift.org/docs/api/Classes/CCActionSequence.html).
+- **bpp* stands for "bits per pixel". A 24 bpp texture allows the full color range of 16.7 million colors.
 - **CCB** - Refers to a SpriteBuilder document (text file, plist format) which carries the `.ccb` file extension. CCB stands for **C**o**C**os**B**uilder. The SpriteBuilder project used to be known as CocosBuilder.
 - **CCBi** - A SpriteBuilder document in compressed binary form optimized for in-app loading. The *i* stands for b*i*nary.
 - **Director** - The core class in Cocos2D. Acts as view controller, manages the render loop, presents scenes.

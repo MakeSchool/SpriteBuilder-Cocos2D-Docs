@@ -21,6 +21,7 @@
 	[
 		{"title" : "User Interface Overview",				"path" : "spritebuilder/user-interface-overview",			"version" : "1.3"},
 		{"title" : "Resource Browser",						"path" : "spritebuilder/resource-browser",					"version" : "1.3"},
+		{"title" : "Resource Files",						"path" : "spritebuilder/resource-files",					"version" : "1.3"},
 		{"title" : "Stage and Nodes",						"path" : "spritebuilder/stage-and-nodes",					"version" : "1.3"},
 		{"title" : "Timeline and Node Tree",				"path" : "spritebuilder/timeline-and-node-tree",			"version" : "1.3"},
 		{"title" : "Keyframe Editor",						"path" : "spritebuilder/keyframe-editor",					"version" : "1.3"},
@@ -45,6 +46,7 @@
 
 	{"title" : "to do",										"path" : "_private/todo",									"version" : "1.3"},
 	{"title" : "=== old docs below ===",					"path" : "_private/test",									"version" : "1.3"},
+	{"title" : "=== old docs below ===",					"path" : "_private/marker",									"version" : "1.3"},
 
 
 

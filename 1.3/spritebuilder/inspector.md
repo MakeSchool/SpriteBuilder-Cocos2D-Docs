@@ -19,7 +19,7 @@ On the **Code Connections** tab the Selector and Target properties are only avai
 
 The **Physics** tab is disabled for Sub File nodes and should not be used with the Physics Node. Enabling physics and setting the body type to dynamic will prevent you from adding Keyframes to that node's Timeline.
 
-<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
+<table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
 It is currently possible to enable physics for Sub File and Physics nodes due to a bug, see [this issue](https://github.com/spritebuilder/SpriteBuilder/issues/427).
 </td></tr></table>
 
