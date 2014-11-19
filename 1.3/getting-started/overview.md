@@ -14,7 +14,7 @@ This documentation covers the following topics in alphabetical order. Clicking o
 - [Cocos2D](./_old/cocos2d/intro) (Cocos2d Programming Guide)
 - [Concepts](./concepts/intro) (High-Level Concepts, Recommended for Beginners)
 - [Developer Reference](./develop/intro) (Technical Information, Advanced Uses)
-- **Getting Started** [this section] (Concepts and Getting Started guides)
+- **Getting Started** [this section] (Getting Started guides)
 - [Graphics](./_old/graphics/intro) (Shader and Particle Effects, Custom Rendering)
 - [GUI](./_old/gui/intro) (User Interface Controls)
 - [Physics](./_old/physics/intro) (Physics Simulation, Chipmunk)

@@ -84,17 +84,17 @@ To ensure an action animates at the same speed you need to set the duration base
 
 Actions can easily be over- or misused. This section tries to explain areas where actions are unsuitable or can not be used at all.
 
-### Very Small Durations
+### Very Short Durations
 
-**Actions are unsuitable for very small durations!** To understand this it helps to understand the timing behind actions.
+**Actions are not suitable to run for very short durations.** To understand this it helps to understand the timing behind actions.
 
-Cocos2D updates interval actions at the same rate the screen refreshes, typically 60 frames per second (fps). At 60 fps the minimum duration for an action to complete is `1.0 / 60.0 = 0.0166` seconds. You can not have a duration any lower than this, and duration will be (roughly) a multiple of 0.0166 seconds.
+Cocos2D updates interval actions at the same rate the screen refreshes, typically 60 frames per second (fps). At 60 fps the minimum duration for an action to complete is `1.0 / 60.0 = 0.0166` seconds. Any duration shorter than this will still run for one frame, because an action's duration is (roughly) a multiple of 0.0166 seconds.
 
-For example, if you specify a duration of 0.02 the action will take two frames to complete and will have an effective duration of 0.0333 seconds. Whether you specify a duration of 0.017 or 0.03 will not have any discernible effect on the action, it runs for two frames in both cases. This is why you will only see quantized animation changes for actions that run for very short durations or if you alter the action duration by less than 0.0166.
+For example, if you specify a duration of 0.02 the action will take two frames to complete and will in fact have an effective duration of 0.0333 seconds at 60 fps. Whether you specify a duration of 0.017 or 0.03 will not have any effect on the duration of the action, it runs for two frames in both cases. This is why you will only see quantized animation changes for actions that run for very short durations or where you alter an action's duration by a value less than 0.0166 seconds.
 
-Now a specific problem surfaces if you replace an action every frame, for instance during the `update:` method but it also applies to code that runs in touchesMoved, accelerometer and other events that are usually sent at the same interval as the screen refresh rate.
+Now a specific problem surfaces if you replace an action every frame, for instance during the `update:` method but it also applies to code that runs in **touchesMoved**, **accelerometer** and other **input events** that could be or are sent at the same interval as the screen refresh rate.
 
-In that particular case there may not be enough time for the action to complete, the animation may stutter or freeze altogether because the previous action has already been replaced by a new one without having had the chance to perform its task to begin with. 
+In such cases there may not be enough time for the action to complete because it is being replaced in the next frame already. The animation may stutter or freeze altogether because **the previous action may not have had a chance to perform its task**. 
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
 If a node property changes frequently, and possibly every frame, it's highly recommended and often required to modify the corresponding node property (ie position) directly rather than using an action (ie move). This will also avoid the overhead of creating and deallocating action objects every frame.
@@ -102,23 +102,19 @@ If a node property changes frequently, and possibly every frame, it's highly rec
 
 ### Actions as AI / Gameplay Replacement
 
-Actions are primarily a means to create animations. However in AI or gameplay programming you often need full control over what an actor (typically represented by a node) does in every moment in time. You may often have to change what the actor does, or make decisions based on what the actor currently is doing.
+Actions are primarily a means to create self-sufficient animations. However in AI or gameplay programming you often need full control over what an actor (typically represented by a node) does in every moment in time. You may often have to change what the actor does, or make decisions based on what the actor currently is doing.
 
-Frequently creating and prematurely stopping actions is considered a [code smell](http://en.wikipedia.org/wiki/Code_smell) for misusing Actions as gameplay components. It's not something that's specifically bad per se, but you need to be aware of its potential pitfalls and consequences.
+Frequently creating and prematurely stopping actions can be considered a [code smell](http://en.wikipedia.org/wiki/Code_smell) for misusing Actions as gameplay components. It's not something that's specifically bad per se, it always depends on the context - but you should be aware of its potential pitfalls and consequences.
 
-- Creating and stopping actions frequently, possibly hundreds of times per second altogether, can become a performance issue unless you re-use those actions. Likewise if you have many actions running and need to look them up frequently.
-- Complex game mechanics animated with actions can easily cause mistakes like not stopping certain actions, running actions in parallel that shouldn't run in parallel, or running new actions every frame. This may be difficult to debug.
-- To keep track of a node's intention (where is it going, and why?) you have to keep this state information up to date seperately from the actions whenever you run or stop actions. However actions are a public CCNode API, so even other nodes could run or stop actions without modifying that actor's internal state.
-- Easy to shoot yourself in the foot if you rely on actions to run to completion yet under certain conditions you stop certain or all of a node's actions.
+- Creating and stopping actions frequently, possibly hundreds of times per second altogether, can become a performance issue unless you re-use those actions. Likewise if you have many actions running and request them frequently via *getActionByTag* and similar lookup methods.
+- Complex game mechanics animated with actions are a source of frequent mistakes, like forgetting to stop certain actions, accidentally running actions in parallel that shouldn't run in parallel, assuming actions run to completion when they might be stopped at any time, or interrupting actions so frequently that they don't animate smoothly. Any of this may cause odd results and can be difficult to debug.
+- To keep track of a node's intention (where is it going, and why?) you have to keep this state information up to date seperately from the actions (typically in a node subclass) whenever you run or stop actions. However actions are a public CCNode API, so even other nodes could run or stop actions without modifying the actor's internal state.
+- Somewhat exempt from this recommendation are visual-only actions, for instance those running sprite frame animations, fading or colorizing a node. Typically visual glitches are harmless, for instance if you stop or replace a visual action at the wrong time the node may just have the wrong color. But even visual actions may render a node completely invisible, and thus affecting gameplay.
 
-Somewhat exempt from this recommendation are visual-only actions, for instance those running sprite frame animations, fading or colorizing a node. At worst there may be a visual glitch if you stop or replace such a visual action at the wrong time, but even so it may leave a node in the wrong color or completely invisible.
-
-The general recommendation is to avoid using actions for gameplay logic. Certainly it's easier to run a move action than to integrate a velocity CGPoint every update cycle. But you pay dearly over time as you add more and more actions to run (interruptible) game logic. 
+The general recommendation is to avoid extensive use of actions for gameplay logic. Certainly it's easier to run a move action than to integrate a velocity CGPoint every update cycle. But you pay dearly over time as you add more and more actions to perform (interruptible) game logic. 
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
-The main purpose of action animations is to play them from start to end (or looping indefinitely) to perform a single, self-sufficient animation.
-<p/>
-Every time where you create an action or an action sequence that is intended to be interruptible, or may *have* to be interrupted under certain conditions, should ring alarm bells. Use actions for gameplay with care and look for possible alternatives.
+The main purpose of action animations is to play them from start to end (or looping indefinitely) to perform a single, self-sufficient animation. Use actions for gameplay purposes with care and always look for possible alternatives, even if they may require writing more code.
 </td></tr></table>
 
 ### Move/Rotate Actions conflict with Physics
@@ -126,13 +122,12 @@ Every time where you create an action or an action sequence that is intended to 
 Physics animates and updates a node's position and rotation properties if it has a non-static CCPhysicsBody. A move or rotate action does the same. Now which one should take precedence if both were running at the same time, updating the same properties?
 
 <table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
-*You should not run move or rotate actions on nodes with dynamic physics bodies.* The resulting behavior is undefined and will most likely not be what you want.
+**Do not run move or rotate actions on nodes with dynamic physics bodies.** The resulting behavior is undefined and will most likely not be what you expect.
 </td></tr></table>
 
-You can certainly run move and rotate actions on nodes with static or kinematic bodies. Just not dynamic ones, those you need to consider as "owned by physics" as far as the position and rotation properties are concerned.
+You can certainly run move and rotate actions on nodes with static or kinematic bodies. But **consider dynamic bodies as exclusively controlled (owned) by physics** as far as the position and rotation properties are concerned.
 
-But the problems don't end here. Consider that you are moving a node with a physics body (dynamic or not) by the use of a move action. If the body being moved were dynamic or kinematic, the action will have it ignore any physics collision. But the next time the physics engine updates its internal state, it may try to resolve the collision, countering the movement of the action. 
+But the problems don't end here. Consider that you are moving a node with a physics body (dynamic or otherwise) by the use of a move action. If the body being moved were dynamic or kinematic, the move action will have the node ignore any physics collision. But the next time the physics engine updates its internal state, it may try to resolve the collision, countering the movement of the action. 
 
-Ultimately what you may see is that nodes with physics bodies that are animated with move or rotate actions are able to penetrate or pass through collisions or may never reach the action's intended target position or rotation.
-
+Ultimately what you may see is that nodes with physics bodies that are animated with move or rotate actions are able to penetrate or pass through collisions or may never reach the action's intended target position or rotation. Or they may simply jitter along the edges of a collision, as the action tries to move the node inside and the physics engine tries to move it back outside again.
 
