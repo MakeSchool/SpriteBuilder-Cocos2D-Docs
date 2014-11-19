@@ -168,6 +168,7 @@ https://www.youtube.com/watch?v=7dyj6NkM8Ew
 - customizing the cocos2d GL view (depth buffer, antialiasing, etc)
 - drawing sprites in a grid without black line artifacts
 - what gets drawn when and why? (explain culling, visible vs opacity vs removing)
+- pixel art in spritebuilder (see "Re: Retro" email by Viktor)
 
 ## GUI Articles
 - Editing & Programming GUI controls (one article for every GUI control)
