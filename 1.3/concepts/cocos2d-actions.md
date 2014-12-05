@@ -31,7 +31,7 @@ Most Actions fall in either the Instant or Interval category. Rather than discus
 Running multiple actions via `runAction:` will run those actions in parallel.
 
 <table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
-Two interval actions altering the same node property (ie position) <strong>must not be run in parallel</strong>. A common case being two <i>move</i> actions running at the same time on the same node. The resulting behavior is undefined. Check for such cases if you find action animations freeze, stutter, have timing issues or are not animating to completion.
+Two interval actions altering the same node property (ie position) will perform the sum of the actions, which may or may not be what you want. A common case being two <i>move</i> actions running at the same time on the same node, one moving up, the other to the right - the sum of both movements will move the node in a 45° angle up and right. Check for such cases if you find action animations are not working as expected.
 </td></tr></table>
 
 The **Sequence** action allows you to add multiple actions that run in sequence, one after the other. You can of course run two or more sequences in parallel like regular actions, provided that the interval actions within each sequence can be run in parallel  respectively do not overlap (see *Caution* box above).

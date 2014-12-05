@@ -1,6 +1,46 @@
 # To Do List & Planning
 
 # TODO
+- class ref
+	- ccbreader
+		- related?
+	- ccglview?
+	- cgpointext
+
+- Concepts
+	- physics high-level basics
+- Cocos2d
+	- Scene lifecycle (init, didLoad, onEnter, etc)
+	- update loop, scheduling
+	- creating scenes, presenting scenes, transitions
+	- anchor point example images
+	- add/remove children
+	- input event handling
+	- converting coordinates
+- Physics
+	- basics
+	- creating physics bodies
+	- creating joints
+	- collision events
+- Animation
+	- actions
+	- SB/CC sprite frame animations
+- Graphics
+	- particles
+	- cceffect
+	- sb/cc blend modes
+	- cc custom drawing
+- audio
+- gui
+- android
+- spritebuilder
+	- guides / alignment
+	- grid editing
+	- asset management, publishing targets, proeject settings
+	- localization NSLog(CCBLocalize(@"Welcome to SpriteBuilder"));
+	- ccbreader docs
+
+
 - overview/intro
 	- update logos
 	- update showreel
