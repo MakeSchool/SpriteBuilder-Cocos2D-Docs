@@ -52,74 +52,110 @@ The Core Graphics (CG) types use the string format with curly braces supported b
 
 The custom class of MainScene.ccb is named `MainScene` and its header includes the following custom struct and properties:
 
-```
-#import "CCNode.h"
+#### Objective-C
+	#import "CCNode.h"
 
-typedef struct
-{
-	double doubleValue1;
-	double doubleValue2;
-	double doubleValue3;
-} MyStruct;
+	typedef struct {
+		double doubleValue1;
+		double doubleValue2;
+		double doubleValue3;
+	} MyStruct;
 
-@interface MainScene : CCNode
+	@interface MainScene : CCNode
 
-@property CGPoint myCustomCGPoint;
-@property CGSize myCustomCGSize;
-@property CGRect myCustomCGRect;
-@property MyStruct myCustomStruct;
+	@property CGPoint myCustomCGPoint;
+	@property CGSize myCustomCGSize;
+	@property CGRect myCustomCGRect;
+	@property MyStruct myCustomStruct;
 
-@end
-```
+	@end
+
+#### Swift
+	import Foundation
+
+	class MainScene: CCNode
+	{
+		struct MyStruct {
+    		var doubleValue1 : Double = 0.0
+		    var doubleValue2 : Double = 0.0
+    		var doubleValue3 : Double = 0.0
+		}
+		
+    	var _myCustomCGPoint = CGPointZero
+	    var _myCustomCGSize = CGSizeZero
+    	var _myCustomCGRect = CGRectZero
+	    var _myCustomStruct = MyStruct()
+	    ..
 
 In the MainScene.m implementation you then need to implement the `setValue:forKey:` method because all property assignments run through that Key-Value-Coding (KVC) method. [Learn more about KVC](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueCoding/Articles/BasicPrinciples.html#//apple_ref/doc/uid/20002170-178791).
 
 Every time this method gets called, you check whether the `key` string equals one of the custom property names. If it does, you apply the proper conversion from NSString to the desired data type. The following example purposefully omits any sanity checks for brevity. In your own you should certainly add assertions that test whether the given value has the proper type and format.
 
-```
-#import "MainScene.h"
+#### Objective-C
+	#import "MainScene.h"
 
-@implementation MainScene
+	@implementation MainScene
 
--(void) setValue:(id)value forKey:(NSString *)key
-{
-	if ([key isEqualToString:@"myCustomCGPoint"])
-	{
-		_myCustomCGPoint = CGPointFromString(value);
+	-(void) setValue:(id)value forKey:(NSString *)key {
+		if ([key isEqualToString:@"myCustomCGPoint"]) {
+			_myCustomCGPoint = CGPointFromString(value);
+		} 
+		else if ([key isEqualToString:@"myCustomCGSize"]) {
+			_myCustomCGSize = CGSizeFromString(value);
+		}
+		else if ([key isEqualToString:@"myCustomCGRect"]) {
+			_myCustomCGRect = CGRectFromString(value);
+		}
+		else if ([key isEqualToString:@"myCustomStruct"]) {
+			NSArray* components = [value componentsSeparatedByString:@","];
+			_myCustomStruct.doubleValue1 = [components[0] doubleValue];
+			_myCustomStruct.doubleValue2 = [components[1] doubleValue];
+			_myCustomStruct.doubleValue3 = [components[2] doubleValue];
+		}
+		else {
+			// let the super implementation handle this property assignment
+			[super setValue:value forKey:key];
+		}
 	}
-	else if ([key isEqualToString:@"myCustomCGSize"])
-	{
-		_myCustomCGSize = CGSizeFromString(value);
-	}
-	else if ([key isEqualToString:@"myCustomCGRect"])
-	{
-		_myCustomCGRect = CGRectFromString(value);
-	}
-	else if ([key isEqualToString:@"myCustomStruct"])
-	{
-		NSArray* components = [value componentsSeparatedByString:@","];
-		_myCustomStruct.doubleValue1 = [components[0] doubleValue];
-		_myCustomStruct.doubleValue2 = [components[1] doubleValue];
-		_myCustomStruct.doubleValue3 = [components[2] doubleValue];
-	}
-	else
-	{
-		// let the super implementation handle this property assignment
-		[super setValue:value forKey:key];
-	}
-}
 
--(void) didLoadFromCCB
-{
-	NSLog(@"%@", NSStringFromCGPoint(_myCustomCGPoint));
-	NSLog(@"%@", NSStringFromCGSize(_myCustomCGSize));
-	NSLog(@"%@", NSStringFromCGRect(_myCustomCGRect));
-	NSLog(@"%f, %f, %f", _myCustomStruct.doubleValue1, _myCustomStruct.doubleValue2, 
-	      _myCustomStruct.doubleValue3);
-}
+	-(void) didLoadFromCCB {
+		NSLog(@"%@", NSStringFromCGPoint(_myCustomCGPoint));
+		NSLog(@"%@", NSStringFromCGSize(_myCustomCGSize));
+		NSLog(@"%@", NSStringFromCGRect(_myCustomCGRect));
+		NSLog(@"%f, %f, %f", _myCustomStruct.doubleValue1, _myCustomStruct.doubleValue2, _myCustomStruct.doubleValue3);
+	}
 
-@end
-```
+	@end
+
+#### Swift
+    override func setValue(value: AnyObject?, forKey key: String) {
+        if key == "myCustomCGPoint" {
+            _myCustomCGPoint = CGPointFromString(value as String)
+        }
+        else if key == "myCustomCGSize" {
+            _myCustomCGSize = CGSizeFromString(value as String)
+        }
+        else if key == "myCustomCGRect" {
+            _myCustomCGRect = CGRectFromString(value as String)
+        }
+        else if key == "myCustomStruct" {
+            var components = (value as String).componentsSeparatedByString(",")
+            _myCustomStruct.doubleValue1 = (components[0] as NSString).doubleValue
+            _myCustomStruct.doubleValue2 = (components[1] as NSString).doubleValue
+            _myCustomStruct.doubleValue3 = (components[2] as NSString).doubleValue
+        }
+        else {
+            // let the super implementation handle this property assignment
+            super.setValue(value, forKey: key)
+        }
+    }
+    
+    func didLoadFromCCB() -> Void {
+        NSLog("%@", NSStringFromCGPoint(_myCustomCGPoint))
+        NSLog("%@", NSStringFromCGSize(_myCustomCGSize))
+        NSLog("%@", NSStringFromCGRect(_myCustomCGRect))
+        NSLog("%f, %f, %f", _myCustomStruct.doubleValue1, _myCustomStruct.doubleValue2, _myCustomStruct.doubleValue3)
+    }
 
 <table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
 Do not forget to call <code>[super setValue:value forKey:key]</code> for any key that you don't handle yourself! Otherwise none of the node's properties would get assigned, including the built-in properties like position, rotation, scale, sprite frame, etc. On the other hand be sure not to call the super implementation if you <strong>do</strong> handle a given key, doing so would result in an infinite recursion (app freezes).
@@ -127,12 +163,10 @@ Do not forget to call <code>[super setValue:value forKey:key]</code> for any key
 
 When running the project with this MainScene class, the Debug Console in Xcode will log something similar to these lines, confirming that KVC is truly awesome:
 
-```
-MyFirstProject[3909:70b] {100, 200}
-MyFirstProject[3909:70b] {123, 456}
-MyFirstProject[3909:70b] {{0, 0}, {960, 640}}
-MyFirstProject[3909:70b] 1.230000, 4.560000, 7.890000
-```
+	MyFirstProject[3909:70b] {100, 200}
+	MyFirstProject[3909:70b] {123, 456}
+	MyFirstProject[3909:70b] {{0, 0}, {960, 640}}
+	MyFirstProject[3909:70b] 1.230000, 4.560000, 7.890000
 
 Not surprisingly the output of `NSStringFromCGPoint` for instance is the same string that you fed into `CGPointFromNSString`.
 

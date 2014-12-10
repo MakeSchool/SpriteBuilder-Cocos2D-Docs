@@ -17,8 +17,13 @@ You will find plenty of information about physics in the [Cocos2D Class Referenc
 
 To add physics to a scene you need to add at least one (and typically only one) `CCPhysicsNode` to the scene. For example:
 
+#### Objective-C
     CCPhysicsNode* physicsNode = [CCPhysicsNode node];
     [self addChild:physicsNode];
+    
+#### Swift
+    var physicsNode = CCPhysicsNode.node() as CCPhysicsNode
+    self.addChild(physicsNode)
 
 ### Enabling Debug Drawing
 
@@ -30,7 +35,11 @@ When using SpriteBuilder you can visually see the shapes and joints you create s
 
 To enable debug drawing add the following line after initializing the physics node:
 
+#### Objective-C
     physicsNode.debugDraw = YES;
+
+#### Swift
+	physicsNode.debugDraw = true
 
 This results in an output similar to this:
 
@@ -43,9 +52,15 @@ For a node to have physics, it needs to have a valid `CCPhysicsBody` instance as
 
 This minimal example assumes that the `physicsNode` variable from above code fragment is in scope:
 
+#### Objective-C
     CCSprite* sprite = [CCSprite spriteWithImageNamed:@"player.png"];
     sprite.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:10.0 andCenter:CGPointZero];
     [physicsNode addChild:sprite];
+
+#### Swift
+    var sprite = CCSprite(imageNamed: "player.png")
+    sprite.physicsBody = CCPhysicsBody(circleOfRadius: 10.0, andCenter: CGPointZero)
+    physicsNode.addChild(sprite)
 
 In the above example the created physics body is dynamic, which means the body is actually taking over updating the node's position and rotation properties. Still, during initialization of the node it does not matter whether you set the node's position first, then create the physics body, or vice versa.
 
@@ -55,9 +70,15 @@ See the [CCPhysicsBody reference](http://www.cocos2d-swift.org/docs/api/Classes/
 
 A body is not limited to a single shape. Sometimes you may need a body composed of multiple shapes. This is done by first creating the `CCPhyiscsShape` instances, then creating a `CCPhysicsBody` with an array of shapes.
 
+#### Objective-C
     CCPhysicsShape* shape1 = [CCPhysicsShape circleShapeWithRadius:5 center:CGPointZero];
     CCPhysicsShape* shape2 = [CCPhysicsShape rectShape:CGRectMake(0, 0, 50, 200) cornerRadius:10];
     CCPhysicsBody* body = [CCPhysicsBody bodyWithShapes:@[shape1, shape2]];
+
+#### Swift
+<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
+[`CCPhysicsShape` initializers are not currently available in Swift](https://github.com/cocos2d/cocos2d-swift/issues/1117).
+</td></tr></table>
 
 See the [CCPhysicsShape reference](http://www.cocos2d-swift.org/docs/api/Classes/CCPhysicsShape.html) for a list of shape types and their properties.
 
@@ -65,7 +86,13 @@ See the [CCPhysicsShape reference](http://www.cocos2d-swift.org/docs/api/Classes
 
 Once you have at least two `CCPhysicsBody` instances you can connect them together with a `CCPhysicsJoint`. To create a joint and add it to the physics simulation you merely need to call one of the joint initializers, for example:
 
+#### Objective-C
 	[CCPhysicsJoint connectedMotorJointWithBodyA:bodyA bodyB:bodyB rate:5];
+
+#### Swift
+<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
+[`CCPhysicsShape` initializers are not currently available in Swift](https://github.com/cocos2d/cocos2d-swift/issues/1117).
+</td></tr></table>
 
 You only need a reference to the returned `CCPhysicsJoint` instance if you want to modify joint properties, for example:
 

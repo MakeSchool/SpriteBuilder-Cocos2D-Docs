@@ -9,15 +9,12 @@ If you do not want to use the SpriteBuilder editor at all, you should read the [
 This documentation covers the following topics in alphabetical order. Clicking on a link brings you directly to the main article for each topic.
 
 - [Android](./android/intro) (SpriteBuilder Android Plugin, Apportable)
-- [Animation](./_old/animation/intro) (Timeline, Sprite Frame, Actions)
-- [Audio](./_old/audio/intro) (ObjectAL, Music and Effects playback)
-- [Cocos2D](./_old/cocos2d/intro) (Cocos2d Programming Guide)
+- [Animation](./animation/intro) (Timeline, Sprite Frame, Actions)
+- [Audio](./audio/intro) (ObjectAL, Music and Effects playback)
 - [Concepts](./concepts/intro) (High-Level Concepts, Recommended for Beginners)
 - [Developer Reference](./develop/intro) (Technical Information, Advanced Uses)
 - **Getting Started** [this section] (Getting Started guides)
-- [Graphics](./_old/graphics/intro) (Shader and Particle Effects, Custom Rendering)
-- [GUI](./_old/gui/intro) (User Interface Controls)
-- [Physics](./_old/physics/intro) (Physics Simulation, Chipmunk)
+- [Physics](./physics/intro) (Physics Simulation, Chipmunk)
 - [SpriteBuilder](./spritebuilder/intro) (SpriteBuilder User Guide)
 
 ## Other Resources

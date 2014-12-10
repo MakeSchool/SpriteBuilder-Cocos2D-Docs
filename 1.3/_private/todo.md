@@ -1,6 +1,9 @@
 # To Do List & Planning
 
 # TODO
+- [Graphics](./graphics/intro) (Shader and Particle Effects, Custom Rendering)
+- [GUI](./gui/intro) (User Interface Controls)
+
 - class ref
 	- ccbreader
 		- related?
@@ -17,14 +20,6 @@
 	- add/remove children
 	- input event handling
 	- converting coordinates
-- Physics
-	- basics
-	- creating physics bodies
-	- creating joints
-	- collision events
-- Animation
-	- actions
-	- SB/CC sprite frame animations
 - Graphics
 	- particles
 	- cceffect
