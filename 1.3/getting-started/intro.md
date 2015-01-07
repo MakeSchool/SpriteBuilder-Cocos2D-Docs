@@ -1,4 +1,4 @@
-# Welcome to SpriteBuilder & Cocos2D
+# Welcome to SpriteBuilder & Cocos2D Developer Guide
 
 This is the reference documentation for [SpriteBuilder](http://www.spritebuilder.com) and [Cocos2D-Swift](http://www.cocos2d-swift.org), the **free and open source 2D game development** framework for **Objective-C** and **Swift** developers with support for **iOS, Android and OS X** platforms. Click on the logos below to open the corresponding websites.
 

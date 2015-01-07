@@ -28,6 +28,10 @@ image frame
 - |
 description |
 
+<div style="text-align: center">
+<img src="/gridfs/uploads/1a77a10137027ac879dd71df5342ec08" width="100%" height="100%" />
+</div>
+
 There's another paragraph here.
 This one uses HTML (ouch!):
 
