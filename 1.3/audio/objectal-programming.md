@@ -39,3 +39,26 @@ Only a single background (music) track can be played/preloaded at a time with OA
 
 ### Playing Sound Effects
 
+To play a sound effect you can choose between simple playback and playback with optional volume (gain), pitch, pan and loop parameters. 
+
+Volume and pitch default values are 1.0 while a pan value of 0.0 means the audio is played equally on both speakers, while -1.0 will play the effect only on the left, 1.0 only on the right speaker.
+
+**Objective-C:**
+
+    [[OALSimpleAudio sharedInstance] playEffect:@"click.wav"];
+    [[OALSimpleAudio sharedInstance] playEffect:@"click.wav" volume:1.0 pitch:1.0 pan:0.0 loop:NO];
+
+**Swift:**
+
+    OALSimpleAudio.sharedInstance().playEffect("click.wav")
+    OALSimpleAudio.sharedInstance().playEffect("click.wav", volume:1.0, pitch:1.0, pan:0.0, loop:false)
+
+Sound effects are first loaded into memory as a whole. This can lead to a noticable delay when playing a particular sound effect for the first time. Preloading sound effects fixes that problem by loading the audio resource into memory ahead of time.
+
+**Objective-C:**
+
+    [[OALSimpleAudio sharedInstance] preloadEffect:@"click.wav"];
+
+**Swift:**
+
+    OALSimpleAudio.sharedInstance().preloadEffect("click.wav")

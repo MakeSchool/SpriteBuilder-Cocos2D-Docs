@@ -1,0 +1,70 @@
+{"_comment" : "This format relies on a tab width of 4 spaces per tab.",	"content" : [
+
+	{"title" : "Welcome",									"path" : "getting-started/intro",							"version" : "1.3",	"children": 
+	[
+		{"title" : "Overview",								"path" : "getting-started/overview",						"version" : "1.3"},
+		{"title" : "Requirements",							"path" : "getting-started/requirements",					"version" : "1.3"},
+		{"title" : "First Steps: SpriteBuilder",			"path" : "getting-started/getting-started-spritebuilder",	"version" : "1.3"},
+		{"title" : "First Steps: Cocos2D",					"path" : "getting-started/getting-started-cocos2d",			"version" : "1.3"}
+	]},
+
+	{"title" : "Concepts",									"path" : "concepts/intro",									"version" : "1.3",	"children": 
+	[
+		{"title" : "Cocos2D View",							"path" : "concepts/cocos2d-view-hierarchy",					"version" : "1.3"},
+		{"title" : "Scenes and Layers",						"path" : "concepts/cocos2d-scenes-and-layers",				"version" : "1.3"},
+		{"title" : "Nodes",									"path" : "concepts/cocos2d-nodes",							"version" : "1.3"},
+		{"title" : "Actions",								"path" : "concepts/cocos2d-actions",						"version" : "1.3"},
+		{"title" : "Glossary",								"path" : "concepts/glossary",								"version" : "1.3"}
+	]},
+
+	{"title" : "SpriteBuilder",								"path" : "spritebuilder/intro",								"version" : "1.3",	"children": 
+	[
+		{"title" : "User Interface Overview",				"path" : "spritebuilder/user-interface-overview",			"version" : "1.3"},
+		{"title" : "Resource Browser",						"path" : "spritebuilder/resource-browser",					"version" : "1.3"},
+		{"title" : "Resource Files",						"path" : "spritebuilder/resource-files",					"version" : "1.3"},
+		{"title" : "Stage and Nodes",						"path" : "spritebuilder/stage-and-nodes",					"version" : "1.3"},
+		{"title" : "Timeline and Node Tree",				"path" : "spritebuilder/timeline-and-node-tree",			"version" : "1.3"},
+		{"title" : "Keyframe Editor",						"path" : "spritebuilder/keyframe-editor",					"version" : "1.3"},
+		{"title" : "Inspector Tabs",						"path" : "spritebuilder/inspector",							"version" : "1.3"},
+		{"title" : "Node Properties",						"path" : "spritebuilder/node-properties",					"version" : "1.3"},
+		{"title" : "Code Connections",						"path" : "spritebuilder/code-connections",					"version" : "1.3"}
+	]},
+
+	{"title" : "Physics",									"path" : "physics/intro",									"version" : "1.3",	"children": 
+	[
+		{"title" : "Working with Physics Bodies",			"path" : "physics/editing-physics",							"version" : "1.3"},
+		{"title" : "Editing Body Properties",				"path" : "physics/editing-body-properties",					"version" : "1.3"},
+		{"title" : "Editing Joints",						"path" : "physics/editing-joints",							"version" : "1.3"},
+		{"title" : "Programming Physics",					"path" : "physics/physics-programming",						"version" : "1.3"},
+		{"title" : "Simulation Stability",					"path" : "physics/simulation-stability",					"version" : "1.3"}
+	]},
+
+	{"title" : "Animation",									"path" : "animation/intro",									"version" : "1.3",	"children": 
+	[
+		{"title" : "Working with Actions",					"path" : "animation/actions",								"version" : "1.3"},
+		{"title" : "Scene Transitions",						"path" : "animation/scene-transitions",						"version" : "1.3"},
+		{"title" : "SpriteFrame Animations",				"path" : "animation/spriteframe-animation",					"version" : "1.3"}
+	]},
+
+	{"title" : "Audio",										"path" : "audio/intro",										"version" : "1.3",	"children": 
+	[
+		{"title" : "Audio in SpriteBuilder",				"path" : "audio/spritebuilder",								"version" : "1.3"},
+		{"title" : "Audio Programming",						"path" : "audio/objectal-programming",						"version" : "1.3"}
+	]},
+
+	{"title" : "Android",									"path" : "android/intro",									"version" : "1.3",	"children": 
+	[
+	]},
+
+	{"title" : "Developer Reference",						"path" : "develop/intro",									"version" : "1.3",	"children": 
+	[
+		{"title" : "SpriteBuilder from GitHub",				"path" : "develop/spritebuilder-build-from-sources",		"version" : "1.3"},
+		{"title" : "Cocos2D from GitHub",					"path" : "develop/cocos2d-build-from-sources",				"version" : "1.3"},
+		{"title" : "Creating Node Plugins",					"path" : "develop/plugin-node",								"version" : "1.3"},
+		{"title" : "Creating Export Plugins",				"path" : "develop/plugin-export",							"version" : "1.3"},
+		{"title" : "CCB File Format",						"path" : "develop/file-format-ccb",							"version" : "1.3"},
+		{"title" : "CCBi File Format",						"path" : "develop/file-format-ccbi",						"version" : "1.3"},
+		{"title" : "Custom Drawing Code",					"path" : "_old/graphics/custom-rendering",					"version" : "1.3"}
+	]}
+
+]}
