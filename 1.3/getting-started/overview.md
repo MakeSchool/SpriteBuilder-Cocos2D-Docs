@@ -20,7 +20,7 @@ This documentation covers the following topics in alphabetical order. Clicking o
 ## Other Resources
 
 - **[Cocos2D Class Reference](http://www.cocos2d-swift.org/docs/api/)**: Your go-to site when you need to know the name of a class or method, or to browse the available methods and properties of a given class.
-- **[Learn SpriteBuilder book](http://www.apress.com/learn-spritebuilder-for-ios-game-development)**: The official Learn SpriteBuilder guide is available as print or eBook from Apress.
+- **[Learn SpriteBuilder book](http://www.apress.com/9781484202630)**: The official Learn SpriteBuilder guide is available as print or eBook from Apress.
 - **[SpriteBuilder Android Plugin](http://android.spritebuilder.com/)**: Get to know everything about developing apps for Android with SpriteBuilder.
 - **Release Notes**: The [SpriteBuilder GitHub Wiki](https://github.com/spritebuilder/SpriteBuilder/wiki) and [Cocos2D GitHub Wiki](https://github.com/cocos2d/cocos2d-swift/wiki) wikis list major changes, bugfixes and new features. 
 - **Update Notes**: The [SpriteBuilder Update compatiblity notes](http://www.spritebuilder.com/update/) explain how you need to change your code after updating Cocos2D in a SpriteBuilder project.

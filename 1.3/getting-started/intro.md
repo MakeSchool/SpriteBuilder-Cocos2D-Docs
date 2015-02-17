@@ -4,7 +4,7 @@ This is the developer guide for [SpriteBuilder](http://www.spritebuilder.com) an
 
 Game Engine | Game Editor | Official Guide | Tutorials
 :-: | :-: | :-: | :-:
-[![Cocos2D-Swift](intro-cocos2d-logo.png "Cocos2D-Swift")](http://www.cocos2d-swift.org) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/learn-spritebuilder-for-ios-game-development) | [![MakeGamesWith.Us](intro-mgwu-logo.png "Make Games With Us: Online Academy")](https://www.makegameswith.us/home/)
+[![Cocos2D-Swift](intro-cocos2d-logo.png "Cocos2D-Swift")](http://www.cocos2d-swift.org) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeGamesWith.Us](intro-mgwu-logo.png "Make Games With Us: Online Academy")](https://www.makegameswith.us/home/)
 Cocos2D-Swift | SpriteBuilder | Learn SpriteBuilder | MakeSchool
 
 
