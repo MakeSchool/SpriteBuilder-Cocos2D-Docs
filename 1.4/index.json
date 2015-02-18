@@ -30,6 +30,13 @@
 		{"title" : "Code Connections",						"path" : "spritebuilder/code-connections",					"version" : "1.3"}
 	]},
 
+	{"title" : "User Interaction",							"path" : "user-interaction/intro",							"version" : "1.4",	"children": 
+	[
+		{"title" : "Touch Events",							"path" : "user-interaction/touch-events",					"version" : "1.4"},
+		{"title" : "OS X Input Events",						"path" : "user-interaction/osx-input-events",				"version" : "1.4"},
+		{"title" : "Hit Detection",							"path" : "user-interaction/hit-detection",					"version" : "1.4"}
+	]},
+
 	{"title" : "Physics",									"path" : "physics/intro",									"version" : "1.3",	"children": 
 	[
 		{"title" : "Working with Physics Bodies",			"path" : "physics/editing-physics",							"version" : "1.3"},
