@@ -147,13 +147,17 @@ You must use the [NSEvent keyCode property](https://developer.apple.com/library/
 Using keyCode is the only way to ensure that the same physical key on the keyboard will need to be pressed on any keyboard. Using the `characters` string would only give you the letter of the key pressed after it went through the system's locale where it may have been transformed to a different letter. So while a developer using a US keyboard may find the '/' character to be suitable for making the character "jump", most european users would end up swearing at that developer because they are forced to press `Shift+7` in order to print the letter '/' that would then be recognized as making the character jump. Clearly it is not advisable to base your game's input on letters. And on top of that, you would have to test for both upper and lower case variants of a letter, too. By using the keyCode `kVK_ANSI_Slash` you ensure that all users regardless of their locale will have to press the same physical key "left of Right-Shift" in order to make the character jump.
 </td></tr></table>
 
-To get access to the key code constants you have to:
+To get access to the key code constants you have to import the Carbon header (but only in OS X builds):
 
 	// Objective-C
+	#if __CC_PLATFORM_MAC
 	#import <Carbon/Carbon.h>
+	#endif
 	
 	// Swift
+	#if __CC_PLATFORM_MAC
 	import Carbon
+	#endif
 
 Add this to the class where you want to use the key code constants. A full list of the [key code constants is available here](http://stackoverflow.com/a/22662708/201863). Alternatively, just type `kVK_ANSI_A` or a similar 'kVK' constant in Xcode, then right-click the constant and choose *Jump to Definition* to open the framework header where the key codes are defined.
 
@@ -190,7 +194,7 @@ To give you a simple example that allows the user to make the character jump by 
 
 A continuous keypress needs to be implemented by storing the state of a key, typically in a boolean property of the class. This bool would give you a permanent record whether a given key is currently pressed down. You set the bool to YES/true in the key down event, and you set it back to NO/false in the key up event.
 
-In this example you may want to allow the player to jump higher the longer the jump key is pressed. Therefore you need to test over the course of several frames whether the jump key is still held down. You can do it like so, assuming that `jumpKeyPressed` is declared as a property (or ivar) of the class:
+In this example you may want to allow the player to jump higher the longer the jump key is pressed. Therefore you need to test over the course of several frames whether the jump key is still held down. You can do it like so, assuming that `jumpKeyPressed` is declared as a BOOL (ObjC) or Bool (Swift) property of the class:
 
 	// Objective-C
 	-(void)keyDown:(NSEvent *)theEvent {
@@ -226,6 +230,6 @@ In this example you may want to allow the player to jump higher the longer the j
         }
     }
 
-Note that it is good practice to avoid using the name of the character or key code in variable names. Typically a key will have a function, so it's best to use a variable name that reflects the function that it performs (here: "jump") rather than the key.
+Note that it is good practice to avoid using the name of the character or key code in variable names. Typically a key will run a specific function or start a given activity, so it's best to use a variable name that reflects the function/activity performed by the key (here: "jump") rather than the name of the key itself.
 
 For one, key assignments may change which would require renaming the variable. Then there may be multiple keys assigned to the same function, as in the example above. Lastly, it improves code readability. Imagine having to remember what kind of function was assigned to the `keyPressed_S` variable at any time. Bugs where you perform the wrong action based on a variable stand out more when you realize that: if the `timeWarpKeyPressed` variable is true it actually runs the "save game" method. It wouldn't be that obvious if you used `keyPressed_S` as the variable name.
