@@ -136,13 +136,19 @@ In the [Core Motion guide](https://developer.apple.com/library/ios/documentation
 
 What's crucial to understand here is that these values do not change with respect to device and interface orientation, nor with the coordinate system used by the framework (UIKit vs OpenGL/Cocos2D). 
 
-Depending on whether the game runs in LandscapeLeft or LandscapeRight orientation, you may have to invert the X and Y axis values (ie multiply with -1.0). Furthermore, in any landscape orientation, the Y axis is actually the horizontal axis while the X axis is the vertical axis. Hence you'll find the assignment of accelerometer values to a node's position slightly odd on first sight:
+Depending on whether the game runs in LandscapeLeft or LandscapeRight orientation, you may have to invert the X and Y axis values (ie multiply with -1.0). Furthermore, in any landscape orientation, the Y axis is actually the horizontal axis while the X axis is the vertical axis. 
+
+Hence you'll find the assignment of accelerometer values to a node's position slightly odd on first sight:
 
 	// Objective-C
     node.position = ccpAdd(node.position, ccpMult(CGPointMake(-accelerationY, accelerationX), 0.02));
 
 	// Swift
     node.position = ccpAdd(node.position, ccpMult(CGPoint(x: -accelerationY, y: accelerationX), 0.02))
+
+This example uses the filtered acceleration values from the previous paragraph. The 0.02 constant is simply a speed modifier to slow down movement to a reasonable rate. You'll need to tweak this to your needs.
+
+Alternatively you can also feed the accelerometer values directly into `node.physicsBody.velocity` if you intend to control a node with a physics body. Assigning accelerometer values to the velocity property is preferred for nodes with a physics body because it allows the node/body to behave physically correct (ie bouncing back off of other bodies).
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
 If you use the accelerometer to control your game's character you should disable autorotation. Otherwise the interface orientation may change unintentionally while controlling the game, which will confuse the player and possibly even invert the controls if the interface orientation change is not accounted for when applying the acceleration values.
