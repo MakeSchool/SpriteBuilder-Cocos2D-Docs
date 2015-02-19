@@ -42,46 +42,63 @@ You will need to assign the CMMotionManager instance to a class property because
 You should not register multiple nodes to receive Core Motion events at the same time. Instead, make the motion manager property public to access it from other classes.
 </td></tr></table>
 
-## Starting and Stopping Accelerometer Updates
+## Starting and Stopping Motion Updates
 
-It's best to set the accelerometer update interval to the same rate as the display refresh rate, which is stored in the CCDirector property animationInterval and defaults to `1.0 / 60.0` (60 Hz). Then start accelerometer updates. You would normally do this in one of the initialization functions, be it `init`, `didLoadFromCCB` or `onEnter`.
+It's best to set the accelerometer and gyroscope update intervals to the same rate as the display refresh rate, which is stored in the CCDirector property animationInterval and defaults to `1.0 / 60.0` (60 Hz). Then start accelerometer updates. You would normally do this in one of the initialization functions, be it `init`, `didLoadFromCCB` or `onEnter`.
 
 	// Objective-C
     _motionManager.accelerometerUpdateInterval = [CCDirector sharedDirector].animationInterval;
     [_motionManager startAccelerometerUpdates];
+    _motionManager.gyroUpdateInterval = [CCDirector sharedDirector].animationInterval;
+    [_motionManager startGyroUpdates];
 
 	// Swift
     _motionManager.accelerometerUpdateInterval = CCDirector.sharedDirector().animationInterval
     _motionManager.startAccelerometerUpdates()
+    _motionManager.gyroUpdateInterval = CCDirector.sharedDirector().animationInterval
+    _motionManager.startGyroUpdates()
 
-To stop accelerometer updates at a later time you just need to call:
+To stop motion updates at a later time you just need to call:
 
 	// Objective-C
     [_motionManager stopAccelerometerUpdates];
+    [_motionManager stopGyroUpdates];
 
 	// Swift
     _motionManager.stopAccelerometerUpdates()
+    _motionManager.stopGyroUpdates()
 
+If you only need to use the accelerometer, simply omit the gyroscope code from the above code examples. And vice versa if you only need the gyroscope.
 
-## Obtaining Accelerometer Values
+## Obtaining Accelerometer & Gyroscope Values
 
-To receive accelerometer updates you simply check periodically for new values. Typically you'll want to use the `update:` method for that.
+To receive motion value updates you simply check periodically for new values. Typically you'll want to use the `update:` method for that.
 
 	// Objective-C
 	-(void) update:(CCTime)delta {
 	    CMAcceleration acceleration = _motionManager.accelerometerData.acceleration;
     	NSLog(@"accel x: %f, y: %f, z: %f", acceleration.x, acceleration.y, acceleration.z);
+    	
+	    CMRotationRate rotationRate = _motionManager.gyroData.rotationRate;
+	    NSLog(@"gyro x: %f, y: %f, z: %f", rotationRate.x, rotationRate.y, rotationRate.z);
 	}
 
 	// Swift
     override func update(delta: CCTime) {
         if let accelData = _motionManager.accelerometerData {
-            let acceleration : CMAcceleration = accelData.acceleration
+            let acceleration = accelData.acceleration
             NSLog("accel x: %f, y: %f, z: %f", acceleration.x, acceleration.y, acceleration.z)
+        }
+        
+        if let gyroData = _motionManager.gyroData {
+            let rotationRate = gyroData.rotationRate
+            NSLog("gyro x: %f, y: %f, z: %f", rotationRate.x, rotationRate.y, rotationRate.z)
         }
     }
 
-Acceleration values are provided via a [CMAccelerometerData](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMAccelerometerData_Class/index.html) object (which may be nil) which contains a [CMAcceleration property](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMAccelerometerData_Class/index.html#//apple_ref/c/tdef/CMAcceleration) containing the actual raw acceleration values.
+Acceleration values are provided via a [CMAccelerometerData](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMAccelerometerData_Class/index.html) object (which may be nil) which contains a [CMAcceleration property](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMAccelerometerData_Class/index.html#//apple_ref/c/tdef/CMAcceleration) containing the raw acceleration values.
+
+Similarly, gyroscope values are provided via a [CMGyroData](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMGyroData_Class/index.html) object (which may also be nil) which contains a [CMRotationRate property](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMGyroData_Class/index.html#//apple_ref/c/tdef/CMRotationRate) containing the raw gyroscope values.
 
 ## Filtering Accelerometer Values
 
@@ -107,6 +124,9 @@ The `kFilterPercent` constant represents a percentage in the range 0.0 (0%) to 1
 
 This delay causes accelerometer motion to be much smoother but it also introduces a certain amount of lag. So you may need to experiment to find the best value for `kFilterPercent` for your particular use case.
 
+<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
+The same filtering can be applied to gyroscope data but doing so may be counterproductive because you may want to specifically react to sudden changes, at least more so than with accelerometer values.
+</td></tr></table>
 
 ## Working with Accelerometer Coordinates
 
@@ -125,7 +145,7 @@ Depending on whether the game runs in LandscapeLeft or LandscapeRight orientatio
     node.position = ccpAdd(node.position, ccpMult(CGPoint(x: -accelerationY, y: accelerationX), 0.02))
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
-If you use the accelerometer to control your game's character you should disable autorotation. Otherwise the interface orientation may change unintentionally while controlling the game, which will confuse the player and possibly even invert the controls.
+If you use the accelerometer to control your game's character you should disable autorotation. Otherwise the interface orientation may change unintentionally while controlling the game, which will confuse the player and possibly even invert the controls if the interface orientation change is not accounted for when applying the acceleration values.
 </td></tr></table>
 
 And then there's the issue of calibration. You can not expect players to play on a flat surface at all times. Most players will want to play at an angle, or even lying down holding the device above them. This requires you to calibrate the device to a desired orientation which is then used as the reference orientation. Tilting the device should then be relative to the reference orientation.
