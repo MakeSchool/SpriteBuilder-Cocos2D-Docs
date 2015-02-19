@@ -17,7 +17,7 @@ On the iOS Simulator Core Motion returns zero for all motion values. You have to
 
 ## Creating an instance of CMMotionManager
 
-You will need to assign the CMMotionManager instance to a class property because you'll need to be able to access updated values (typically in the `update:` method) and eventually you'll have to stop updates as well. A minimal setup requires this code:
+You will need to assign the CMMotionManager instance to a class property because you'll need to be able to access updated values (typically in the `update:` method) and eventually you'll have to stop updates as well. A minimal setup requires this code in any node of your choice, typically you'll want to make the Core Motion updates in the scene, the "game layer" node or the node that you want to control via motion updates.
 
 	// Objective-C
 	@implementation MainScene
