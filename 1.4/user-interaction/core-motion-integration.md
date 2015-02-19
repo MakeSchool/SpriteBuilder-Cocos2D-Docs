@@ -6,18 +6,18 @@ The main difference to input events supported by CCResponder is that Core Motion
 
 To use Core Motion you follow these simple steps:
 
-- Create an instance of [`CMMotionManager`]( and assign it to a class property or ivar
+- Create an instance of [`CMMotionManager`](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMMotionManager_Class/) and assign it to a class property or ivar
 - Set the update interval
 - start accelerometer or gyroscope updates
-- in the update: method, read the motion manager's acceleration/gyroscope property for updated values
+- in the `update:` method, read the motion manager's acceleration/gyroscope property for updated values
 
-<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
-On the iOS Simulator Core Motion returns zero for all motion values. You have to test Core Motion functionality on an actual device.
+<table border="0"><tr><td width="48px" bgcolor="#ffd0d0"><strong>Caution</strong></td><td bgcolor="#ffd0d0">
+On the iOS Simulator Core Motion returns zero for all motion values. You have to test Core Motion functionality on an actual device!
 </td></tr></table>
 
 ## Creating an instance of CMMotionManager
 
-You will need to assign the CMMotionManager instance to a class property because you'll need to be able to access updated values (typically in the update: method) and eventually you'll have to stop updates as well. A minimal setup requires this code:
+You will need to assign the CMMotionManager instance to a class property because you'll need to be able to access updated values (typically in the `update:` method) and eventually you'll have to stop updates as well. A minimal setup requires this code:
 
 	// Objective-C
 	@implementation MainScene
@@ -65,7 +65,7 @@ To stop accelerometer updates at a later time you just need to call:
 
 ## Obtaining Accelerometer Values
 
-To receive accelerometer updates you simply check periodically for new values. Typically you'll want to use the update: method for that.
+To receive accelerometer updates you simply check periodically for new values. Typically you'll want to use the `update:` method for that.
 
 	// Objective-C
 	-(void) update:(CCTime)delta {
@@ -85,7 +85,7 @@ Acceleration values are provided via a [CMAccelerometerData](https://developer.a
 
 ## Filtering Accelerometer Values
 
-The raw accelerometer values are typically unsuitable for controlling a game or a game character. It reacts highly sensitive to device chances which makes the resulting motion unsteady, jumpy. The solution is a so-called *low-pass filter* which is easy to implement.
+The raw accelerometer values are typically unsuitable for controlling a game or a game character. The values react very sensitive to device chances which makes the resulting motion unsteady, jumpy, jittery. The solution is a so-called *low-pass filter* which is easy to implement.
 
 You need a property/ivar in the class for each of the x,y,z components you want to filter. They ought to be of type `double`/`Double`. In this case they are called `accelerationX`, `accelerationY` and `accelerationZ`. Of course you can omit the calculations for the axis you don't need, ie in 2D games you'll mainly just need to filter X and Y components.
 
@@ -103,20 +103,20 @@ You need a property/ivar in the class for each of the x,y,z components you want 
     accelerationZ = (acceleration.z * kFilterPercent) + (accelerationZ * (1.0 - kFilterPercent));
     NSLog("filtered accel x: %f, y: %f, z: %f", accelerationX, accelerationY, accelerationZ);
 
-The `kFilterPercent` constant represents a percentage in the range 0.0 (0%) to 1.0 (100%). At 0.1 (10%) the filter will cause the new accelerometer value to contribute only 10% to the filtered values. So over the course of 10 frames the current acceleration value will change to the one that the device is pointing at. This delay causes motion to be much smoother.
+The `kFilterPercent` constant represents a percentage in the range 0.0 (0%) to 1.0 (100%). At 0.1 (10%) the filter will cause the new accelerometer value to contribute only 10% to the already filtered value. So over the course of 10 frames the current acceleration value will gradually change to the one that the device is pointing at. 
 
-For your game you may need to experiment to find the best value for `kFilterPercent`.
+This delay causes accelerometer motion to be much smoother but it also introduces a certain amount of lag. So you may need to experiment to find the best value for `kFilterPercent` for your particular use case.
 
 
 ## Working with Accelerometer Coordinates
 
-In the [Core Motion guide](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/motion_event_basics/motion_event_basics.html#//apple_ref/doc/uid/TP40009541-CH6-SW4) Apples gives you this neat graph that explains the directions of the axis:
+In the [Core Motion guide](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/motion_event_basics/motion_event_basics.html#//apple_ref/doc/uid/TP40009541-CH6-SW4) you'll find this neat graph that explains the directions of the accelerometer axis:
 
-![](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Art/acceleration_axes_2x.png)
+![](acceleration_axes_2x.png)
 
-What's crucial to understand here is that these values do not change with respect to device and interface orientation. So depending on whether the game runs in LandscapeLeft or LandscapeRight orientation, you may have to invert the X and Y axis values (ie multiply with -1.0).
+What's crucial to understand here is that these values do not change with respect to device and interface orientation, nor with the coordinate system used by the framework (UIKit vs OpenGL/Cocos2D). 
 
-Furthermore, in a landscape orientation, the Y axis is actually the horizontal axis while the X axis is the vertical axis. Hence you'll find the assignment of acclerometer x values to a node's y coordinate odd at first:
+Depending on whether the game runs in LandscapeLeft or LandscapeRight orientation, you may have to invert the X and Y axis values (ie multiply with -1.0). Furthermore, in any landscape orientation, the Y axis is actually the horizontal axis while the X axis is the vertical axis. Hence you'll find the assignment of accelerometer values to a node's position slightly odd on first sight:
 
 	// Objective-C
     node.position = ccpAdd(node.position, ccpMult(CGPointMake(-accelerationY, accelerationX), 0.02));
@@ -130,4 +130,4 @@ If you use the accelerometer to control your game's character you should disable
 
 And then there's the issue of calibration. You can not expect players to play on a flat surface at all times. Most players will want to play at an angle, or even lying down holding the device above them. This requires you to calibrate the device to a desired orientation which is then used as the reference orientation. Tilting the device should then be relative to the reference orientation.
 
-To add to this, you will have to combine the values of two axis. For instance in a landscape app where the device is tiled by a 45° angle along the Y axis then both X and Z axis acceleration values need to contribute equally to the controlled character's Y position.
+To add to this, you will have to consider the case where the X axis reaches -1.0 (or 1.0) and then suddenly starts going back towards 0.0 as the user tilts the device past the 90° angle. You will have to look at the sign of the Z coordinate to determine which way the device is being tilted, whether the user actually is turning back or simply turned the device past the 90° angle.
