@@ -18,4 +18,4 @@ TTF fonts rely on the fonts built into the platform.  These built in fonts have 
 #Label BM-Font
 Cocos2D can render bitmap fonts created using external editor.  After creating a new BM-Font, specify the font file in the properties panel.  The label text can also be set in the properties panel, and the text can be changed programatically using a code connection.  Since each character is rendered as a seperate Sprite, the text can be more efficiently rendered than a LabelTTF when ferquent changes occur, and individual letters can be programatically accessed through the child property of the Label BM-Font.
 
-For more information on Cocos2D's font rendering see [the official API](http://www.cocos2d-swift.org/docs/api/Classes/CCLabelBMFont.html)
+For more information on Cocos2D's font rendering see [the official API](http://cocos2d.spritebuilder.com/docs/api/Classes/CCLabelBMFont.html)

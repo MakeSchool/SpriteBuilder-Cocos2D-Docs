@@ -4,7 +4,7 @@
 
 You can download SpriteBuilder for free from the [Mac App Store](https://itunes.apple.com/app/spritebuilder/id784912885). The latest beta versions are available on the [SpriteBuilder Beta download page](http://www.spritebuilder.com/beta). Experienced developers may want to [build SpriteBuilder from sources](#!/docs/1.3/develop/spritebuilder-build-from-sources).
 
-There are no installation or setup steps necessary. Cocos2D-Swift is already included in the SpriteBuilder download.
+There are no installation or setup steps necessary. Cocos2D-SpriteBuilder is already included in the SpriteBuilder download.
 
 ## Launch SpriteBuilder
 
