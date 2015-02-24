@@ -398,10 +398,9 @@ Here's an example removing the projectiles string from the enemy's mask, so it w
 	_enemy.physicsBody.collisionMask = mask;
 
 #### Swift
-    let**** mask = NSMutableArray(array: self.physicsBody.collisionMask)
+    let mask = NSMutableArray(array: self.physicsBody.collisionMask)
     mask.removeObject("projectiles")
     self.physicsBody.collisionMask = mask
-
 
 ### Using Collision Groups
 
