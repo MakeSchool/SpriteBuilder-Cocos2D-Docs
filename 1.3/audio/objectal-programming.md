@@ -25,12 +25,10 @@ Do not use the audio file's published file extension, ie `.m4a` or `.ogg`, but t
 
 To play a music track, or more precisely playing a streaming audio file with AVAudioPlayer, you will use the playBg method:
 
-**Objective-C:**
-
+	// Objective-C
 	[[OALSimpleAudio sharedInstance] playBg:@"Audio/game-music.wav" loop:YES];
 
-**Swift:**
-
+	// Swift
 	OALSimpleAudio.sharedInstance().playBg("Audio/game-music.wav", loop:true)
 
 <table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
@@ -43,22 +41,18 @@ To play a sound effect you can choose between simple playback and playback with 
 
 Volume and pitch default values are 1.0 while a pan value of 0.0 means the audio is played equally on both speakers, while -1.0 will play the effect only on the left, 1.0 only on the right speaker.
 
-**Objective-C:**
-
+	// Objective-C
     [[OALSimpleAudio sharedInstance] playEffect:@"click.wav"];
     [[OALSimpleAudio sharedInstance] playEffect:@"click.wav" volume:1.0 pitch:1.0 pan:0.0 loop:NO];
 
-**Swift:**
-
+	// Swift
     OALSimpleAudio.sharedInstance().playEffect("click.wav")
     OALSimpleAudio.sharedInstance().playEffect("click.wav", volume:1.0, pitch:1.0, pan:0.0, loop:false)
 
 Sound effects are first loaded into memory as a whole. This can lead to a noticable delay when playing a particular sound effect for the first time. Preloading sound effects fixes that problem by loading the audio resource into memory ahead of time.
 
-**Objective-C:**
-
+	// Objective-C
     [[OALSimpleAudio sharedInstance] preloadEffect:@"click.wav"];
 
-**Swift:**
-
+	// Swift
     OALSimpleAudio.sharedInstance().preloadEffect("click.wav")

@@ -63,7 +63,7 @@ To create a sprite frame animation in Cocos2D, you need to:
 - Create a [`CCAnimation`](http://www.cocos2d-swift.org/docs/api/Classes/CCAnimation.html) instance with a list of [`CCSpriteFrame`](http://www.cocos2d-swift.org/docs/api/Classes/CCSpriteFrame.html) instances and the frame delay.
 - Run the animation via [`CCActionAnimate`](http://www.cocos2d-swift.org/docs/api/Classes/CCActionAnimate.html).
 
-First of all, you have to import the *CCAnimation.h* header file at the top of your implementation file. You may also need to forward-declare the CCAnimation class in your interface if you make use of that class in the interface. 
+You may or may not have to import the *CCAnimation.h* header file, depending on the Cocos2D version used.
 
 <table border="0"><tr><td width="48px" bgcolor="#d0f0ff"><strong>Info</strong></td><td bgcolor="#d0f0ff">
 The *CCAnimation.h* header file is no longer public because it will be retired in a future version of Cocos2D (v3.5 or later). You can find an alternative way to run animations in the (also non-public) *CCAnimationManager+FrameAnimation.h+.

@@ -24,10 +24,10 @@ If an action provides a custom initializer (see class reference) you should alwa
 		
 A simple example with a move action:
 
-#### Objective-C
+	// Objective-C
 	id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(123, 444)];
 
-#### Swift
+	// Swift
 	var move = CCActionMoveTo(duration: 2.4, position: CGPointMake(123, 444))
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
@@ -38,10 +38,10 @@ The generic type `ìd` or `CCAction*` are frequently used over the action's actu
 
 Actions need to be run on a node for them to have any effect. Of course the node itself also needs to be in the node tree and must not be paused for actions to run.
 
-#### Objective-C
+	// Objective-C
 	[node runAction:move];
 	
-#### Swift
+	// Swift
 	node.runAction(move)
 
 
@@ -59,7 +59,7 @@ The performance difference (if any) between copying or creating a new action ins
 
 To run the same action on multiple nodes without having to create multiple actions using the same parameters, you can simply copy an existing action.
 
-#### Objective-C
+	// Objective-C
 	id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(123, 444)];
 	
 	// run the first action normally
@@ -69,7 +69,7 @@ To run the same action on multiple nodes without having to create multiple actio
 	[node2 runAction:[move copy]];
 	[node3 runAction:[move copy]];
 
-#### Swift
+	// Swift
     var move = CCActionMoveTo(duration: 2.4, position: CGPointMake(123, 444))
         
     // run the first action normally
@@ -83,12 +83,12 @@ Notice the forced cast to `CCAction` in the Swift example. This is necessary bec
 
 Note that you can also copy the action for the first node. Thus the above code can also be written more consistently as:
 
-#### Objective-C
+	// Objective-C
 	[node1 runAction:[move copy]];
 	[node2 runAction:[move copy]];
 	[node3 runAction:[move copy]];
 
-#### Swift
+	// Swift
     node1.runAction(move.copy() as CCAction)
     node2.runAction(move.copy() as CCAction)
 	node3.runAction(move.copy() as CCAction)
@@ -105,13 +105,13 @@ To re-use an action you would normally just copy an existing instance (see above
 
 Since actions that run to completion will automatically deallocate, you will have to keep a strong reference to any action that you like to re-use. Typically you just need to create a property or ivar without the `weak` keyword, or an array. Then assign respectively add any actions to it that you want to re-use at a later time.
 
-#### Objective-C
+	// Objective-C
 	@interface MyClass : CCNode
 	{
 		id _reusableAction;
 		..
 
-#### Swift
+	// Swift
 	class MyClass: CCNode
 	{
     	var _reusableAction : CCAction?
@@ -119,7 +119,7 @@ Since actions that run to completion will automatically deallocate, you will hav
 
 At the time of re-use, be sure to send the re-used action the copy message:
 
-#### Objective-C
+	// Objective-C
 	// assigning an action to an ivar and run the action
 	_reusableAction = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(123, 444)];
 	[node runAction:_reusableAction];
@@ -127,7 +127,7 @@ At the time of re-use, be sure to send the re-used action the copy message:
 	// at a later time you can re-use the same action by running a copy of it
 	[node runAction:[_reusableAction copy]];
 
-#### Swift
+	// Swift
     // assigning an action to an ivar and run the action
     _reusableAction = CCActionMoveTo(duration: 2.4, position: CGPointMake(123, 444));
     node.runAction(_reusableAction);
@@ -147,10 +147,10 @@ Some actions inheriting from `CCActionInterval` can be reversed. This means the 
 
 To reverse an action send it the `reverse` method before running it:
 
-#### Objective-C
+	// Objective-C
 	[node runAction:[move reverse]];
 	
-#### Swift
+	// Swift
 	node.runAction(move.reverse())
 
 Like `copy` the `reverse` method returns a new instance of the action. It is therefore not necessary to combine copy and reverse, for example if you want an action run from start to finish, and then reverse it. In that case it is sufficient to reverse the original action.
@@ -161,20 +161,20 @@ Sometimes it may be necessary to stop an action prematurely. Besides `[node stop
 
 If you have a reference to an action, you can stop that action by reference:
 
-#### Objective-C
+	// Objective-C
 	[node stopAction:move];
 	
-#### Swift
+	// Swift
 	node.stopAction(move)
 	
 If you don't have a reference to an action you need to tag the action when creating it. For instance:
 
-#### Objective-C
+	// Objective-C
 	CCAction* move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(123, 444)];
 	move.tag = 123;
 	[node runAction:move];
 
-#### Swift
+	// Swift
     var move = CCActionMoveTo(duration: 2.4, position: CGPointMake(123, 444))
     move.tag = 123;
    	node.runAction(move)
@@ -182,20 +182,20 @@ If you don't have a reference to an action you need to tag the action when creat
 	
 You can then remove an action by its tag:
 
-#### Objective-C
+	// Objective-C
 	[node stopActionByTag:123];
 	
-#### Swift
+	// Swift
     node.stopActionByTag(123)
 
 Note that this will only remove the first action with this tag. If you need to stop multiple actions with the same tag, try to tag them differently. But if this isn't feasible, you can use the following snippet to remove all actions with the same tag:
 
-#### Objective-C
+	// Objective-C
     while ([node getActionByTag:123] != nil) {
         [node stopActionByTag:123];
     }
     
-#### Swift
+	// Swift
     while (node.getActionByTag(123) != nil) {
         node.stopActionByTag(123)
     }
@@ -205,34 +205,34 @@ Note that this will only remove the first action with this tag. If you need to s
 
 To get a reference to a running action, you can just simply store the action after creating it in an ivar or property. But you can also tag it and do:
 
-#### Objective-C
+	// Objective-C
 	id actionWithTag123 = [node getActionByTag:123];
 
-#### Swift
+	// Swift
 	var actionWithTag123 = node.getActionByTag(123)
 
 Note that this will return nil if there's no action with the given tag. It will also return only the first action with the given tag.
 
 You can also test whether there are any active actions in the first place:
 
-#### Objective-C
+	// Objective-C
 	if (node.numberOfRunningActions > 0) {
 		NSLog(@"node is running 1 or more actions");
 	}
 
-#### Swift
+	// Swift
     if node.numberOfRunningActions() > 0 {
         NSLog("node is running 1 or more actions");
     }
 
 And you can check whether actions may be paused. This is the case when either the node is paused, or one of the node's parents is paused, or when the node isn't currently in the node tree. Therefore just checking the paused state isn't enough, you have to test for the active state:
 
-#### Objective-C
+	// Objective-C
 	if (node.runningInActiveScene) {
 		NSLog(@"node is active (not paused), so actions aren't paused either");
 	}
 	
-#### Swift
+	// Swift
 	if node.runningInActiveScene {
         NSLog("node is active (not paused), so actions aren't paused either");
     }
@@ -247,12 +247,12 @@ Typically call block/func actions are only used within a sequence (see below) as
 
 How to create a call block action:
 
-#### Objective-C
+	// Objective-C
 	id block = [CCActionCallBlock actionWithBlock:^{
 		// run code here
 	}];
 
-#### Swift
+	// Swift
     var block = CCActionCallBlock { () -> Void in
         // run code here
     }
@@ -261,20 +261,20 @@ The block takes no parameters and returns no value.
 
 How to create a call func action:
 
-#### Objective-C
+	// Objective-C
 	id callFunc = [CCActionCallFunc actionWithTarget:self selector@selector(theMethod)];
 	
-#### Swift
+	// Swift
     var callFunc = CCActionCallFunc(target: self, selector:Selector("theMethod"))
 
 Where `theMethod` must be implemented by the target with the following signature:
 	
-#### Objective-C
+	// Objective-C
 	-(void) theMethod {
     	NSLog(@"call func action ran my method");
 	}
 
-#### Swift
+	// Swift
     func theMethod() -> Void {
         NSLog("call func action ran my method");
     }
@@ -285,13 +285,13 @@ The selector takes no parameters and returns nothing (void).
 
 The following is typically overkill:
 
-#### Objective-C
+	// Objective-C
 	id block = [CCActionCallBlock actionWithBlock:^{
 		[node removeFromParent];
 	}];
 	[node runAction:block];
 
-#### Swift
+	// Swift
     var block = CCActionCallBlock ({ () -> Void in
         node.removeFromParent();
     })
@@ -299,10 +299,10 @@ The following is typically overkill:
        	
 Unless there's a reason to defer the execution to the next frame, the above can be reduced to simply running the code (here: calling the method) directly:
 
-#### Objective-C
+	// Objective-C
 	[node removeFromParent];
 
-#### Swift
+	// Swift
 	node.removeFromParent()
 
 ## Sequences and Spawning Actions
@@ -311,7 +311,7 @@ You can run a series of actions in sequence, and even have some actions run in p
 
 To setup a complex, linear sequence with spawning actions:
 
-#### Objective-C
+	// Objective-C
 	// create individual actions used in sequence
 	id move = [CCActionMoveBy actionWithDuration:5 position:CGPointMake(222, 111)];
 	id wait = [CCActionDelay actionWithDuration:2];
@@ -329,7 +329,7 @@ To setup a complex, linear sequence with spawning actions:
 	id sequence = [CCActionSequence actionWithArray:@[move, wait, spawn, block, remove]];
 	[node runAction:sequence];
 
-#### Swift
+	// Swift
     // create individual actions used in sequence
     var move = CCActionMoveBy(duration: 5, position: CGPointMake(222, 111))
     var wait = CCActionDelay(duration: 2)
@@ -368,13 +368,13 @@ The CCActionSpawn action serves little purpose outside of a sequence. In such a 
 
 This sequence will have a node move from A to B, then move back to A. The sequence repeats forever (until stopped):
 
-#### Objective-C
+	// Objective-C
 	id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(123, 444)];
 	id sequence = [CCActionSequence actionWithArray:@[move, [move reverse]]];
 	id forever = [CCActionRepeatForever actionWithAction:sequence];
 	[node runAction:forever];
 	
-#### Swift
+	// Swift
     var move = CCActionMoveTo(duration: 2.4, position: CGPointMake(123, 444))
     var sequence = CCActionSequence(one: move, two: move.reverse())
     var forever = CCActionRepeatForever(action: sequence)
@@ -389,12 +389,12 @@ Easing actions wrap an existing action to change the action's progress over time
 
 To create an easing action you initialize it with an existing action that inherits from `CCActionInterval`:
 
-#### Objective-C
+	// Objective-C
 	id move = [CCActionMoveTo actionWithDuration:4 position:CGPointMake(654, 321)];
 	id easeMove = [CCActionEaseInOut actionWithAction:move];
 	[node runAction:easeMove];
 
-#### Swift
+	// Swift
     var move = CCActionMoveTo(duration: 4, position: CGPointMake(654, 321))
     var easeMove = CCActionEaseInOut(action: move)
     node.runAction(easeMove);

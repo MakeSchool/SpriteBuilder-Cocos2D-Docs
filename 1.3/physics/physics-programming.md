@@ -17,11 +17,11 @@ You will find plenty of information about physics in the [Cocos2D Class Referenc
 
 To add physics to a scene you need to add at least one (and typically only one) `CCPhysicsNode` to the scene. For example:
 
-#### Objective-C
+	// Objective-C
     CCPhysicsNode* physicsNode = [CCPhysicsNode node];
     [self addChild:physicsNode];
     
-#### Swift
+	// Swift
     var physicsNode = CCPhysicsNode.node() as CCPhysicsNode
     self.addChild(physicsNode)
 
@@ -35,10 +35,10 @@ When using SpriteBuilder you can visually see the shapes and joints you create s
 
 To enable debug drawing add the following line after initializing the physics node:
 
-#### Objective-C
+	// Objective-C
     physicsNode.debugDraw = YES;
 
-#### Swift
+	// Swift
 	physicsNode.debugDraw = true
 
 This results in an output similar to this:
@@ -52,12 +52,12 @@ For a node to have physics, it needs to have a valid `CCPhysicsBody` instance as
 
 This minimal example assumes that the `physicsNode` variable from above code fragment is in scope:
 
-#### Objective-C
+	// Objective-C
     CCSprite* sprite = [CCSprite spriteWithImageNamed:@"player.png"];
     sprite.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:10.0 andCenter:CGPointZero];
     [physicsNode addChild:sprite];
 
-#### Swift
+	// Swift
     var sprite = CCSprite(imageNamed: "player.png")
     sprite.physicsBody = CCPhysicsBody(circleOfRadius: 10.0, andCenter: CGPointZero)
     physicsNode.addChild(sprite)
@@ -70,12 +70,12 @@ See the [CCPhysicsBody reference](http://www.cocos2d-swift.org/docs/api/Classes/
 
 A body is not limited to a single shape. Sometimes you may need a body composed of multiple shapes. This is done by first creating the `CCPhyiscsShape` instances, then creating a `CCPhysicsBody` with an array of shapes.
 
-#### Objective-C
+	// Objective-C
     CCPhysicsShape* shape1 = [CCPhysicsShape circleShapeWithRadius:5 center:CGPointZero];
     CCPhysicsShape* shape2 = [CCPhysicsShape rectShape:CGRectMake(0, 0, 50, 200) cornerRadius:10];
     CCPhysicsBody* body = [CCPhysicsBody bodyWithShapes:@[shape1, shape2]];
 
-#### Swift
+	// Swift
     let shape1 = CCPhysicsShape(circleShapeWithRadius: 5, center: CGPointZero)
     let shape2 = CCPhysicsShape(rectShape: CGRect(x: 0, y: 0, width: 50, height: 200), cornerRadius: 10)
     let body = CCPhysicsBody(shapes: [shape1, shape2])
@@ -86,21 +86,21 @@ See the [CCPhysicsShape reference](http://www.cocos2d-swift.org/docs/api/Classes
 
 Once you have at least two `CCPhysicsBody` instances you can connect them together with a `CCPhysicsJoint`. To create a joint and add it to the physics simulation you merely need to call one of the joint initializers, for example:
 
-#### Objective-C
+	// Objective-C
 	[CCPhysicsJoint connectedMotorJointWithBodyA:bodyA bodyB:bodyB rate:5];
 
-#### Swift
+	// Swift
     CCPhysicsJoint(motorJointWithBodyA: bodyA, bodyB: bodyB, rate: 5)
 
 You only need a reference to the returned `CCPhysicsJoint` instance if you want to modify joint properties, for example:
 
-#### Objective-C
+	// Objective-C
 	CCPhysicsJoint* joint = [CCPhysicsJoint connectedMotorJointWithBodyA:bodyA bodyB:bodyB rate:5];
 	joint.maxForce = 500;
 	joint.breakingForce = 75;
 	joint.collideBodies = NO;
 
-#### Swift
+	// Swift
     let joint = CCPhysicsJoint(motorJointWithBodyA: bodyA, bodyB: bodyB, rate: 5)
     joint.maxForce = 500;
     joint.breakingForce = 75;
@@ -112,12 +112,12 @@ See the [CCPhysicsJoint reference](http://www.cocos2d-swift.org/docs/api/Classes
 
 Every `CCPhysicsBody` instance has a list of joints it is connected with. You can enumerate a body's joints as follows:
 
-#### Objective-C
+	// Objective-C
 	for (CCPhysicsJoint* joint in self.physicsBody.joints) {
 		NSLog(@"connected with: %@", joint);
 	}
 	
-#### Swift
+	// Swift
     for joint in self.physicsBody.joints {
         NSLog("connected with: %@", joint.description)
     }
@@ -127,9 +127,9 @@ Every `CCPhysicsBody` instance has a list of joints it is connected with. You ca
 
 If you need to identify a specific joint, you need to provide the information to identify the joint in the two connected bodies. Typically you would use the node's `name` properties but you could also use the [CCNode userObject](http://www.cocos2d-swift.org/docs/api/Classes/CCNode.html#//api/name/userObject) to store additional information for a joint in the connected nodes.
 
-To identify a given joint, enumerate the joints of a body and compare their identification information of the connected nodes:
+To identify a given joint, enumerate the joints of a body and compare their identification information of the connected nodes.
 
-#### Objective-C
+	// Objective-C
 	for (CCPhysicsJoint* joint in self.physicsBody.joints) {
 		if ([joint.bodyA.node.name isEqualToString:@"player-torso] &&
 		    [joint.bodyB.node.name isEqualToString:@"player-head"]) {
@@ -137,7 +137,7 @@ To identify a given joint, enumerate the joints of a body and compare their iden
 	    }
 	}
 
-#### Swift
+	// Swift
     for joint in self.physicsBody.joints {
         if (joint.bodyA!.node.name == "player-torso" &&
             joint.bodyB!.node.name == "player-head") {
@@ -155,10 +155,10 @@ Ivars and properties referencing joints should be declared `weak` so that if you
 
 To remove a joint you need to send the joint the `invalidate` message:
 
-#### Objective-C
+	// Objective-C
 	[joint invalidate];
 
-#### Swift
+	// Swift
     joint.invalidate()
 
 The above note still applies: joint ivars / properties should be declared as `__weak` or `weak` respectively to allow invalidated joints to deallocate properly.
@@ -167,11 +167,11 @@ However you can keep a strong reference to an invalidated joint, but you only ne
 
 In such cases it is customary to set the joint ivar or property to nil after the joint has been invalidated or when it is no longer needed:
 
-#### Objective-C
+	// Objective-C
 	[_joint invalidate];
 	_joint = nil;
 
-#### Swift
+	// Swift
     joint.invalidate()
     joint = nil
 
@@ -191,7 +191,7 @@ See also the [CCPhysicsCollisionDelegate reference](http://www.cocos2d-swift.org
 
 It is common to subclass `CCPhysicsNode` to let it become its own collision callback delegate, though any class implementing the `CCPhysicsCollisionDelegate` protocol will work. The subclass would look as follows:
 
-#### Objective-C
+	// Objective-C
 	// MyPhysicsNode.h
 	@interface MyPhysicsNode : CCPhysicsNode <CCPhysicsCollisionDelegate>
 	@end
@@ -212,7 +212,7 @@ It is common to subclass `CCPhysicsNode` to let it become its own collision call
 
 	@end
 	
-#### Swift
+	// Swift
 	// add the CCPhysicsCollisionDelegate protocol to the class:
 	class MainScene: CCNode, CCPhysicsCollisionDelegate {
 	
@@ -229,12 +229,12 @@ Note that if you return NO/false from the ccPhysicsCollisionBegin method, the co
 	
 In order for the collision callback methods to actually be called, an instance of the class that implements the `CCPhysicsCollisionDelegate` protocol must be assigned to the `collisionDelegate` property. An updated physics node initialization would look as follows:
 
-#### Objective-C
+	// Objective-C
     MyPhysicsNode* physicsNode = [MyPhysicsNode node];
     physicsNode.collisionDelegate = self;
     [self addChild:physicsNode];
 
-#### Swift
+	// Swift
     let physicsNode = CCPhysicsNode()
     physicsNode.collisionDelegate = self
     self.addChild(physicsNode)
@@ -245,11 +245,11 @@ In this case `MyPhysicsNode` is assumed to be a subclass of `CCPhysicsNode`.
 
 You can assign any node a collision type so that it runs the corresponding collision callback method (see below).
 
-#### Objective-C
+	// Objective-C
     _player.physicsBody.collisionType = @"player";
     _enemy.physicsBody.collisionType = @"enemy";
 
-#### Swift
+	// Swift
     player.physicsBody.collisionType = "player"
     enemy.physicsBody.collisionType = "enemy"
 
@@ -269,7 +269,7 @@ Where `XXX` stands for the type of event (`Begin`, `PreSolve`, `PostSolve`, `Sep
 
 For example, if you have a body with collision type string `player` and another body with collision type string `enemy` colliding, they will run the following selector, provided that the receiver implements them and is registered as the CCPhysicsNode's [`collisionDelegate`](http://www.cocos2d-swift.org/docs/api/Classes/CCPhysicsNode.html#//api/name/collisionDelegate):
 
-#### Objective-C
+	// Objective-C
 	-(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair*)pair player:(CCNode*)player enemy:(CCNode*)enemy {
 		NSLog(@"player collided with enemy");
 		return YES;
@@ -281,7 +281,7 @@ For example, if you have a body with collision type string `player` and another 
 		return YES;
 	}
 
-#### Swift
+	// Swift
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, player: CCNode, enemy: CCNode) -> Bool {
         NSLog("player collided with enemy")
         return true
@@ -296,7 +296,7 @@ For example, if you have a body with collision type string `player` and another 
 
 If you don't need to be that specific you can test whether a body with a given collision type collided with any other body regardless of collision type. You do so by using `wildcard` as the name for the last parameter:
 
-#### Objective-C
+	// Objective-C
 	-(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair*)pair player:(CCNode*)player wildcard:(CCNode*)wildcard {
 		NSLog(@"the player collided with something");
 		return YES;
@@ -307,7 +307,7 @@ If you don't need to be that specific you can test whether a body with a given c
 		return YES;
 	}
 
-#### Swift
+	// Swift
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, player: CCNode, wildcard: CCNode) -> Bool {
         NSLog("the player collided with something")
         return true
@@ -326,13 +326,13 @@ Above specialized collision callback methods run in addition to the default `ccP
 
 Therefore should prefer to use collision types and specialized collision callback handlers rather than using a generic collision callback method like this one below:
 
-#### Objective-C
+	// Objective-C
 	-(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair*)pair typeA:(CCNode*)nodeA typeB:(CCNode*)nodeB {
 		NSLog(@"a node %@ collided with another node %@", nodeA, nodeB);
 		return YES;
 	}
 
-#### Swift
+	// Swift
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, typeA: CCNode, typeB: CCNode) -> Bool {
         NSLog("a node %@ collided with another node %@", typeA, typeB);
         return true
@@ -356,21 +356,21 @@ It should suffice to say that by default all bodies collide with each other. Set
 
 The `collisionCategories` and `collisionMask` properties are arrays containing NSString objects. Let's put the player in a category and tell its mask to collide with enemy and a few other types:
 
-#### Objective-C
+	// Objective-C
 	_player.physicsBody.collisionCategories = @[@"player"];
 	_player.physicsBody.collisionMask = @[@"enemy", @"obstacles", @"items"];
 	
-#### Swift
+	// Swift
     player.physicsBody.collisionCategories = ["player"]
     player.physicsBody.collisionMask = ["enemy", "obstacles", "items"]
 
 Now you have to assign the enemy's body to the enemy category and include player in its mask for the collision to work:
 
-#### Objective-C
+	// Objective-C
 	_enemy.physicsBody.collisionCategories = @[@"enemy"];
 	_enemy.physicsBody.collisionMask = @[@"player", @"obstacles", @"projectiles"];
 
-#### Swift
+	// Swift
 	enemy.physicsBody.collisionCategories = ["enemy"]
 	enemy.physicsBody.collisionMask = ["player", "obstacles", "projectiles"]
 
@@ -382,22 +382,22 @@ The categories and mask arrays are immutable NSArray instances. If you need to m
 
 Here's how you can add a mask string to the player's mask:
 
-#### Objective-C
+	// Objective-C
 	NSMutableArray* mask = [NSMutableArray arrayWithArray:_player.physicsBody.collisionMask];
 	[mask addObject:@"ladders"];
 	_player.physicsBody.collisionMask = mask;
 
-#### Swift
+	// Swift
     player.physicsBody.collisionMask.append("ladders")
 
 Here's an example removing the projectiles string from the enemy's mask, so it won't collide with projectiles anymore:
 
-#### Objective-C
+	// Objective-C
 	NSMutableArray* mask = [NSMutableArray arrayWithArray:_enemy.physicsBody.collisionMask];
 	[mask removeObject:@"projectiles"];
 	_enemy.physicsBody.collisionMask = mask;
 
-#### Swift
+	// Swift
     let mask = NSMutableArray(array: self.physicsBody.collisionMask)
     mask.removeObject("projectiles")
     self.physicsBody.collisionMask = mask
@@ -406,10 +406,10 @@ Here's an example removing the projectiles string from the enemy's mask, so it w
 
 In addition you can assign bodies to a `collisionGroup`. If two bodies are in the same group, they will not collide regardless of their categories/masks. As collisionGroup you can use any object, typically you would use a string constant. In a multiplayer game you might want to make the players not collide with each other as follows:
 
-#### Objective-C
+	// Objective-C
 	_player1.physicsBody.collisionGroup = @"players";
 	_player2.physicsBody.collisionGroup = @"players";
 
-#### Swift
+	// Swift
 	player1.physicsBody.collisionGroup = "players"
 	player2.physicsBody.collisionGroup = "players"

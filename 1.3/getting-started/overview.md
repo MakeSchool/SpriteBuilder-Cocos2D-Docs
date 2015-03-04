@@ -1,6 +1,6 @@
 # Overview
 
-New users should read [Getting Started with SpriteBuilder](./overview/getting-started-spritebuilder) first to learn how to use the SpriteBuilder editor as a companion for Cocos2D development. 
+New users should read [First Steps with SpriteBuilder](./overview/getting-started-spritebuilder) first to learn how to use the SpriteBuilder editor as a companion for Cocos2D development. 
 
 If you do not want to use the SpriteBuilder editor at all, you should read the [Getting Started with Cocos2D](./overview/getting-started-cocos2d) article. You will have to write code for everything and import/convert/manage assets manually. This is only advisable for experienced game developers.
 

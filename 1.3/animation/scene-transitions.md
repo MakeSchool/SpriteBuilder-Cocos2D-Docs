@@ -15,12 +15,12 @@ A [CCTransition](http://www.cocos2d-swift.org/docs/api/Classes/CCTransition.html
 
 To present a scene with a transition, simply create an instance of the CCTransition class with the initializer that creates the desired transition effect, and then present the scene with the transition. For example:
 
-#### Objective-C
+	// Objective-C
 	id scene = [MyScene node];
 	id transition = [CCTransition transitionFadeWithDuration:2.0];
 	[[CCDirector sharedDirector] presentScene:scene withTransition:transition];
 	
-#### Swift
+	// Swift
     var scene = MainScene.node() as CCScene
     var transition = CCTransition(fadeWithDuration: 2.0)
     CCDirector.sharedDirector().presentScene(scene, withTransition: transition)
@@ -31,11 +31,11 @@ By default, both scenes will neither run any scheduled selectors/blocks nor will
 
 To change this behavior so that you can see animations, particle effects, movement and what not happening even while the transition animation is playing, simply set these transition properties to YES:
 
-#### Objective-C
+	// Objective-C
 	transition.outgoingSceneAnimated = YES;
 	transition.incomingSceneAnimated = YES;
 
-#### Swift
+	// Swift
     transition.outgoingSceneAnimated = true
     transition.incomingSceneAnimated = true
 		
@@ -45,11 +45,11 @@ Since rendering and perhaps even animation two scenes at the same time can easil
 
 First, you can change the scale of each scene:
 
-#### Objective-C
+	// Objective-C
 	transition.outgoingDownScale = 4.0;
 	transition.incomingDownScale = 2.0;
 
-#### Swift
+	// Swift
 	transition.outgoingDownScale = 4.0
 	transition.incomingDownScale = 2.0
 
@@ -59,24 +59,24 @@ After the transition finishes the incoming scene will suddenly switch to full sc
 
 You can also change whether Transitions should be animated with full Retina resolution:
 
-#### Objective-C
+	// Objective-C
 	transition.retinaTransition = NO;
 
-#### Swift
+	// Swift
 	transition.retinaTransition = true
 
 The above code disables Retina rendering on Retina devices for the duration of the transition. This can greatly enhance transition performance on Retina devices but will leave non-Retina devices unaffected. Still, it is quite effective and during a scene transition animation one can hardly notice the difference between full Retina resolution and standard (point-based) resolution.
 
 You may also be able to squeeze out a little more performance by changing the transition's texture pixel and depth stencil formats:
 
-#### Objective-C
+	// Objective-C
 	// use a 16-Bit pixel color format (default: RGBA8888)
 	transition.transitionPixelFormat = CCTexturePixelFormat_RGBA4444;
 	
 	// use an 8-Bit depth stencil format (default: 24-Bit)
 	transition.transitionDepthStencilFormat = GL_DEPTH24_STENCIL8_OES;
 
-#### Swift
+	// Swift
     // use a 16-Bit pixel color format (default: RGBA8888)
     transition.transitionPixelFormat = CCTexturePixelFormat.RGBA4444
     

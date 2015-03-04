@@ -52,7 +52,7 @@ The Core Graphics (CG) types use the string format with curly braces supported b
 
 The custom class of MainScene.ccb is named `MainScene` and its header includes the following custom struct and properties:
 
-#### Objective-C
+	// Objective-C
 	#import "CCNode.h"
 
 	typedef struct {
@@ -70,7 +70,7 @@ The custom class of MainScene.ccb is named `MainScene` and its header includes t
 
 	@end
 
-#### Swift
+	// Swift
 	import Foundation
 
 	class MainScene: CCNode
@@ -91,7 +91,7 @@ In the MainScene.m implementation you then need to implement the `setValue:forKe
 
 Every time this method gets called, you check whether the `key` string equals one of the custom property names. If it does, you apply the proper conversion from NSString to the desired data type. The following example purposefully omits any sanity checks for brevity. In your own you should certainly add assertions that test whether the given value has the proper type and format.
 
-#### Objective-C
+	// Objective-C
 	#import "MainScene.h"
 
 	@implementation MainScene
@@ -127,7 +127,7 @@ Every time this method gets called, you check whether the `key` string equals on
 
 	@end
 
-#### Swift
+	// Swift
     override func setValue(value: AnyObject?, forKey key: String) {
         if key == "myCustomCGPoint" {
             _myCustomCGPoint = CGPointFromString(value as String)
@@ -163,10 +163,10 @@ Do not forget to call <code>[super setValue:value forKey:key]</code> for any key
 
 When running the project with this MainScene class, the Debug Console in Xcode will log something similar to these lines, confirming that KVC is truly awesome:
 
-	MyFirstProject[3909:70b] {100, 200}
-	MyFirstProject[3909:70b] {123, 456}
-	MyFirstProject[3909:70b] {{0, 0}, {960, 640}}
-	MyFirstProject[3909:70b] 1.230000, 4.560000, 7.890000
+	{100, 200}
+	{123, 456}
+	{{0, 0}, {960, 640}}
+	1.230000, 4.560000, 7.890000
 
 Not surprisingly the output of `NSStringFromCGPoint` for instance is the same string that you fed into `CGPointFromNSString`.
 
