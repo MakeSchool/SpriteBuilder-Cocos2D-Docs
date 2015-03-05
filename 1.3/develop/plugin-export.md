@@ -1,4 +1,4 @@
-# SpriteBuilder - Create export plug-in
+# Creating a SpriteBuilder Export Plugin
 
 SpriteBuilder has support for creating custom export plug-ins. Bundled with SpriteBuilder comes the default ccbi-exporter, but it is easy to add new output formats.
 

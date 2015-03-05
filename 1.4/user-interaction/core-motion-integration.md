@@ -1,4 +1,4 @@
-# Core Motion Integration (Accelerometer, Gyroscope)
+# Core Motion (Accelerometer, Gyroscope)
 
 Cocos2D does not have built-in support for accelerometer and gyroscope. These input events are provided by the *Core Motion* framework.
 

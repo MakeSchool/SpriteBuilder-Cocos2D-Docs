@@ -1,4 +1,4 @@
-# SpriteBuilder - Create Node Plug-in
+# Creating a SpriteBuilder Node Plugin
 
 Node plug-ins can be used to add custom types of objects that can be used in and exported from SpriteBuilder. The objects need to be a direct or indirect sub-class of CCNode.
 

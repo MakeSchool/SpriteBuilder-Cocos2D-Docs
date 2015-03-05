@@ -122,7 +122,6 @@ Every `CCPhysicsBody` instance has a list of joints it is connected with. You ca
         NSLog("connected with: %@", joint.description)
     }
 
-
 ### Identifying Joints
 
 If you need to identify a specific joint, you need to provide the information to identify the joint in the two connected bodies. Typically you would use the node's `name` properties but you could also use the [CCNode userObject](http://www.cocos2d-swift.org/docs/api/Classes/CCNode.html#//api/name/userObject) to store additional information for a joint in the connected nodes.

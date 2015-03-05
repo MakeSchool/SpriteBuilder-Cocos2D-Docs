@@ -17,9 +17,6 @@ You can change most of the behavior of the Stage via the Document menu.
 - **Language** enables you to view the document in a different **language**. This will change the text of all labels with localized text.
 - **Stage Border** allows you to change the border of a Scene document. 
 - **Stage Color** allows you to change the background color of a non-Scene document.
-- **Extras** <table border="0"><tr><td width="48px" bgcolor="#ffa0ff"><strong>TBD</strong></td><td bgcolor="#ffa0ff">
-Extras: what does it do?
-</td></tr></table>
 - **Show** menu allows you to show or hide the Guides (rulers), the Grid and Sticky Notes.
 - **Snapping** allows you to control snap to grid and snap to node. You can edit the grid spacing as needed.
 - **Sticky Notes** are little notes drawn over the document content. They are not nodes and will not appear in your game. Double-click to edit a Sticky Note, while editing the red button in the upper left corner deletes the Sticky Note.
@@ -28,11 +25,6 @@ Extras: what does it do?
 ### Panning the Stage
 
 To pan the stage, keep the Command (Cmd) key pressed, then left-click and drag with your mouse to move the Stage contents.
-
-<table border="0"><tr><td width="48px" bgcolor="#d0f0ff"><strong>Info</strong></td><td bgcolor="#d0f0ff">
-Alternative panning controls are [currently being discussed](https://github.com/spritebuilder/SpriteBuilder/issues/1075).
-</td></tr></table>
-
 
 ## Working with Nodes on the Stage
 

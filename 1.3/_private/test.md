@@ -7,7 +7,7 @@ INFO blueish table contents
 </td></tr></table>
 
 <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">
-TIP greenish table contents
+TIP green table contents
 </td></tr></table>
 
 <table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">

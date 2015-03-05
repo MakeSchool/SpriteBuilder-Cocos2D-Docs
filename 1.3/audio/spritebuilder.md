@@ -27,3 +27,18 @@ For iOS SpriteBuilder will automatically pick a suitable output format, either C
 For Android the output format is always OGG (.ogg extension).
 
 The audio quality can be set in the range from 1 (lowest quality, smallest file size) to 8 (highest quality, largest file size). Using the *Default* setting will choose whatever audio quality setting is set to in the Project Settings dialog. What quality is acceptable and how file size changes depends on the audio file in question and needs to be determined through experimentation.
+
+## Sound Effects Keyframes
+
+How to create and edit audio keyframes is also explained in the [Keyframe Editor](./spritebuilder/keyframe-editor) article.
+
+In summary:
+
+- Hold down the `Option` key, then click anywhere on the *Sound Effects* row in the Keyframe Editor to create a sound effect keyframe.
+- Double-click a *Sound Effects* keyframe to edit its properties: the audio file as well as Pitch, Pan and Gain.
+
+![](edit-sound-effects-keyframe.png)
+
+<table border="0"><tr><td width="48px" bgcolor="#ffffc0"><strong>Note</strong></td><td bgcolor="#ffffc0">
+*Sound Effects* keyframes are played through OALSimpleAudio's `playEffect` method, meaning playback uses OpenAL. This is good for (short) sound effects as the entire sound file will be buffered in memory, but this would be unsuitable for long audio, specifically when it's supposed to be streaming audio (M4A/MP3). Such audio should rather be played programmatically using the `playBg` methods of OALSimpleAudio.
+</td></tr></table>

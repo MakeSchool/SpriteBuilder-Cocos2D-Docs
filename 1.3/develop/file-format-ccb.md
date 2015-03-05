@@ -1,4 +1,4 @@
-# SpriteBuilder - CCB File Format
+# SpriteBuilder - CCB File Format (XML)
 
 This is a description of the SpriteBuilder save file format. It is also used internally in SpriteBuilder and is used by export plug-ins. Published files are (by default) saved in the CCBi file format.
 

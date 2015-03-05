@@ -35,7 +35,7 @@ An example of horizontal black lines can be seen below, but vertical or differen
 
 ### Cause
 
-The culprit here are gaps that occur due to [floating point rounding errors](http://programmers.stackexchange.com/questions/101163/what-causes-floating-point-rounding-errors). To use a simplified example, in a tileset where tiles are 32x32 points one tile gets drawn at position 100,100 while the next is drawn at 133,100 - one off due to rounding errors, thus introducing a gap between the two tiles. 
+The culprit here are gaps that occur due to [floating point rounding errors](http://programmers.stackexchange.com/questions/101163/what-causes-floating-point-rounding-errors). To use a simplified example, in a tileset where tiles are 32x32 points one tile gets drawn at pixel coordinate 100,100 while the next is drawn at 133,100 - one off due to rounding errors, thus introducing a gap between the two tiles.
 
 What you see as black lines is actually the default background clear color which happens to be black, hence the name of the artifact because "black lines" are most commonly observed. But if you had, say, a color node or sprite in the background of the tilemap your "black line" gaps may be of a different color.
 
@@ -70,6 +70,8 @@ Ensuring that tile coordinates always exactly match pixel coordinates is the onl
 ### Solutions that don't really work
 
 You may find the recommendation to change a "stretch texels" config setting or otherwise draw your tiles larger than they are. These workarounds fix the gaps, but they introduce new ugly artifacts, most notably aliasing where the entire map seems to be "drowning in pixels" when it moves at relatively slow speeds.
+
+You could try setting the `CC_NODE_RENDER_SUBPIXEL` definition in *ccConfig.h* to 0 to disable subpixel rendering. However it's been reported numerous times that this didn't actually (and reliably) fix the "black lines" issue.
 
 ## Tiles bleeding into other Tiles
 

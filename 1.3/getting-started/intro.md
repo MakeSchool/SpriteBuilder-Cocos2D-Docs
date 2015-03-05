@@ -25,9 +25,11 @@ This documentation covers the following topics in alphabetical order. Clicking o
 - [Audio](./audio/intro) (ObjectAL, Music and Effects playback)
 - [Concepts](./concepts/intro) (High-Level Concepts, Recommended for Beginners)
 - [Developer Reference](./develop/intro) (Technical Information, Advanced Uses)
+- First Steps: [SpriteBuilder](./getting-started/getting-started-spritebuilder) and [Cocos2D](./getting-started/getting-started-cocos2d)
 - [User Interaction](./user-interaction/intro) (User input: Touches, Core Motion, Keyboard & Mouse)
 - [Physics](./physics/intro) (Physics Simulation, Chipmunk)
 - [SpriteBuilder](./spritebuilder/intro) (SpriteBuilder User Guide)
+- [Tilemaps](./tilemaps/intro) (TMX Tilemaps)
 
 ## Other Resources
 

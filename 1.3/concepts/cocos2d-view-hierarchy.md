@@ -1,4 +1,4 @@
-# The Cocos2D View Layout
+# Cocos2D Overview
 
 Cocos2D renders its contents (called *nodes*) in a hierarchy similar to how Cocoa (Touch) renders its views. There are important differences between the two. In particular if you've been working with Cocoa (Touch) before you should read this article to learn about and understand these differences.
 

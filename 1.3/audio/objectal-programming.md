@@ -2,9 +2,9 @@
 
 Cocos2D and SpriteBuilder come bundled with the [ObjectAL audio engine](http://kstenerud.github.io/ObjectAL-for-iPhone/). It is essentially a clever wrapper around AVAudioPlayer and OpenAL that leaves the time-critical sound effect playback to OpenAL while streaming audio is (typically) played through AVAudioPlayer (if available).
 
-The essential ObjectAL classes are documented in the [Cocos2D Class Reference](http://www.cocos2d-swift.org/docs/api), they all carry the `OAL` prefix. The [complete ObjectAL documentation](http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html) includes an introduction and guide with several code examples.
+The essential ObjectAL classes are documented in the [Cocos2D Class Reference](http://www.cocos2d-swift.org/docs/api), they all carry the `OAL` prefix. The official [ObjectAL documentation](http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html) includes an introduction and guide with several code examples.
 
-Apportable has specially modified ObjectAL to also work (well) on Android with OGG audio files.
+Apportable has specially modified ObjectAL to also work (well) on Android with OGG audio files, but other than that the version of ObjectAL included in Cocos2D is usually the latest version available at the time, so the ObjectAL documentation can and should be used as a companion documentation for Cocos2D audio programming topics.
 
 ## "Simple" Audio
 
