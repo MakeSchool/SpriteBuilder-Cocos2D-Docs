@@ -16,7 +16,7 @@ Depending on which node is selected and the type of the node not all properties 
 
 - **Root Node**: Only in documents of type *Sprite* can the root node have keyframes. In that case only Sprite Frame, Normal Map, Opacity and Color can be animated. <table border="0"><tr><td width="48px" bgcolor="#d0ffd0"><strong>Tip</strong></td><td bgcolor="#d0ffd0">*Alternative*: use a document of type *Node* or *Layer* and add a single Sprite to it.</td></tr></table>
 - **Sub File Node**: Only Visible, Position, Scale, Rotation and Skew can be animated on a Sub File node.
-- **Physics Enabled**: Physics enabled nodes can only have keyframes if their physics body is set to *Static*. Nodes with *Dynamic* bodies can not have keyframe animations as they are controlled by physics. Physics enabled nodes with a *Static* body and at least one keyframe will switch to *Dynamic* mode and disable the *Dynamic* and *Static* radio buttons for as long as there are keyframes on the node.
+- **Physics Enabled**: Physics enabled nodes currently can only have keyframes if their physics body is set to *Static*. Trying to add keyframes to a physics-enabled node may show a message stating that the body type was changed to *Static*.
 
 ![Keyframe Editor Warning](keyframe-editor-dynamic-physics-body-warning.png "Keyframe Editor warning when trying to add Keyframe to node with dynamic physics body")
 

@@ -2,6 +2,7 @@
 
 	{"title" : "Welcome",									"path" : "getting-started/intro",							"version" : "1.3",	"children": 
 	[
+		{"title" : "Compared to Sprite Kit",				"path" : "getting-started/cocos2d-vs-spritekit",			"version" : "1.3"},
 		{"title" : "Requirements",							"path" : "getting-started/requirements",					"version" : "1.3"},
 		{"title" : "First Steps: SpriteBuilder",			"path" : "getting-started/getting-started-spritebuilder",	"version" : "1.3"},
 		{"title" : "First Steps: Cocos2D",					"path" : "getting-started/getting-started-cocos2d",			"version" : "1.3"}
