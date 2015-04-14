@@ -4,8 +4,8 @@ This is the developer guide for [SpriteBuilder](http://www.spritebuilder.com) an
 
 Game Engine | Game Editor | Official Guide | Tutorials
 :-: | :-: | :-: | :-:
-[![Cocos2D-Spritebuilder](intro-cocos2d-logo.png "Cocos2D-SpriteBuilder")](http://http://cocos2d.spritebuilder.com/) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeGamesWith.Us](intro-mgwu-logo.png "Make Games With Us: Online Academy")](https://www.makegameswith.us/home/)
-Cocos2D-SpriteBuilder | SpriteBuilder | Learn SpriteBuilder | MakeSchool
+[![Cocos2D-Spritebuilder](intro-cocos2d-logo.png "Cocos2D-SpriteBuilder")](http://http://cocos2d.spritebuilder.com/) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeSchool](intro-ms-logo.jpg "Make School")](https://www.makeschool.com/tutorials/)
+Cocos2D-SpriteBuilder | SpriteBuilder | Learn SpriteBuilder | Make School
 
 <p/>
 # Getting Started
@@ -38,7 +38,7 @@ This documentation covers the following topics in alphabetical order. Clicking o
 - **[SpriteBuilder Android Plugin](http://android.spritebuilder.com/)**: Get to know everything about developing apps for Android with SpriteBuilder.
 - **Release Notes**: The [SpriteBuilder GitHub Wiki](https://github.com/spritebuilder/SpriteBuilder/wiki) and [Cocos2D GitHub Wiki](https://github.com/cocos2d/cocos2d-swift/wiki) wikis list major changes, bugfixes and new features. 
 - **Update Notes**: The [SpriteBuilder Update compatiblity notes](http://www.spritebuilder.com/update/) explain how you need to change your code after updating Cocos2D in a SpriteBuilder project.
-- **Tutorials**: On [MakeSchool](https://www.makeschool.com/tutorials#start) you will find many up-to-date SpriteBuilder and Cocos2D tutorials. The [SpriteBuilder 'Learn' page](http://www.spritebuilder.com/learn) summarizes additional tutorials posted on the SpriteBuilder blog.
+- **Tutorials**: On [Make School](https://www.makeschool.com/tutorials#start) you will find many up-to-date SpriteBuilder and Cocos2D tutorials. The [SpriteBuilder 'Learn' page](http://www.spritebuilder.com/learn) summarizes additional tutorials posted on the SpriteBuilder blog.
 - **Forums**: [SpriteBuilder Forum](http://forum.spritebuilder.com/) and [Cocos2D Forum](http://forum.cocos2d-swift.org/) are great places to ask questions and to promote your work.
 - **Blogs**: The [SpriteBuilder Blog](http://www.spritebuilder.com/blog) and the [Cocos2D Blog](http://www.cocos2d-swift.org/blog) are infrequently updated with the latest development insights, announcements and tutorials.
 - **Issue Tracking**: [SpriteBuilder Issues](https://github.com/spritebuilder/SpriteBuilder/issues) and [Cocos2D Issues](https://github.com/cocos2d/cocos2d-swift/issues) are the places to search for known issues, possible workarounds and submitting bug reports and suggestions for improvement. Of course you can also do so via the forums.
