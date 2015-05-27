@@ -3,7 +3,7 @@
 This is the developer guide for [SpriteBuilder](http://www.spritebuilder.com) and [Cocos2D-SpriteBuilder](http://http://cocos2d.spritebuilder.com), the **free and open source 2D game development** framework for **Objective-C** and **Swift** developers with support for **iOS, Android and OS X** platforms. Click on the logos below to open the corresponding websites.
 
 Game Engine | Game Editor | Official Guide | Book | Tutorials
-:-: | :-: | :-: | :-:
+:-: | :-: | :-: | :-: | :-:
 [![Cocos2D-Spritebuilder](intro-cocos2d-logo.png "Cocos2D-SpriteBuilder")](http://http://cocos2d.spritebuilder.com/) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![Book Logo](spritebuilder-swift-book.png "SpriteBuilder Swift Book")](http://www.spritebuilder-book.com) | [![MakeSchool](intro-ms-logo.jpg "Make School")](https://www.makeschool.com/tutorials/)
 Cocos2D-SpriteBuilder | SpriteBuilder | Learn SpriteBuilder | Learn SB, Cocos2D, Swift | Make School
 
