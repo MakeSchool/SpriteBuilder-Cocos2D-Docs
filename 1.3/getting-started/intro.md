@@ -2,17 +2,17 @@
 
 This is the developer guide for [SpriteBuilder](http://www.spritebuilder.com) and [Cocos2D-SpriteBuilder](http://http://cocos2d.spritebuilder.com), the **free and open source 2D game development** framework for **Objective-C** and **Swift** developers with support for **iOS, Android and OS X** platforms. Click on the logos below to open the corresponding websites.
 
-Game Engine | Game Editor | Official Guide | Tutorials
+Game Engine | Game Editor | Official Guide | Book | Tutorials
 :-: | :-: | :-: | :-:
-[![Cocos2D-Spritebuilder](intro-cocos2d-logo.png "Cocos2D-SpriteBuilder")](http://http://cocos2d.spritebuilder.com/) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![MakeSchool](intro-ms-logo.jpg "Make School")](https://www.makeschool.com/tutorials/)
-Cocos2D-SpriteBuilder | SpriteBuilder | Learn SpriteBuilder | Make School
+[![Cocos2D-Spritebuilder](intro-cocos2d-logo.png "Cocos2D-SpriteBuilder")](http://http://cocos2d.spritebuilder.com/) | [![SpriteBuilder Logo](intro-spritebuilder-logo.png "SpriteBuilder")](http://www.spritebuilder.com) | [![Learn SpriteBuilder](intro-learn-spritebuilder-book-cover.png "The Official Guide")](http://www.apress.com/9781484202630) | [![Book Logo](spritebuilder-swift-book.png "SpriteBuilder Swift Book")](https://www.makeschool.com/tutorials/) | [![MakeSchool](intro-ms-logo.jpg "Make School")](https://www.makeschool.com/tutorials/)
+Cocos2D-SpriteBuilder | SpriteBuilder | Learn SpriteBuilder | Learn SB, Cocos2D, Swift | Make School
 
 <p/>
 # Getting Started
 
 Before you begin, check the [Development Requirements](./getting-started/requirements).
 
-New users should read [First Steps with SpriteBuilder](./getting-started/getting-started-spritebuilder) to learn how to use the SpriteBuilder editor. 
+New users should read [First Steps with SpriteBuilder](./getting-started/getting-started-spritebuilder) to learn how to use the SpriteBuilder editor.
 
 If you plan on using Cocos2D without SpriteBuilder you should read the [First Steps with Cocos2D](./getting-started/getting-started-cocos2d) article.
 
@@ -36,7 +36,7 @@ This documentation covers the following topics in alphabetical order. Clicking o
 - **[Cocos2D Class Reference](http://www.cocos2d-swift.org/docs/api/)**: Your go-to site when you need to know the name of a class or method, or to browse the available methods and properties of a given class.
 - **[Learn SpriteBuilder book](http://www.apress.com/9781484202630)**: The official Learn SpriteBuilder guide is available as print or eBook from Apress.
 - **[SpriteBuilder Android Plugin](http://android.spritebuilder.com/)**: Get to know everything about developing apps for Android with SpriteBuilder.
-- **Release Notes**: The [SpriteBuilder GitHub Wiki](https://github.com/spritebuilder/SpriteBuilder/wiki) and [Cocos2D GitHub Wiki](https://github.com/cocos2d/cocos2d-swift/wiki) wikis list major changes, bugfixes and new features. 
+- **Release Notes**: The [SpriteBuilder GitHub Wiki](https://github.com/spritebuilder/SpriteBuilder/wiki) and [Cocos2D GitHub Wiki](https://github.com/cocos2d/cocos2d-swift/wiki) wikis list major changes, bugfixes and new features.
 - **Update Notes**: The [SpriteBuilder Update compatiblity notes](http://www.spritebuilder.com/update/) explain how you need to change your code after updating Cocos2D in a SpriteBuilder project.
 - **Tutorials**: On [Make School](https://www.makeschool.com/tutorials#start) you will find many up-to-date SpriteBuilder and Cocos2D tutorials. The [SpriteBuilder 'Learn' page](http://www.spritebuilder.com/learn) summarizes additional tutorials posted on the SpriteBuilder blog.
 - **Forums**: [SpriteBuilder Forum](http://forum.spritebuilder.com/) and [Cocos2D Forum](http://forum.cocos2d-swift.org/) are great places to ask questions and to promote your work.
